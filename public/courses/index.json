@@ -1,6 +1,8 @@
 {
   "courses": [
     "learn-javascript-beginners",
-    "system-design-concepts"
+    "system-design-concepts",
+    "system-design-apis-infra",
+    "system-design-senior-engineer"
   ]
 }

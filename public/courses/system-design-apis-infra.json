@@ -1,0 +1,665 @@
+{
+  "id": "system-design-apis-infra",
+  "title": "System Design Course \u2014 APIs, Databases, Caching, CDNs, Load Balancing & Production Infra",
+  "description": "A structured path through Hayk Simonyan\u2019s freeCodeCamp course on designing production systems: starting from a single server, then databases, scaling, load balancing, API styles, and finally authentication, authorization, and security. Watch each chapter in the original YouTube video, then use the summary, quiz, and exercise to lock in the idea.",
+  "level": "Intermediate",
+  "summarySource": "chapters-and-description",
+  "source": {
+    "name": "freeCodeCamp.org",
+    "channelUrl": "https://www.youtube.com/@freecodecamp",
+    "creator": "Hayk Simonyan",
+    "videoTitle": "System Design Course \u2013 APIs, Databases, Caching, CDNs, Load Balancing & Production Infra",
+    "videoId": "C842vFY5kRo",
+    "videoUrl": "https://www.youtube.com/watch?v=C842vFY5kRo",
+    "duration": "2:05:22",
+    "durationSeconds": 7522
+  },
+  "thumbnailUrl": "https://i.ytimg.com/vi/C842vFY5kRo/hqdefault.jpg",
+  "modules": [
+    {
+      "id": "foundations",
+      "title": "Foundations",
+      "lessons": [
+        {
+          "id": "introduction",
+          "title": "Introduction",
+          "startSeconds": 0,
+          "endSeconds": 185,
+          "chapters": [
+            {
+              "title": "Introduction",
+              "startSeconds": 0
+            }
+          ],
+          "summary": "Hayk Simonyan introduces this freeCodeCamp.org course as a path from foundational system design ideas to production-ready systems. The official outline starts with a single-server setup, then databases and scaling, load balancing and failure, and a deep look at APIs (including REST and GraphQL) plus authentication, authorization, and security.",
+          "quiz": [
+            {
+              "question": "What is the overall path this course follows?",
+              "choices": [
+                "Only front-end styling and CSS frameworks",
+                "From foundational setup and data/scaling ideas to APIs and production security",
+                "Only interview puzzles with no architecture",
+                "Only Kubernetes YAML from the first minute"
+              ],
+              "correctIndex": 1,
+              "explanation": "The published contents move from a single server through databases, scaling, load balancing, APIs, and security."
+            },
+            {
+              "question": "Who developed this freeCodeCamp course?",
+              "choices": [
+                "Beau Carnes",
+                "Keerti Purswani",
+                "Hayk Simonyan",
+                "Quincy Larson"
+              ],
+              "correctIndex": 2,
+              "explanation": "The official description and freeCodeCamp article credit Hayk Simonyan (@hayk.simonyan)."
+            }
+          ],
+          "exercise": {
+            "prompt": "Write three questions you would ask before designing a production system (for example about users, scale, or what must not fail).",
+            "hint": "Good starting questions include who the users are, expected traffic, latency or availability targets, and which data must stay correct."
+          }
+        },
+        {
+          "id": "single-server-setup",
+          "title": "Single server setup",
+          "startSeconds": 185,
+          "endSeconds": 432,
+          "chapters": [
+            {
+              "title": "Single Server Setup",
+              "startSeconds": 185
+            }
+          ],
+          "summary": "This chapter starts with the simplest production picture: one server handling a web or mobile app. You need a way for a domain name to resolve to that machine (DNS) and a request path from the client to the server, usually over HTTP. This baseline makes later chapters \u2014 adding a database, more servers, and a load balancer \u2014 easier to motivate.",
+          "quiz": [
+            {
+              "question": "In a basic single-server web setup, what does DNS typically do?",
+              "choices": [
+                "Store the application\u2019s user table",
+                "Map a domain name to the server\u2019s IP address",
+                "Balance traffic across many regions automatically",
+                "Compile the server\u2019s source code"
+              ],
+              "correctIndex": 1,
+              "explanation": "Clients look up the hostname, then connect to the address they receive."
+            },
+            {
+              "question": "Why start a system design with a single server?",
+              "choices": [
+                "Because one server is always enough in production",
+                "It is a clear baseline; you add databases, replicas, and load balancers as bottlenecks appear",
+                "Because DNS cannot work with more than one host",
+                "Because HTTP only supports a single machine"
+              ],
+              "correctIndex": 1,
+              "explanation": "The course builds from a simple setup toward production concerns rather than starting with every possible component."
+            }
+          ],
+          "exercise": {
+            "prompt": "Sketch a single-server path: user types a URL, DNS returns an IP, the browser sends an HTTP request, the server returns a response. Label each step.",
+            "hint": "Browser \u2192 DNS lookup \u2192 IP \u2192 HTTP request to the one server \u2192 HTML or JSON response."
+          }
+        }
+      ]
+    },
+    {
+      "id": "data-and-scaling",
+      "title": "Databases and scaling",
+      "lessons": [
+        {
+          "id": "databases",
+          "title": "Databases: SQL, NoSQL, and graph",
+          "startSeconds": 432,
+          "endSeconds": 812,
+          "chapters": [
+            {
+              "title": "Databases: SQL, NoSQL, Graph",
+              "startSeconds": 432
+            }
+          ],
+          "summary": "Once an app has to remember data, you need a store that matches the access pattern. SQL (relational) databases fit structured records and transactions. NoSQL stores cover a range of models \u2014 documents, key-value, wide columns \u2014 that can be a better fit for flexible schemas or certain scale patterns. Graph databases are built for highly connected data. The point is to choose the model for the problem, not to treat one type as universal.",
+          "quiz": [
+            {
+              "question": "When is a relational SQL database usually a strong default?",
+              "choices": [
+                "Only for storing video files as blobs and nothing else",
+                "When you have structured records and need transactional, relational queries",
+                "When the only operation is a key lookup with no relationships",
+                "When you must store only graph edges"
+              ],
+              "correctIndex": 1,
+              "explanation": "Tables, schemas, and ACID-style transactions are the usual reason to start with SQL."
+            },
+            {
+              "question": "What is a graph database particularly well suited to?",
+              "choices": [
+                "Highly connected data, where relationships are a first-class part of the query",
+                "Replacing DNS",
+                "Serving only static CSS",
+                "Guaranteeing UDP delivery"
+              ],
+              "correctIndex": 0,
+              "explanation": "Social graphs, recommendations, and similar problems often map cleanly onto graph stores."
+            }
+          ],
+          "exercise": {
+            "prompt": "For each of these, pick SQL, a document/key-value NoSQL store, or a graph database and say why: bank transfers, a flexible product catalog, and 'friends of friends' recommendations.",
+            "hint": "Transfers lean SQL (transactions). A catalog often fits documents. Friend-of-friend queries often fit a graph."
+          }
+        },
+        {
+          "id": "vertical-vs-horizontal",
+          "title": "Vertical vs horizontal scaling",
+          "startSeconds": 812,
+          "endSeconds": 982,
+          "chapters": [
+            {
+              "title": "Vertical vs Horizontal Scaling",
+              "startSeconds": 812
+            }
+          ],
+          "summary": "Vertical scaling means giving one machine more CPU, memory, or disk. It is simple until you hit the limits or cost of a single box. Horizontal scaling means adding more machines and spreading work across them. It adds capacity, but also coordination: you need a way to route traffic and, often, to split or replicate data.",
+          "quiz": [
+            {
+              "question": "What is vertical scaling?",
+              "choices": [
+                "Adding more machines and splitting work across them",
+                "Giving a single machine more resources, such as CPU, RAM, or disk",
+                "Deleting unused regions",
+                "Turning off the load balancer"
+              ],
+              "correctIndex": 1,
+              "explanation": "You scale 'up' the existing box. Horizontal scaling is scaling 'out' to more boxes."
+            },
+            {
+              "question": "What is a typical trade-off of horizontal scaling compared with vertical scaling?",
+              "choices": [
+                "It is always simpler and never needs routing changes",
+                "It can add more capacity, but you must distribute work and often change how data is stored or routed",
+                "It only works for front-end static files",
+                "It removes the need for any database"
+              ],
+              "correctIndex": 1,
+              "explanation": "More machines mean load balancing, and often sharding or replication, not just a larger instance type."
+            }
+          ],
+          "exercise": {
+            "prompt": "A web app\u2019s single server is CPU-bound at peak. List one vertical step you might try first and one horizontal step you would take if that is no longer enough.",
+            "hint": "Vertical: a larger instance. Horizontal: more app servers behind a load balancer."
+          }
+        }
+      ]
+    },
+    {
+      "id": "reliability",
+      "title": "Load balancing and reliability",
+      "lessons": [
+        {
+          "id": "load-balancing",
+          "title": "Load balancing",
+          "startSeconds": 982,
+          "endSeconds": 1508,
+          "chapters": [
+            {
+              "title": "Load Balancing",
+              "startSeconds": 982
+            }
+          ],
+          "summary": "A load balancer sits in front of several servers and spreads incoming traffic so no single instance has to take every request. Common algorithms include round robin, least connections, and hashing schemes such as IP hash or consistent hashing. The load balancer also helps with fault tolerance: if one server goes down, traffic can go to the healthy ones \u2014 provided the balancer itself is not a single point of failure.",
+          "quiz": [
+            {
+              "question": "What is the main job of a load balancer?",
+              "choices": [
+                "Compile the application",
+                "Distribute incoming traffic across multiple backends",
+                "Replace the need for DNS",
+                "Convert SQL to GraphQL automatically"
+              ],
+              "correctIndex": 1,
+              "explanation": "It spreads load and, with health information, can avoid failed instances."
+            },
+            {
+              "question": "Which of these is a common load-balancing algorithm mentioned in this kind of course?",
+              "choices": [
+                "Round robin",
+                "Quicksort",
+                "MIME sniffing",
+                "CSS cascade"
+              ],
+              "correctIndex": 0,
+              "explanation": "Round robin is a standard first example; other strategies include least connections and hash-based routing."
+            }
+          ],
+          "exercise": {
+            "prompt": "Name two load-balancing algorithms and one reason you might pick each. Then note what should happen if one of three app servers crashes.",
+            "hint": "Round robin is simple when servers are alike. Least connections helps if some requests last longer. A crashed server should be taken out of rotation."
+          }
+        },
+        {
+          "id": "health-checks",
+          "title": "Health checks",
+          "startSeconds": 1508,
+          "endSeconds": 1680,
+          "chapters": [
+            {
+              "title": "Health Checks",
+              "startSeconds": 1508
+            }
+          ],
+          "summary": "Health checks are how a load balancer or orchestrator tells whether an instance is fit to receive traffic. A failed check should remove or avoid that instance until it recovers. Checks can be as simple as a TCP port or an HTTP endpoint that also verifies critical dependencies. Poorly designed checks (too shallow or too sensitive) either send users to broken nodes or flap healthy ones out of the pool.",
+          "quiz": [
+            {
+              "question": "What should a load balancer typically do when a backend fails its health check?",
+              "choices": [
+                "Send it twice as much traffic to help it recover",
+                "Stop sending it new traffic until it looks healthy again",
+                "Delete the user\u2019s database",
+                "Disable DNS for the whole site permanently"
+              ],
+              "correctIndex": 1,
+              "explanation": "That is the point of a health check: keep user requests away from an unhealthy instance."
+            },
+            {
+              "question": "Why can a too-shallow health check be a problem?",
+              "choices": [
+                "It may report a process as up even when a critical dependency is down",
+                "It always makes TCP faster",
+                "It replaces the need for logging",
+                "It forces you to use UDP"
+              ],
+              "correctIndex": 0,
+              "explanation": "If the check only asks whether the process is listening, a server that cannot reach its database may still receive traffic."
+            }
+          ],
+          "exercise": {
+            "prompt": "Design a simple /health endpoint for a web API that uses a database. What would it check, and what status code would you return if the database is unreachable?",
+            "hint": "Check that the process is up and that a cheap database ping works. Return a non-2xx status (often 503) if the dependency is down."
+          }
+        },
+        {
+          "id": "spof",
+          "title": "Single point of failure",
+          "startSeconds": 1680,
+          "endSeconds": 1861,
+          "chapters": [
+            {
+              "title": "Single Point of Failure (SPOF)",
+              "startSeconds": 1680
+            }
+          ],
+          "summary": "A single point of failure is any one component whose outage takes the whole system down. A lone app server is an obvious example; a lone load balancer, a single database primary without failover, or a single availability zone can also be SPOFs. This chapter is about spotting those bottlenecks and adding redundancy so one failure does not become a total outage.",
+          "quiz": [
+            {
+              "question": "What is a single point of failure?",
+              "choices": [
+                "Any component whose outage can take down the whole system",
+                "A cache that sometimes goes stale",
+                "A CSS file that failed to minify",
+                "A unit test that is skipped"
+              ],
+              "correctIndex": 0,
+              "explanation": "If there is only one of something on the critical path, that thing is a SPOF."
+            },
+            {
+              "question": "Which of these can be a SPOF even after you add several app servers?",
+              "choices": [
+                "A single load balancer that is the only entry point",
+                "Having more than one availability zone",
+                "Using a health check",
+                "Having multiple independent replicas with no shared dependency"
+              ],
+              "correctIndex": 0,
+              "explanation": "Redundant app servers do not help if the only balancer in front of them dies."
+            }
+          ],
+          "exercise": {
+            "prompt": "List three potential SPOFs in a simple stack (DNS/domain, load balancer, app servers, database). For each, write one way you might reduce the risk.",
+            "hint": "Examples: a managed DNS with more than one record, a pair of load balancers, several app servers, and a database with a failover replica."
+          }
+        }
+      ]
+    },
+    {
+      "id": "apis",
+      "title": "API design and protocols",
+      "lessons": [
+        {
+          "id": "api-design",
+          "title": "API design",
+          "startSeconds": 1861,
+          "endSeconds": 2837,
+          "chapters": [
+            {
+              "title": "API Design",
+              "startSeconds": 1861
+            }
+          ],
+          "summary": "This longer section covers what APIs are for in an architecture and how to design ones that other developers can use and that can grow. The course looks at common styles such as REST, GraphQL, and gRPC, at design principles that keep an interface maintainable, and at how the design-to-development-to-deployment process works. Good APIs have clear contracts, consistent naming, and a plan for change.",
+          "quiz": [
+            {
+              "question": "Which three API styles does this course section highlight as commonly used?",
+              "choices": [
+                "REST, GraphQL, and gRPC",
+                "FTP, SMTP, and POP3 only",
+                "HTML, CSS, and SVG",
+                "CSV, XML, and YAML only"
+              ],
+              "correctIndex": 0,
+              "explanation": "Those three are the usual modern comparison set for service APIs in this course."
+            },
+            {
+              "question": "Why does API design matter in system design, not just in coding?",
+              "choices": [
+                "Because the API is the contract other clients and services depend on as the system scales",
+                "Because APIs replace the need for a database",
+                "Because an API cannot fail",
+                "Because DNS cannot work without GraphQL"
+              ],
+              "correctIndex": 0,
+              "explanation": "A poorly designed contract is hard to change later and becomes a bottleneck between teams and services."
+            }
+          ],
+          "exercise": {
+            "prompt": "Write a one-paragraph API design brief for a 'tasks' service: who the clients are, the main operations, and whether you would start with REST, GraphQL, or gRPC and why.",
+            "hint": "A simple CRUD service for a web and mobile client often starts with REST. GraphQL can help when clients need flexible shapes. gRPC is a common choice for internal service-to-service calls."
+          }
+        },
+        {
+          "id": "api-protocols",
+          "title": "API protocols",
+          "startSeconds": 2837,
+          "endSeconds": 3550,
+          "chapters": [
+            {
+              "title": "API Protocols",
+              "startSeconds": 2837
+            }
+          ],
+          "summary": "Application protocols shape how an API is actually spoken on the wire. HTTP is the default for many REST and GraphQL APIs. Other choices (for example gRPC over HTTP/2, or a streaming protocol) change how you version, stream, and handle errors. This chapter ties protocol choice to the API style and to the needs of the clients.",
+          "quiz": [
+            {
+              "question": "Why does the application protocol matter when you design an API?",
+              "choices": [
+                "It decides how clients and servers exchange requests, errors, and (sometimes) streams",
+                "It selects the database engine automatically",
+                "It is only a documentation theme",
+                "It replaces authentication"
+              ],
+              "correctIndex": 0,
+              "explanation": "HTTP, HTTP/2 plus gRPC, and other protocols have different constraints and strengths."
+            },
+            {
+              "question": "What protocol is the usual transport for a public REST or GraphQL HTTP API?",
+              "choices": [
+                "HTTP (often with TLS, as HTTPS)",
+                "SMTP only",
+                "FTP only",
+                "IMAP only"
+              ],
+              "correctIndex": 0,
+              "explanation": "REST and browser-facing GraphQL APIs are typically served over HTTPS."
+            }
+          ],
+          "exercise": {
+            "prompt": "For a public JSON API used by a website, and for a high-throughput internal service-to-service API, say which protocol style you would prefer and why.",
+            "hint": "Public web clients almost always use HTTPS JSON/REST or GraphQL. Internal services often use gRPC or HTTP, depending on tooling and streaming needs."
+          }
+        },
+        {
+          "id": "tcp-udp",
+          "title": "Transport layer: TCP and UDP",
+          "startSeconds": 3550,
+          "endSeconds": 3862,
+          "chapters": [
+            {
+              "title": "Transport Layer: TCP, UDP",
+              "startSeconds": 3550
+            }
+          ],
+          "summary": "Under the application protocol is the transport. TCP is connection-oriented and aims to deliver a reliable, ordered stream \u2014 a good default for payments or most APIs, where a lost request is a problem. UDP is lighter and does not guarantee delivery or order, which can be the right trade-off for latency-sensitive media where a late packet is useless. The chapter is about picking the transport to match the requirement, not treating one as always better.",
+          "quiz": [
+            {
+              "question": "Which statement about TCP versus UDP is accurate?",
+              "choices": [
+                "TCP is connection-oriented and aims to deliver data reliably and in order; UDP is lighter and does not guarantee delivery or order",
+                "UDP always retries more than TCP, so it is slower for every use case",
+                "TCP cannot be used for HTTP",
+                "UDP assigns IP addresses"
+              ],
+              "correctIndex": 0,
+              "explanation": "That trade-off is why APIs and payments usually sit on TCP, while some real-time media uses UDP."
+            },
+            {
+              "question": "Which traffic is a better default for UDP than for TCP?",
+              "choices": [
+                "A bank transfer API that must not lose a request",
+                "A live video stream where a late packet is better dropped than retried",
+                "Storing a user\u2019s password hash",
+                "A database migration"
+              ],
+              "correctIndex": 1,
+              "explanation": "Retransmitting an old video frame can hurt more than skipping it."
+            }
+          ],
+          "exercise": {
+            "prompt": "Choose TCP or UDP for: a checkout API, a DNS query (as typically designed), and a real-time game position update. Give a one-line reason for each.",
+            "hint": "Checkout: TCP. Classic DNS: often UDP. Game state: often UDP, with the app handling loss."
+          }
+        },
+        {
+          "id": "restful-apis",
+          "title": "RESTful APIs",
+          "startSeconds": 3862,
+          "endSeconds": 4744,
+          "chapters": [
+            {
+              "title": "RESTful APIs",
+              "startSeconds": 3862
+            }
+          ],
+          "summary": "REST models the API around resources (nouns) and uses HTTP methods such as GET, POST, PUT, PATCH, and DELETE for operations. URLs are typically hierarchical, and query parameters handle filtering, sorting, and pagination so responses stay a reasonable size. Status codes communicate success and error classes. This chapter is about applying those habits so the API stays predictable for clients.",
+          "quiz": [
+            {
+              "question": "In a RESTful design, what should a URL usually represent?",
+              "choices": [
+                "A verb such as /getUser",
+                "A resource (a noun), such as /users/42",
+                "A raw SQL query",
+                "An IP address only"
+              ],
+              "correctIndex": 1,
+              "explanation": "Operations then come from the HTTP method, not from packing verbs into the path."
+            },
+            {
+              "question": "Why do list endpoints often support pagination?",
+              "choices": [
+                "To keep responses bounded and reduce bandwidth as collections grow",
+                "Because HTTP forbids returning more than one record",
+                "Because REST cannot use JSON",
+                "Because pagination replaces authentication"
+              ],
+              "correctIndex": 0,
+              "explanation": "Page/limit, offset, or cursor patterns all exist to avoid dumping an entire table."
+            }
+          ],
+          "exercise": {
+            "prompt": "Design REST endpoints for a 'books' resource: list, get one, create, update, and delete. Add a query for paging the list, and pick status codes for a successful create and a missing book.",
+            "hint": "GET /books?page=&limit=, GET /books/{id}, POST /books, PUT or PATCH /books/{id}, DELETE /books/{id}. 201 for create, 404 if the book is missing."
+          }
+        },
+        {
+          "id": "graphql",
+          "title": "GraphQL",
+          "startSeconds": 4744,
+          "endSeconds": 5092,
+          "chapters": [
+            {
+              "title": "GraphQL",
+              "startSeconds": 4744
+            }
+          ],
+          "summary": "GraphQL lets the client ask for exactly the fields it needs, often in one request, instead of stitching several REST endpoints. That can reduce over-fetching and under-fetching, especially for rich clients. The trade-offs include a more complex server, caching that is less natural than plain HTTP GET, and the need to protect against expensive queries. This chapter compares that model with REST so you can choose when GraphQL is worth it.",
+          "quiz": [
+            {
+              "question": "What problem does GraphQL mainly try to solve for clients?",
+              "choices": [
+                "Letting the client request a specific shape of data, often in a single query",
+                "Replacing TLS",
+                "Making UDP reliable",
+                "Automatically sharding a database"
+              ],
+              "correctIndex": 0,
+              "explanation": "Clients describe the fields they need instead of taking a fixed REST payload from each endpoint."
+            },
+            {
+              "question": "What is a common trade-off of GraphQL compared with simple REST GET endpoints?",
+              "choices": [
+                "HTTP caching and cost control can be harder, and the server has to police expensive queries",
+                "It cannot return JSON",
+                "It only works on FTP",
+                "It removes the need for any schema"
+              ],
+              "correctIndex": 0,
+              "explanation": "A single POST /graphql endpoint and nested queries change how you cache and how you limit work."
+            }
+          ],
+          "exercise": {
+            "prompt": "Write a small GraphQL-style query for a user and that user\u2019s last three orders (fields: id, name, order id and total). Then note one risk you would guard against on the server.",
+            "hint": "A query like user { id name orders(last: 3) { id total } }. Guard against deeply nested or unbounded list queries."
+          }
+        }
+      ]
+    },
+    {
+      "id": "security",
+      "title": "Authentication, authorization, and security",
+      "lessons": [
+        {
+          "id": "authentication",
+          "title": "Authentication",
+          "startSeconds": 5092,
+          "endSeconds": 6351,
+          "chapters": [
+            {
+              "title": "Authentication",
+              "startSeconds": 5092
+            }
+          ],
+          "summary": "Authentication is about proving who a client or user is. This long chapter surveys common methods: basic and digest auth, API keys, session cookies, JWTs (often with access and refresh tokens), and sign-in frameworks such as OAuth2, OpenID Connect, and SAML that also enable single sign-on. The right choice depends on whether you are authenticating a user, a machine, or a third-party app.",
+          "quiz": [
+            {
+              "question": "What is authentication, as opposed to authorization?",
+              "choices": [
+                "Verifying who the caller is",
+                "Deciding which resources that caller may access",
+                "Encrypting a hard drive at rest",
+                "Balancing traffic across servers"
+              ],
+              "correctIndex": 0,
+              "explanation": "Authentication establishes identity. Authorization decides what that identity is allowed to do."
+            },
+            {
+              "question": "Which of these is a typical use of OAuth2 or OpenID Connect?",
+              "choices": [
+                "Letting a user sign in (or grant a third-party app access) without sharing their password with every service",
+                "Choosing between SQL and NoSQL",
+                "Compressing images at the CDN",
+                "Sorting an array in linear time"
+              ],
+              "correctIndex": 0,
+              "explanation": "Those protocols are widely used for delegated access and for single sign-on experiences."
+            }
+          ],
+          "exercise": {
+            "prompt": "For a public HTTP API used by a first-party mobile app, pick an authentication approach (for example session cookies, API keys, or JWT access/refresh tokens) and list one advantage and one risk you would have to handle.",
+            "hint": "Mobile apps often use access and refresh tokens. Risks include token theft, refresh-token rotation, and storing secrets on the device."
+          }
+        },
+        {
+          "id": "authorization",
+          "title": "Authorization",
+          "startSeconds": 6351,
+          "endSeconds": 7022,
+          "chapters": [
+            {
+              "title": "Authorization",
+              "startSeconds": 6351
+            }
+          ],
+          "summary": "Authorization decides what an authenticated caller is allowed to do. Designs include roles (RBAC), permissions or policies attached to resources, and attribute-based rules. A secure API checks authorization on every sensitive operation, not only at the login screen, and defaults to denying access when a rule is missing.",
+          "quiz": [
+            {
+              "question": "What does authorization decide?",
+              "choices": [
+                "Which actions and resources an already-identified caller is allowed to use",
+                "The caller\u2019s display name only",
+                "Which load-balancing algorithm to enable",
+                "Whether TCP or UDP is used"
+              ],
+              "correctIndex": 0,
+              "explanation": "It is the 'what can you do?' step after authentication."
+            },
+            {
+              "question": "Why is it not enough to authorize only at login?",
+              "choices": [
+                "Each request or action can require a different permission, and tokens or sessions can be reused",
+                "Because login never authenticates the user",
+                "Because authorization is handled only by DNS",
+                "Because APIs cannot send cookies"
+              ],
+              "correctIndex": 0,
+              "explanation": "A logged-in user still must not be able to edit someone else\u2019s order just because they have a valid session."
+            }
+          ],
+          "exercise": {
+            "prompt": "Define two roles for a blog API, such as author and admin. List which endpoints each role may call, and say what an unauthenticated caller may read.",
+            "hint": "Public readers might GET published posts. Authors can create and edit their own. Admins can moderate or delete any post."
+          }
+        },
+        {
+          "id": "security",
+          "title": "Security",
+          "startSeconds": 7022,
+          "endSeconds": 7522,
+          "chapters": [
+            {
+              "title": "Security",
+              "startSeconds": 7022
+            }
+          ],
+          "summary": "The closing chapter gathers production security practices around the APIs and infrastructure already designed: protecting data in transit (TLS), handling secrets carefully, limiting abuse, validating input, and reducing the blast radius when something goes wrong. Security is not a single product you add at the end; it is a set of habits that have to sit in the design.",
+          "quiz": [
+            {
+              "question": "Why is TLS (HTTPS) a baseline for a public API?",
+              "choices": [
+                "It protects data in transit from being read or altered on the path between client and server",
+                "It chooses your database for you",
+                "It makes health checks unnecessary",
+                "It is only required for static CSS files"
+              ],
+              "correctIndex": 0,
+              "explanation": "Without TLS, credentials and personal data can be intercepted or modified."
+            },
+            {
+              "question": "Which of these belongs in a production security design, not only in application features?",
+              "choices": [
+                "How secrets are stored, how input is validated, and how abuse is rate-limited",
+                "The font size of the marketing site",
+                "The name of the sprint board",
+                "The color of the load-balancer logo"
+              ],
+              "correctIndex": 0,
+              "explanation": "Those controls are part of making the system safe to operate, not just pretty to use."
+            }
+          ],
+          "exercise": {
+            "prompt": "Write a short security checklist for a new public API: transport, secrets, input validation, and abuse. One bullet for each.",
+            "hint": "HTTPS everywhere; secrets in a vault or env, not in git; validate and bound all input; rate-limit by IP or user."
+          }
+        }
+      ]
+    }
+  ]
+}

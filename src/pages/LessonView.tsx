@@ -108,8 +108,9 @@ export default function LessonView() {
         </ul>
         <p className="summary-text">{lesson.summary}</p>
         <p className="progress-label">
-          Summary written from the public chapter titles and video description,
-          not from a transcript.
+          {course.summarySource === "transcript"
+            ? "Summary written from the official video transcript."
+            : "Summary written from the public chapter titles and video description, not from a transcript."}
         </p>
       </section>
       <Quiz

@@ -43,11 +43,14 @@ export type CourseSource = {
   durationSeconds: number;
 };
 
+export type SummarySource = "chapters-and-description" | "transcript";
+
 export type Course = {
   id: string;
   title: string;
   description: string;
   level: string;
+  summarySource: SummarySource;
   source: CourseSource;
   thumbnailUrl: string;
   modules: Module[];

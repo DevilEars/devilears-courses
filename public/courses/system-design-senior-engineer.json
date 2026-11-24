@@ -1,0 +1,1198 @@
+{
+  "id": "system-design-senior-engineer",
+  "title": "Design Software Systems Like a Senior Engineer \u2014 Complete Course",
+  "description": "A structured path through Hayk Simonyan\u2019s freeCodeCamp course on designing systems the way senior interviews expect: a five-step framework, then three worked examples in the style of Spotify, Booking.com, and WhatsApp. Watch each chapter in the original YouTube video, then use the summary, quiz, and exercise to practice the same thinking.",
+  "level": "Advanced",
+  "summarySource": "chapters-and-description",
+  "source": {
+    "name": "freeCodeCamp.org",
+    "channelUrl": "https://www.youtube.com/@freecodecamp",
+    "creator": "Hayk Simonyan",
+    "videoTitle": "Design Software Systems Like a Senior Engineer \u2013 Complete Course",
+    "videoId": "soTfFFIQQ8U",
+    "videoUrl": "https://www.youtube.com/watch?v=soTfFFIQQ8U",
+    "duration": "3:16:48",
+    "durationSeconds": 11808
+  },
+  "thumbnailUrl": "https://i.ytimg.com/vi/soTfFFIQQ8U/hqdefault.jpg",
+  "modules": [
+    {
+      "id": "framework",
+      "title": "System design framework",
+      "lessons": [
+        {
+          "id": "why-it-matters",
+          "title": "Why system design matters",
+          "startSeconds": 0,
+          "endSeconds": 136,
+          "chapters": [
+            {
+              "title": "Why System Design Matters",
+              "startSeconds": 0
+            }
+          ],
+          "summary": "The course opens by explaining why system design matters both on the job and in senior and staff interviews. Interviewers are not looking for a single correct diagram. They also score how you communicate, structure the problem, show technical judgment, go deep enough, and manage time.",
+          "quiz": [
+            {
+              "question": "In a senior system design interview, what is being evaluated besides the final architecture?",
+              "choices": [
+                "Only how quickly you write compilable code",
+                "Communication, structured thinking, technical judgment, depth, and time management",
+                "Only how many AWS services you can name",
+                "Only typography on the whiteboard"
+              ],
+              "correctIndex": 1,
+              "explanation": "The course frames these as the dimensions interviewers actually score."
+            },
+            {
+              "question": "Is there usually a single correct architecture in these interviews?",
+              "choices": [
+                "Yes, and naming it immediately is the whole test",
+                "No. You are expected to reason about requirements and trade-offs, not recite one canonical diagram",
+                "Yes, but only if you use microservices",
+                "No, because system design interviews never use diagrams"
+              ],
+              "correctIndex": 1,
+              "explanation": "The opening point is that the conversation and the trade-offs matter as much as the boxes."
+            }
+          ],
+          "exercise": {
+            "prompt": "List the five evaluation dimensions from this lesson in your own words, and circle the one you personally need to practice most.",
+            "hint": "Communication, structured thinking, technical judgment, practical depth, and time management."
+          }
+        },
+        {
+          "id": "interview-formats",
+          "title": "Interview formats overview",
+          "startSeconds": 136,
+          "endSeconds": 554,
+          "chapters": [
+            {
+              "title": "Interview Formats Overview",
+              "startSeconds": 136
+            }
+          ],
+          "summary": "This chapter surveys how system design interviews are typically run: a relatively short, open-ended session in which you are given a vague prompt and expected to lead the discussion. Knowing the format helps you budget time for clarifying questions, a high-level design, and a deeper dive, instead of spending the whole slot on one corner of the problem.",
+          "quiz": [
+            {
+              "question": "What should you usually do first when a system design prompt is vague?",
+              "choices": [
+                "Start naming technologies immediately",
+                "Clarify the scope and requirements before drawing a large design",
+                "Write a complete database schema in silence",
+                "Refuse to use a whiteboard"
+              ],
+              "correctIndex": 1,
+              "explanation": "The format rewards a structured start, not a rush into components."
+            },
+            {
+              "question": "Why does time management matter in this interview format?",
+              "choices": [
+                "The session is limited, so you must leave time for a high-level design and at least one deeper area",
+                "Because interviews have no time limit",
+                "Because you are scored only on typography",
+                "Because you must implement the whole system in code"
+              ],
+              "correctIndex": 0,
+              "explanation": "A common failure is to over-detail one piece and never finish the rest."
+            }
+          ],
+          "exercise": {
+            "prompt": "For a 45-minute interview, sketch a rough time budget for: clarifying requirements, high-level design, a deep dive, and a short wrap-up.",
+            "hint": "A common split is roughly 5\u201310 minutes clarifying, 15 on the high-level design, 15 on a deep dive, and a few minutes to summarize trade-offs."
+          }
+        },
+        {
+          "id": "five-step-framework",
+          "title": "The five-step framework",
+          "startSeconds": 554,
+          "endSeconds": 1104,
+          "chapters": [
+            {
+              "title": "The 5 Step Framework",
+              "startSeconds": 554
+            }
+          ],
+          "summary": "The course\u2019s practical framework is a repeatable sequence: clarify functional and non-functional requirements; design the data model and APIs; sketch the high-level architecture and data flows; analyze scale, bottlenecks, and reliability; then summarize trade-offs and possible extensions. Using a framework keeps the conversation organized when the prompt is broad.",
+          "quiz": [
+            {
+              "question": "Which sequence matches the five-step framework taught in this course?",
+              "choices": [
+                "Clarify requirements; design data and APIs; sketch architecture; discuss scale and reliability; summarize trade-offs",
+                "Write code; deploy; load-test; advertise; retire",
+                "Pick a database first; then invent the product",
+                "Draw microservices first and never discuss requirements"
+              ],
+              "correctIndex": 0,
+              "explanation": "That order is the backbone of the rest of the course\u2019s worked examples."
+            },
+            {
+              "question": "Why start with requirements instead of components?",
+              "choices": [
+                "The right architecture depends on users, use cases, scale, and constraints you have not heard yet",
+                "Because requirements interviews never allow diagrams",
+                "Because APIs cannot be designed after requirements",
+                "Because scale math is forbidden until the end of the job"
+              ],
+              "correctIndex": 0,
+              "explanation": "Jumping to a favorite technology before the constraints are clear is a common miss."
+            }
+          ],
+          "exercise": {
+            "prompt": "Write the five steps on a card. Under 'clarify requirements', add two functional and two non-functional questions you would always ask.",
+            "hint": "Functional: who are the users, what are the core actions? Non-functional: scale, latency, availability, consistency."
+          }
+        },
+        {
+          "id": "tradeoffs-and-extensions",
+          "title": "Trade-offs and extensions",
+          "startSeconds": 1104,
+          "endSeconds": 1435,
+          "chapters": [
+            {
+              "title": "Tradeoffs and Extensions",
+              "startSeconds": 1104
+            }
+          ],
+          "summary": "The last framework step is to make trade-offs explicit and mention how the design could be extended. Interviewers want to hear alternatives you considered \u2014 for example WebSockets versus HTTP, or when you would add a load balancer or a cache \u2014 and what you would build later if traffic or features grew. This is also where you show judgment rather than a single rigid plan.",
+          "quiz": [
+            {
+              "question": "What should you do instead of presenting only one option as obvious?",
+              "choices": [
+                "Compare plausible alternatives and explain the trade-off you are accepting",
+                "List every cloud product without a recommendation",
+                "Stay silent after drawing the first box",
+                "Restart the interview from scratch"
+              ],
+              "correctIndex": 0,
+              "explanation": "The course emphasizes justifying decisions, not just naming tools."
+            },
+            {
+              "question": "Why mention extensions at the end of a design?",
+              "choices": [
+                "It shows you know what you deferred, and how the system could grow, without over-building the first version",
+                "Because the first version must include every future feature",
+                "Because extensions replace capacity planning",
+                "Because interviews forbid discussing the future"
+              ],
+              "correctIndex": 0,
+              "explanation": "A good close is: here is the simple system, here is what we add when a named bottleneck appears."
+            }
+          ],
+          "exercise": {
+            "prompt": "Pick one familiar product. Write a 'v1' design choice and one extension you would add only after a named bottleneck (for example a cache after the database becomes read-heavy).",
+            "hint": "Start simple. Name the signal that would justify the next component."
+          }
+        }
+      ]
+    },
+    {
+      "id": "spotify-like",
+      "title": "System 1 \u2014 music streaming (Spotify-like)",
+      "lessons": [
+        {
+          "id": "spotify-requirements",
+          "title": "Requirements and capacity planning",
+          "startSeconds": 1435,
+          "endSeconds": 1764,
+          "chapters": [
+            {
+              "title": "Requirements and Capacity Planning",
+              "startSeconds": 1435
+            }
+          ],
+          "summary": "The first worked example is a music-streaming system in the style of Spotify. This chapter clarifies functional needs (play, browse, store a catalog) and then does capacity planning: estimates for storage, bandwidth, and traffic that will drive later choices about object storage, CDNs, and databases.",
+          "quiz": [
+            {
+              "question": "Why do capacity estimates belong early in a music-streaming design?",
+              "choices": [
+                "They tell you whether you need object storage, a CDN, or a much larger pipeline than a single disk can hold",
+                "They replace the need for an API",
+                "They are only used for typography",
+                "They decide the band\u2019s playlist order"
+              ],
+              "correctIndex": 0,
+              "explanation": "Audio libraries and playback traffic are large enough that rough math changes the architecture."
+            },
+            {
+              "question": "Which kind of requirement is 'users can play a track and browse a catalog'?",
+              "choices": [
+                "A functional requirement",
+                "A non-functional latency SLO only",
+                "A legal SLA with refunds",
+                "A load-balancing algorithm"
+              ],
+              "correctIndex": 0,
+              "explanation": "Functional requirements describe what the system does; capacity and latency are non-functional."
+            }
+          ],
+          "exercise": {
+            "prompt": "Estimate, roughly, storage for 40 million songs if each song averages 5 MB. Then write one sentence about what that number implies for local disk versus object storage.",
+            "hint": "40 million times 5 MB is about 200 TB. That usually belongs in object storage, not on one app server."
+          }
+        },
+        {
+          "id": "spotify-architecture",
+          "title": "Architecture and data flows",
+          "startSeconds": 1764,
+          "endSeconds": 2123,
+          "chapters": [
+            {
+              "title": "Architecture and Data Flows",
+              "startSeconds": 1764
+            }
+          ],
+          "summary": "This chapter sketches the high-level architecture and the data flows for playback and catalog browsing: clients talk to APIs, metadata comes from a data store, and the actual audio is typically served from object storage, often through a CDN, rather than from the API servers themselves.",
+          "quiz": [
+            {
+              "question": "Why is audio usually not streamed directly off the same application servers that serve the catalog API?",
+              "choices": [
+                "Audio is large; object storage and CDNs are built to serve big files at scale",
+                "APIs are legally forbidden from sending bytes",
+                "Object storage cannot store files",
+                "CDNs can only cache HTML"
+              ],
+              "correctIndex": 0,
+              "explanation": "A common pattern is: API authorizes the play, then the client fetches the file from object storage or a CDN, often with a signed URL."
+            },
+            {
+              "question": "What is a data flow in this part of the design?",
+              "choices": [
+                "The path a play or browse request takes through clients, APIs, stores, and the audio path",
+                "A CSS animation",
+                "A git branching model",
+                "A load-testing product name"
+              ],
+              "correctIndex": 0,
+              "explanation": "Interviewers want to see how a request actually moves, not just a pile of boxes."
+            }
+          ],
+          "exercise": {
+            "prompt": "Draw a play-request flow: app to API (auth and which file), then a signed URL or CDN, then object storage, then audio back to the app. Label where metadata is read.",
+            "hint": "Metadata (title, id, path) lives in a database. The heavy bytes come from object storage or a CDN."
+          }
+        },
+        {
+          "id": "spotify-api",
+          "title": "API design",
+          "startSeconds": 2123,
+          "endSeconds": 2404,
+          "chapters": [
+            {
+              "title": "API Design",
+              "startSeconds": 2123
+            }
+          ],
+          "summary": "Here the streaming example gets an API: endpoints or operations for search or browse, fetching track metadata, and starting playback. The design has to stay simple for clients while making it possible to authorize access to the underlying audio object without putting the API server on the hot path for every byte.",
+          "quiz": [
+            {
+              "question": "What is a common way for an API to authorize playback without streaming all audio itself?",
+              "choices": [
+                "Issue a short-lived signed URL (or equivalent) for the object or CDN path",
+                "Email the MP3 to the user",
+                "Store the entire catalog in a cookie",
+                "Disable TLS"
+              ],
+              "correctIndex": 0,
+              "explanation": "The API checks that the user may play the track, then lets the client fetch the file directly from storage or a CDN."
+            },
+            {
+              "question": "Which operations would you expect in a minimal streaming API?",
+              "choices": [
+                "Browse or search, get track metadata, and start or authorize playback",
+                "Only a raw SSH login",
+                "Only SMTP send",
+                "Only a database dump endpoint"
+              ],
+              "correctIndex": 0,
+              "explanation": "Those are the core client needs named in this example."
+            }
+          ],
+          "exercise": {
+            "prompt": "Write three REST-style endpoints for this system (catalog search, track metadata, request playback). Note which one would return a signed media URL.",
+            "hint": "GET /tracks?q=, GET /tracks/{id}, POST /tracks/{id}/play (or GET with auth) returning a signed URL."
+          }
+        },
+        {
+          "id": "spotify-storage",
+          "title": "Storage and schema design",
+          "startSeconds": 2404,
+          "endSeconds": 2677,
+          "chapters": [
+            {
+              "title": "Storage and Schema Design",
+              "startSeconds": 2404
+            }
+          ],
+          "summary": "Storage is split by access pattern: object storage for the audio files themselves, and a structured store (often SQL) for metadata such as tracks, artists, and albums. The schema should support the queries you actually need \u2014 listing an album, looking up a track, maybe a user\u2019s library \u2014 without pretending one store is good at everything.",
+          "quiz": [
+            {
+              "question": "In this Spotify-like design, where do the audio files usually live?",
+              "choices": [
+                "In object storage, not as rows of raw audio in the primary metadata database",
+                "Only in each user\u2019s browser cache, never on a server",
+                "Inside the load balancer\u2019s config file",
+                "In DNS TXT records"
+              ],
+              "correctIndex": 0,
+              "explanation": "Object storage is built for large blobs. The database keeps references and metadata."
+            },
+            {
+              "question": "Why keep metadata in a structured database?",
+              "choices": [
+                "So you can query and relate tracks, artists, and albums efficiently",
+                "Because object storage cannot store any file",
+                "Because SQL automatically streams audio",
+                "Because browsers cannot play files from a CDN"
+              ],
+              "correctIndex": 0,
+              "explanation": "Relational or similarly structured stores are a natural fit for catalog data."
+            }
+          ],
+          "exercise": {
+            "prompt": "Draft a minimal metadata schema: artists, albums, tracks (with a pointer to the object-storage key). Write one query you would need for an album page.",
+            "hint": "tracks.album_id to albums, albums.artist_id to artists, tracks.object_key for the file. Query all tracks for an album_id, ordered by track number."
+          }
+        },
+        {
+          "id": "spotify-scaling",
+          "title": "Scaling to millions",
+          "startSeconds": 2677,
+          "endSeconds": 3052,
+          "chapters": [
+            {
+              "title": "Scaling to Millions",
+              "startSeconds": 2677
+            }
+          ],
+          "summary": "As usage grows, the simple design adds the usual levers: a CDN in front of audio, read replicas for hot metadata, and eventually sharding if a single primary cannot hold or write the catalog. The course shows how to start simple and add these pieces when a bottleneck is named, rather than starting with every component.",
+          "quiz": [
+            {
+              "question": "Which component is usually added first to serve popular audio from locations near users?",
+              "choices": [
+                "A CDN",
+                "A second programming language",
+                "A thicker laptop",
+                "A new DNS vendor only for email"
+              ],
+              "correctIndex": 0,
+              "explanation": "CDNs cache large, mostly-static objects close to listeners and take load off origin storage."
+            },
+            {
+              "question": "When would you add read replicas for catalog metadata?",
+              "choices": [
+                "When reads overwhelm the primary, and slightly stale metadata is acceptable for many pages",
+                "When you have no data at all",
+                "When you want to avoid any database",
+                "When audio files need a new codec"
+              ],
+              "correctIndex": 0,
+              "explanation": "Replicas scale reads. Writes still go to the primary, and you accept some lag."
+            }
+          ],
+          "exercise": {
+            "prompt": "List three scale-out steps for this design in the order you would add them, and the bottleneck that would justify each.",
+            "hint": "CDN when origin bandwidth or latency hurts playback; read replicas when metadata reads spike; sharding when one primary can no longer store or write the catalog."
+          }
+        }
+      ]
+    },
+    {
+      "id": "booking-like",
+      "title": "System 2 \u2014 hotel booking (Booking.com-like)",
+      "lessons": [
+        {
+          "id": "booking-nfr",
+          "title": "Non-functional targets",
+          "startSeconds": 3052,
+          "endSeconds": 3502,
+          "chapters": [
+            {
+              "title": "Non-Functional Targets",
+              "startSeconds": 3052
+            }
+          ],
+          "summary": "The second worked example is a hotel-booking system in the style of Booking.com. This chapter focuses on non-functional targets: search should be fast, inventory must not be double-booked, and availability, latency, and consistency needs may differ for search versus checkout. Those targets will drive later choices about search engines, transactions, and caching.",
+          "quiz": [
+            {
+              "question": "Which non-functional tension is especially sharp in a booking system?",
+              "choices": [
+                "Fast, scalable search versus strict correctness so two users cannot book the same room",
+                "Choosing a font for the logo",
+                "Whether the homepage is blue or green",
+                "Whether to use tabs or spaces"
+              ],
+              "correctIndex": 0,
+              "explanation": "Search can often be slightly stale; checkout cannot oversell a room."
+            },
+            {
+              "question": "What are non-functional requirements?",
+              "choices": [
+                "Quality attributes such as latency, availability, and consistency, not the user-facing features themselves",
+                "Only the names of HTTP methods",
+                "The list of hotel photos",
+                "The marketing slogan"
+              ],
+              "correctIndex": 0,
+              "explanation": "Features are functional; SLOs and consistency rules are non-functional."
+            }
+          ],
+          "exercise": {
+            "prompt": "Write one latency target for hotel search and one consistency rule for booking a room. Say whether you would allow slightly stale search results.",
+            "hint": "Search might allow p95 under a few hundred milliseconds and slightly stale availability. Booking must not confirm two guests into the last room."
+          }
+        },
+        {
+          "id": "booking-capacity",
+          "title": "Capacity math and architecture",
+          "startSeconds": 3502,
+          "endSeconds": 4262,
+          "chapters": [
+            {
+              "title": "Capacity Math and Architecture",
+              "startSeconds": 3502
+            }
+          ],
+          "summary": "This chapter does capacity math for listings, searches, and bookings, then sketches an architecture that can hold that load: clients, APIs, a store for inventory and reservations, and usually a separate path for search. The numbers justify why a single database-plus-app-server may not be enough for both exploratory search and transactional booking.",
+          "quiz": [
+            {
+              "question": "Why might search and booking not share a single, naive database path?",
+              "choices": [
+                "Search volume and booking correctness have different needs; a search index plus a transactional store is a common split",
+                "Because hotels are not allowed to use databases",
+                "Because math is forbidden in interviews",
+                "Because APIs cannot talk to two stores"
+              ],
+              "correctIndex": 0,
+              "explanation": "Capacity math often shows search traffic dwarfing bookings, and bookings need stronger consistency."
+            },
+            {
+              "question": "What is the point of doing capacity math before freezing the architecture?",
+              "choices": [
+                "The estimates tell you which bottlenecks and stores you must plan for",
+                "The estimates replace monitoring in production",
+                "The estimates choose the hotel\u2019s star rating",
+                "The estimates are only for typography"
+              ],
+              "correctIndex": 0,
+              "explanation": "You design to an order-of-magnitude load, not to a vague 'lots of users'."
+            }
+          ],
+          "exercise": {
+            "prompt": "Assume 100 million search requests a day and 1 million bookings a day. In one paragraph, say how that ratio should affect your architecture.",
+            "hint": "Search is two orders of magnitude hotter and can often be cached or served from an index. Booking is rarer but must be transactional."
+          }
+        },
+        {
+          "id": "booking-api",
+          "title": "API design and idempotency",
+          "startSeconds": 4262,
+          "endSeconds": 4954,
+          "chapters": [
+            {
+              "title": "API Design and Idempotency",
+              "startSeconds": 4262
+            }
+          ],
+          "summary": "The booking API has to cover search, quoting or reserving, and confirming a payment or reservation. Idempotency is critical: if a client retries a book request after a timeout, the system must not create two reservations or two charges. Idempotency keys or safely retryable operations are the usual tools.",
+          "quiz": [
+            {
+              "question": "Why must a 'create booking' API be idempotent?",
+              "choices": [
+                "Network retries should not reserve the same room or charge the customer twice",
+                "Because HTTP forbids POST",
+                "Because search cannot use GET",
+                "Because idempotency replaces authentication"
+              ],
+              "correctIndex": 0,
+              "explanation": "Clients retry. Without idempotency, a timeout can become a duplicate booking."
+            },
+            {
+              "question": "What is a common way to make a booking request idempotent?",
+              "choices": [
+                "The client sends an idempotency key; the server stores the first result and replays it for repeats of that key",
+                "The server ignores all errors",
+                "The client never retries, even on timeout",
+                "You only allow one user worldwide"
+              ],
+              "correctIndex": 0,
+              "explanation": "That pattern is widely used for payments and reservations."
+            }
+          ],
+          "exercise": {
+            "prompt": "Design a POST /bookings endpoint that accepts an Idempotency-Key header. Describe what the server stores and what it returns on a retry with the same key.",
+            "hint": "Store the key plus the booking id and response. On a repeat key, return the original result, do not create a second booking."
+          }
+        },
+        {
+          "id": "booking-inventory",
+          "title": "Data modeling and inventory logic",
+          "startSeconds": 4954,
+          "endSeconds": 5585,
+          "chapters": [
+            {
+              "title": "Data Modeling and Inventory Logic",
+              "startSeconds": 4954
+            }
+          ],
+          "summary": "Inventory is the heart of a booking system: rooms or rooms-of-a-type, dates, and remaining capacity. The data model has to answer 'is this stay available?' and then hold a reservation. Pricing may be dynamic, but the inventory logic still has to prevent overselling when two requests arrive at once.",
+          "quiz": [
+            {
+              "question": "What does the inventory model primarily have to represent?",
+              "choices": [
+                "What can be booked, for which dates, and how much capacity is left",
+                "Only the hotel\u2019s marketing copy",
+                "Only CDN cache keys",
+                "Only the user\u2019s password hash"
+              ],
+              "correctIndex": 0,
+              "explanation": "Without a clear inventory model, you cannot safely accept a reservation."
+            },
+            {
+              "question": "Why is inventory harder than a simple product stock count?",
+              "choices": [
+                "Availability is often per date range (and room type), not a single integer for all time",
+                "Hotels never have more than one room",
+                "Dates cannot be stored in a database",
+                "Users are not allowed to search"
+              ],
+              "correctIndex": 0,
+              "explanation": "A stay is a range. Overlaps, not just a total count, matter."
+            }
+          ],
+          "exercise": {
+            "prompt": "Draft tables or documents for properties, room types, and inventory-by-date (or a calendar of availability). Write one rule you would use to check a 3-night stay.",
+            "hint": "All three nights must have remaining capacity for that room type, and you will decrement (or attach a reservation) atomically later."
+          }
+        },
+        {
+          "id": "booking-concurrency",
+          "title": "Concurrency and race conditions",
+          "startSeconds": 5585,
+          "endSeconds": 5684,
+          "chapters": [
+            {
+              "title": "Concurrency and Race Conditions",
+              "startSeconds": 5585
+            }
+          ],
+          "summary": "When two guests try to book the last room at the same time, a race can oversell inventory. This short chapter covers transactional safeguards \u2014 such as row locking or a sufficiently strong isolation level \u2014 so only one booking wins and the other is told the room is gone.",
+          "quiz": [
+            {
+              "question": "What goes wrong if two booking requests for the last room are not serialized?",
+              "choices": [
+                "Both can see 'available' and both can succeed, overselling the room",
+                "The website font changes",
+                "DNS stops resolving",
+                "The CDN deletes all images"
+              ],
+              "correctIndex": 0,
+              "explanation": "That is a classic lost-update / race on inventory."
+            },
+            {
+              "question": "Which kind of tool is typically used to prevent that race?",
+              "choices": [
+                "Transactions with locking or a strict isolation level (or an equivalent compare-and-swap) on the inventory record",
+                "A larger CSS file",
+                "Turning off TLS",
+                "More frontend animations"
+              ],
+              "correctIndex": 0,
+              "explanation": "The course highlights transactional safeguards around the critical booking path."
+            }
+          ],
+          "exercise": {
+            "prompt": "Describe in a few sentences how you would implement 'book the last room' safely: begin a transaction, lock or compare the inventory row, decrement or abort, commit.",
+            "hint": "If the remaining count is zero after the lock, return a conflict. Otherwise decrement and write the reservation in the same transaction."
+          }
+        },
+        {
+          "id": "booking-sharding-cache",
+          "title": "Sharding, caching, and scaling",
+          "startSeconds": 5684,
+          "endSeconds": 6041,
+          "chapters": [
+            {
+              "title": "Sharding, Caching and Scaling",
+              "startSeconds": 5684
+            }
+          ],
+          "summary": "As listings and traffic grow, the booking platform may cache popular search results, shard data (for example by region or property), and scale the services independently. Caching is a good fit for search, with care about stale availability; the transactional booking path should not blindly trust a cache as the source of truth for the last room.",
+          "quiz": [
+            {
+              "question": "Where is caching usually safer in this design?",
+              "choices": [
+                "On search and listing pages, with the booking path still checking live inventory",
+                "As the only source of truth for whether the last room is free",
+                "Inside the payment legal contract",
+                "In place of any database"
+              ],
+              "correctIndex": 0,
+              "explanation": "A slightly stale search result is acceptable; a stale 'still available' at checkout is not."
+            },
+            {
+              "question": "What is a reasonable shard key idea for this kind of marketplace?",
+              "choices": [
+                "Geography or property id, so related listings and bookings tend to live together",
+                "A random new shard for every HTTP header",
+                "Sharding only by the user\u2019s favorite color",
+                "One shard per CSS file"
+              ],
+              "correctIndex": 0,
+              "explanation": "A good shard key keeps related data together and spreads load."
+            }
+          ],
+          "exercise": {
+            "prompt": "Write a one-paragraph policy: what you cache, how long, and what the booking transaction always re-checks.",
+            "hint": "Cache search hits and listing details for a short TTL. At booking time, always re-read and lock inventory in the source of truth."
+          }
+        },
+        {
+          "id": "booking-search",
+          "title": "Search at scale (Elasticsearch)",
+          "startSeconds": 6041,
+          "endSeconds": 6319,
+          "chapters": [
+            {
+              "title": "Search at Scale (Elasticsearch)",
+              "startSeconds": 6041
+            }
+          ],
+          "summary": "Hotel search \u2014 filters, geo, full text, faceted results \u2014 is a poor fit for naive queries on the system of record. This chapter looks at a search index (the chapter title uses Elasticsearch) that is built for those queries, while the transactional database remains the source of truth for inventory and bookings. The index can be slightly stale; you have to design how it is updated.",
+          "quiz": [
+            {
+              "question": "Why introduce a search engine such as Elasticsearch here?",
+              "choices": [
+                "It is built for full-text, filter, and geo search at a volume the primary booking database may not serve well",
+                "It replaces the need to store reservations",
+                "It is required to accept payments",
+                "It is a drop-in replacement for TLS"
+              ],
+              "correctIndex": 0,
+              "explanation": "Search workloads and transactional workloads have different shapes."
+            },
+            {
+              "question": "If the search index is slightly behind the booking database, what should still be true?",
+              "choices": [
+                "Checkout re-validates availability against the source of truth",
+                "The index is allowed to confirm a payment",
+                "Stale search results must never be shown, even by one second",
+                "The database can be deleted"
+              ],
+              "correctIndex": 0,
+              "explanation": "Users can see a room that just sold; the booking path must catch that."
+            }
+          ],
+          "exercise": {
+            "prompt": "Describe how a new listing, or a change in availability, would flow from the database into the search index (for example a change event or a periodic reindex), and where you accept lag.",
+            "hint": "Write to the database first, publish a change, update the index asynchronously. Search may lag by seconds; booking does not use the index as truth."
+          }
+        },
+        {
+          "id": "booking-replication",
+          "title": "Replication and global routing",
+          "startSeconds": 6319,
+          "endSeconds": 6645,
+          "chapters": [
+            {
+              "title": "Replication and Global Routing",
+              "startSeconds": 6319
+            }
+          ],
+          "summary": "A global booking site needs a plan for replication and for routing users to a nearby region. Replicas improve read latency and resilience; writes for bookings may still need a carefully chosen primary or a conflict strategy. Global routing (DNS or a global load balancer) should send people to a healthy, close region without breaking the consistency rules you already set.",
+          "quiz": [
+            {
+              "question": "What does replication mainly buy you in this design?",
+              "choices": [
+                "Read scale, a failover path, and often lower read latency in more than one place",
+                "A way to skip authorization",
+                "Automatic correctness of double bookings without transactions",
+                "A replacement for TLS"
+              ],
+              "correctIndex": 0,
+              "explanation": "Copies of the data help reads and disasters; they do not remove the need for a write protocol."
+            },
+            {
+              "question": "Why must global routing respect your write/consistency story?",
+              "choices": [
+                "If a user is routed to a region that cannot safely take a booking write, you can lose or conflict reservations",
+                "Because routing only affects image formats",
+                "Because DNS cannot change after launch",
+                "Because regions never fail"
+              ],
+              "correctIndex": 0,
+              "explanation": "Read-only regions are fine for search; booking writes need the path you designed."
+            }
+          ],
+          "exercise": {
+            "prompt": "Propose a simple global setup: where search reads go, where booking writes go, and what happens if the primary region is down.",
+            "hint": "Local or regional replicas for search; booking writes to a primary (or a well-defined multi-region write protocol); failover only if you can still protect inventory."
+          }
+        }
+      ]
+    },
+    {
+      "id": "whatsapp-like",
+      "title": "System 3 \u2014 messaging (WhatsApp-like)",
+      "lessons": [
+        {
+          "id": "messaging-scale",
+          "title": "Scale estimation",
+          "startSeconds": 6645,
+          "endSeconds": 6998,
+          "chapters": [
+            {
+              "title": "Scale Estimation",
+              "startSeconds": 6645
+            }
+          ],
+          "summary": "The third worked example is a messaging app in the style of WhatsApp. This chapter estimates scale: messages per second, online users, storage growth, and fanout to group chats or multiple devices. Those numbers explain why a naive 'write every message to one database and poll it' design will not hold.",
+          "quiz": [
+            {
+              "question": "Why is scale estimation especially important for a chat system?",
+              "choices": [
+                "Message volume, online connections, and group fanout can dwarf a simple request/response app",
+                "Chat apps never store anything",
+                "Estimates replace the need for an API",
+                "WhatsApp-style apps have no users"
+              ],
+              "correctIndex": 0,
+              "explanation": "Persistent connections and fanout are the expensive parts, not just a few HTTP pages."
+            },
+            {
+              "question": "Which of these would you try to estimate early for a messenger?",
+              "choices": [
+                "Messages per day, peak connections, and storage for message history and media",
+                "Only the app icon size",
+                "Only the number of CSS files",
+                "Only the office coffee budget"
+              ],
+              "correctIndex": 0,
+              "explanation": "Those figures drive connection handling, storage, and later media/CDN choices."
+            }
+          ],
+          "exercise": {
+            "prompt": "Assume 1 billion messages a day, average 200 bytes of text plus some media metadata. Roughly how much raw text storage is that per day, and what question does it raise about retention?",
+            "hint": "1 billion times 200 bytes is about 200 GB/day of text, before indexes and media. You need a retention and cold-storage story."
+          }
+        },
+        {
+          "id": "messaging-realtime",
+          "title": "Architecture and real-time communication",
+          "startSeconds": 6998,
+          "endSeconds": 7624,
+          "chapters": [
+            {
+              "title": "Architecture and Real Time Communication",
+              "startSeconds": 6998
+            }
+          ],
+          "summary": "Chat needs a real-time path, not just request/response polling. This chapter looks at an architecture that keeps connections open \u2014 commonly WebSockets \u2014 so the server can push messages as they arrive, along with the surrounding services that accept, persist, and deliver those messages.",
+          "quiz": [
+            {
+              "question": "Why is a long-lived connection such as a WebSocket a common choice here?",
+              "choices": [
+                "The server can push a new message immediately instead of waiting for the client to poll",
+                "WebSockets are the only protocol that can store messages",
+                "HTTP cannot be used for any login",
+                "WebSockets replace the database"
+              ],
+              "correctIndex": 0,
+              "explanation": "Polling is simpler but wasteful and slower for interactive chat."
+            },
+            {
+              "question": "What still has to happen besides opening a WebSocket?",
+              "choices": [
+                "Messages must be accepted, persisted, and delivered (including when a user is briefly offline)",
+                "Nothing; the socket alone is a complete system",
+                "You must disable all authentication",
+                "You must store every message in DNS"
+              ],
+              "correctIndex": 0,
+              "explanation": "Real-time transport is one piece; durability and offline delivery are the others."
+            }
+          ],
+          "exercise": {
+            "prompt": "Sketch components for: client connections (WebSocket gateway), a message service, and a store. Draw the path of a message from A to an online user B.",
+            "hint": "A to gateway to message service, persist, look up B\u2019s connection, then push over B\u2019s WebSocket."
+          }
+        },
+        {
+          "id": "messaging-data-api",
+          "title": "Data modeling and API flows",
+          "startSeconds": 7624,
+          "endSeconds": 7990,
+          "chapters": [
+            {
+              "title": "Data Modeling and API Flows",
+              "startSeconds": 7624
+            }
+          ],
+          "summary": "This chapter covers the data model and API flows for chats, messages, and delivery: conversation ids, senders, timestamps, and delivery or read state. The APIs need a send path, a history path (to catch up), and a way to acknowledge delivery, not only a live push.",
+          "quiz": [
+            {
+              "question": "Besides 'send message', which API does a messenger almost always need?",
+              "choices": [
+                "A history or catch-up API so a client can load missed messages",
+                "An API to recompile the server from the phone",
+                "An API that deletes the company\u2019s backups nightly without auth",
+                "An API to change DNS from the chat window"
+              ],
+              "correctIndex": 0,
+              "explanation": "Users open the app after being offline; they need inbox and history, not only the live socket."
+            },
+            {
+              "question": "Which fields would you expect on a stored message?",
+              "choices": [
+                "A conversation or thread id, sender, timestamp, payload, and often a delivery state",
+                "Only a CSS class name",
+                "Only the recipient\u2019s favorite color",
+                "Only a load-balancer score"
+              ],
+              "correctIndex": 0,
+              "explanation": "Those fields support history, ordering, and delivered or read states."
+            }
+          ],
+          "exercise": {
+            "prompt": "Draft a messages table and two APIs: send a message, and list the latest messages in a chat (paged). Note how you would order them.",
+            "hint": "Columns: id, chat_id, sender_id, body, created_at, status. GET /chats/{id}/messages?before=&limit= ordered by time descending."
+          }
+        },
+        {
+          "id": "messaging-sync",
+          "title": "Multi-device sync and offline delivery",
+          "startSeconds": 7990,
+          "endSeconds": 8557,
+          "chapters": [
+            {
+              "title": "Multi Device Sync and Offline Delivery",
+              "startSeconds": 7990
+            }
+          ],
+          "summary": "People read the same chat on a phone and a laptop, and they go offline. This chapter covers syncing message state across devices and holding messages for later delivery \u2014 an offline inbox \u2014 so a message is not lost if the recipient\u2019s socket is down. Conflicts and read-state sync across devices are part of the same problem.",
+          "quiz": [
+            {
+              "question": "What is an offline inbox for?",
+              "choices": [
+                "Holding messages until a device comes back online and can receive them",
+                "Storing only marketing email",
+                "Replacing encryption",
+                "Load-balancing TLS certificates"
+              ],
+              "correctIndex": 0,
+              "explanation": "Delivery has to survive disconnects, not only happy-path sockets."
+            },
+            {
+              "question": "Why is multi-device sync harder than a single-device chat?",
+              "choices": [
+                "Each device needs the history and status (delivered, read) without inventing conflicting state",
+                "Phones cannot use WebSockets",
+                "Laptops cannot store a token",
+                "APIs allow only one user worldwide"
+              ],
+              "correctIndex": 0,
+              "explanation": "A read on the phone should eventually show as read on the desktop."
+            }
+          ],
+          "exercise": {
+            "prompt": "Describe how you would deliver a message to a user with two devices if only one is online, and what happens when the second device opens the app.",
+            "hint": "Push to the online device immediately; keep the message in a per-user inbox or log; the second device fetches catch-up (and maybe a push if it comes online later)."
+          }
+        },
+        {
+          "id": "messaging-media",
+          "title": "Fanout, media storage, and CDN delivery",
+          "startSeconds": 8557,
+          "endSeconds": 9104,
+          "chapters": [
+            {
+              "title": "Fanout, Media Storage and CDN Delivery",
+              "startSeconds": 8557
+            }
+          ],
+          "summary": "Group chats require fanout: one send becomes many deliveries. Media (images, audio, video) should live in object storage and usually be served via a CDN, similar to the streaming example, rather than through the chat servers. The chapter connects those two ideas: fan out a reference to the media, and let the clients fetch the heavy bytes efficiently.",
+          "quiz": [
+            {
+              "question": "What does fanout mean in a group chat?",
+              "choices": [
+                "Turning one outgoing message into deliveries for each member (or each of their devices)",
+                "Compressing JPEGs only",
+                "Deleting the group after one message",
+                "Running the API on the sender\u2019s phone only"
+              ],
+              "correctIndex": 0,
+              "explanation": "A group of 100 members is 100 inboxes or sockets, not one write."
+            },
+            {
+              "question": "Where should large chat media usually be stored and served from?",
+              "choices": [
+                "Object storage, often in front of a CDN, with the chat message storing a reference",
+                "Inside every WebSocket frame as the only copy, with no persistence",
+                "In DNS",
+                "In a CSS stylesheet"
+              ],
+              "correctIndex": 0,
+              "explanation": "The message payload points at the object; the CDN helps with download scale."
+            }
+          ],
+          "exercise": {
+            "prompt": "Write the steps to send a photo to a group of 50: upload media, get a URL, send a message with that URL, fan out to members, members download via CDN.",
+            "hint": "Upload first (maybe a pre-signed URL). Persist the message once. Fanout notifications, not 50 copies of the file, to the members."
+          }
+        },
+        {
+          "id": "messaging-events",
+          "title": "Event-driven architecture and batch processing",
+          "startSeconds": 9104,
+          "endSeconds": 9558,
+          "chapters": [
+            {
+              "title": "Event Driven Architecture and Batch Processing",
+              "startSeconds": 9104
+            }
+          ],
+          "summary": "Once message traffic is large, a lot of work is better done as events and background jobs rather than in the request path: notifications, index updates, analytics, cleanup. This chapter looks at event-driven architecture and batch processing so the live send path stays thin, with queues and later consumers doing the heavy or deferrable work.",
+          "quiz": [
+            {
+              "question": "Why push some work to events or batch jobs in a messenger?",
+              "choices": [
+                "So the live send path stays fast, while notifications, analytics, or cleanup run asynchronously",
+                "Because queues replace the need to persist messages",
+                "Because events cannot fail",
+                "Because batch jobs are the only way to open a WebSocket"
+              ],
+              "correctIndex": 0,
+              "explanation": "The user-facing send should not wait on every side effect."
+            },
+            {
+              "question": "What is a reasonable example of batch processing in this system?",
+              "choices": [
+                "A nightly (or periodic) job to expire old messages or aggregate usage metrics",
+                "Hand-writing every push notification in a spreadsheet each morning",
+                "Compiling the iOS app on each message",
+                "Restarting DNS every second"
+              ],
+              "correctIndex": 0,
+              "explanation": "Cleanup and aggregation are classic batch tasks named later in the course as well."
+            }
+          ],
+          "exercise": {
+            "prompt": "List three side effects of 'message sent' that you would handle with a queue rather than in the WebSocket handler, and one that must stay on the hot path.",
+            "hint": "Hot path: persist the message and deliver to online sockets. Async: email/push notifications, search indexing, analytics."
+          }
+        },
+        {
+          "id": "messaging-security",
+          "title": "Encryption and rate limiting",
+          "startSeconds": 9558,
+          "endSeconds": 10185,
+          "chapters": [
+            {
+              "title": "Encryption and Rate Limiting",
+              "startSeconds": 9558
+            }
+          ],
+          "summary": "Messaging systems handle sensitive content and are easy to abuse. This chapter covers encryption (in transit, and often at rest or end-to-end depending on the product promise) and rate limiting so a single user or bot cannot flood the system or another person. Both are part of a production-quality design, not optional decorations.",
+          "quiz": [
+            {
+              "question": "Why is rate limiting important on a chat send path?",
+              "choices": [
+                "It limits flooding, spam, and resource exhaustion from one client",
+                "It makes encryption unnecessary",
+                "It replaces offline inboxes",
+                "It is only used for image thumbnails"
+              ],
+              "correctIndex": 0,
+              "explanation": "Without limits, one tight loop can overwhelm fanout and storage."
+            },
+            {
+              "question": "What does encryption in transit protect?",
+              "choices": [
+                "Messages as they travel between client and server (or between services) from being read or altered on the path",
+                "Only the company blog",
+                "Only disk sector numbers",
+                "Only load-balancer logos"
+              ],
+              "correctIndex": 0,
+              "explanation": "TLS is the usual baseline. Some messengers also offer end-to-end encryption as a product feature."
+            }
+          ],
+          "exercise": {
+            "prompt": "Propose a simple rate limit for sending messages (for example N per second per user) and say what error you would return. Also name where TLS would be used.",
+            "hint": "For example 20 messages/second/user, then HTTP 429 or an equivalent chat error. TLS on client-to-gateway and between internal services."
+          }
+        },
+        {
+          "id": "messaging-sharding-cleanup",
+          "title": "Sharding and cleanup jobs",
+          "startSeconds": 10185,
+          "endSeconds": 10673,
+          "chapters": [
+            {
+              "title": "Sharding and Cleanup Jobs",
+              "startSeconds": 10185
+            }
+          ],
+          "summary": "Message history does not fit forever on one box. This chapter looks at sharding the data (for example by chat or by user) and at cleanup jobs that expire or archive old messages, media, and leftover inbox state. Together they keep storage growth and operational cost under control.",
+          "quiz": [
+            {
+              "question": "What is a plausible shard key for chat history?",
+              "choices": [
+                "Chat or conversation id (or user id), so a conversation\u2019s messages tend to sit on one shard",
+                "A new random shard for every character in the message",
+                "The current minute of the wall clock only, with no other key",
+                "The CDN POP name"
+              ],
+              "correctIndex": 0,
+              "explanation": "You want a key that keeps a thread together and spreads many threads across shards."
+            },
+            {
+              "question": "What are cleanup jobs for in this design?",
+              "choices": [
+                "Expiring or archiving old messages, media, and stale inbox data so storage does not grow without bound",
+                "Restarting the user\u2019s phone",
+                "Choosing a load-balancing algorithm each morning",
+                "Replacing TLS certificates with plaintext"
+              ],
+              "correctIndex": 0,
+              "explanation": "Retention policies are enforced by background work, not by the send path."
+            }
+          ],
+          "exercise": {
+            "prompt": "Write a short retention policy (for example, media after 1 year, text after 3) and say which job would enforce it, on which shard.",
+            "hint": "A per-shard scheduled job deletes or archives rows older than the policy, and also removes the object-storage media."
+          }
+        },
+        {
+          "id": "messaging-failure",
+          "title": "Failure handling and global scaling",
+          "startSeconds": 10673,
+          "endSeconds": 11348,
+          "chapters": [
+            {
+              "title": "Failure Handling and Global Scaling",
+              "startSeconds": 10673
+            }
+          ],
+          "summary": "Things will fail: sockets drop, queues back up, a cache or a region goes down. This chapter covers failure handling \u2014 retries, dead-letter queues, fallbacks so messages are not lost \u2014 and scaling the system across regions so users worldwide still get a reliable service. The design should say what happens when a dependency is unavailable, not only when everything is healthy.",
+          "quiz": [
+            {
+              "question": "What is a dead-letter queue used for?",
+              "choices": [
+                "Holding events or messages that failed processing, so they can be inspected and retried without blocking the main path",
+                "Storing only emoji",
+                "Terminating TLS",
+                "Choosing a font"
+              ],
+              "correctIndex": 0,
+              "explanation": "Retries with a DLQ are a standard way to handle poison or failing consumers."
+            },
+            {
+              "question": "If a cache or a queue is down, what should a messaging design still try to protect?",
+              "choices": [
+                "That accepted messages are not lost, even if some side features degrade",
+                "That the marketing homepage stays animated",
+                "That logs are never written",
+                "That all devices must be offline"
+              ],
+              "correctIndex": 0,
+              "explanation": "The course emphasizes durable persistence and fallbacks so a cache outage does not drop chat."
+            }
+          ],
+          "exercise": {
+            "prompt": "Write a failure card for 'queue consumer is down': where messages sit, how they retry, when they go to a dead-letter queue, and what the user still sees.",
+            "hint": "Persist first, then enqueue. If the consumer is down, messages wait in the queue. After N failures, move to a DLQ and alert. Online push may lag; history should still load from the store."
+          }
+        },
+        {
+          "id": "feature-flags",
+          "title": "Feature flags and rollouts",
+          "startSeconds": 11348,
+          "endSeconds": 11474,
+          "chapters": [
+            {
+              "title": "Feature Flags and Rollouts",
+              "startSeconds": 11348
+            }
+          ],
+          "summary": "The last production topic in the messaging example is how to ship changes safely: feature flags and gradual rollouts. You can enable a new path for a small percentage of users or a single region, watch the metrics, and roll back without a full binary revert. That is how large systems change without betting the entire fleet at once.",
+          "quiz": [
+            {
+              "question": "What is a feature flag for in a production rollout?",
+              "choices": [
+                "Turning a new path on for some users or regions so you can watch it and roll back quickly",
+                "Encrypting a database automatically",
+                "Naming the load balancer",
+                "Choosing TCP or UDP once for all time"
+              ],
+              "correctIndex": 0,
+              "explanation": "Flags separate deploy (shipping code) from release (exposing the feature)."
+            },
+            {
+              "question": "Why use a gradual rollout instead of enabling a risky change for everyone at once?",
+              "choices": [
+                "Blast radius stays small if the change misbehaves, and you can stop the rollout",
+                "Because flags make capacity planning unnecessary",
+                "Because interviews forbid monitoring",
+                "Because region-by-region deploys are illegal"
+              ],
+              "correctIndex": 0,
+              "explanation": "A 1% or one-region launch is much easier to recover from than a fleet-wide incident."
+            }
+          ],
+          "exercise": {
+            "prompt": "Describe a rollout plan for a new fanout algorithm: 1% of users, then one region, then everyone, with one metric you would watch and a rollback rule.",
+            "hint": "Watch send latency, error rate, and delivery lag. If they breach an SLO, flip the flag off."
+          }
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "Getting better",
+      "lessons": [
+        {
+          "id": "get-better",
+          "title": "How to actually get better",
+          "startSeconds": 11474,
+          "endSeconds": 11808,
+          "chapters": [
+            {
+              "title": "How to Actually Get Better",
+              "startSeconds": 11474
+            }
+          ],
+          "summary": "The closing chapter is about practice: you get better at system design by repeating the framework on real prompts, starting simple, naming bottlenecks, and talking through trade-offs out loud \u2014 not by memorizing one diagram. The three worked examples are a template you can reuse on new problems.",
+          "quiz": [
+            {
+              "question": "According to the close of this course, how do you actually get better at system design?",
+              "choices": [
+                "By practicing the framework on real problems, starting simple and discussing trade-offs, not by memorizing a single canonical diagram",
+                "By reading only product marketing pages",
+                "By avoiding any estimation",
+                "By never drawing a diagram"
+              ],
+              "correctIndex": 0,
+              "explanation": "The course\u2019s own examples are meant to be a reusable method, not a script to recast on every prompt."
+            },
+            {
+              "question": "What should you do first when you practice a new prompt?",
+              "choices": [
+                "Clarify requirements and sketch a simple design, then add components when a bottleneck appears",
+                "List every vendor product you have heard of, in alphabetical order",
+                "Write a complete compiler",
+                "Skip requirements and jump to multi-region failover"
+              ],
+              "correctIndex": 0,
+              "explanation": "That is the same method used for the Spotify, Booking.com, and WhatsApp-style walks."
+            }
+          ],
+          "exercise": {
+            "prompt": "Pick a new prompt (for example a URL shortener or a news feed). Spend ten minutes applying the five-step framework on paper, and note one trade-off you would say out loud.",
+            "hint": "Requirements, data/API, high-level design, scale and failure, then trade-offs. Keep v1 simple."
+          }
+        }
+      ]
+    }
+  ]
+}

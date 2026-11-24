@@ -27,7 +27,7 @@ Progress (completed lessons and quiz scores) is stored in your browser’s `loca
 
 ## Sample courses
 
-Both starter courses are based on freeCodeCamp.org YouTube videos. Lesson summaries are written from public chapter timestamps and the official descriptions, not from a transcript.
+These courses are based on freeCodeCamp.org YouTube videos. Each lesson page says whether its summary was written from a transcript or from public chapter titles and the official description.
 
 1. **Learn JavaScript - Full Course for Beginners** by Beau Carnes  
    https://www.youtube.com/watch?v=PkZNo7MFNFg  
@@ -36,6 +36,14 @@ Both starter courses are based on freeCodeCamp.org YouTube videos. Lesson summar
 2. **System Design Concepts Course and Interview Prep** by Hayk Simonyan  
    https://www.youtube.com/watch?v=F2FmTdLtb_4  
    All 11 official YouTube chapters are included as lessons, grouped into modules.
+
+3. **System Design Course – APIs, Databases, Caching, CDNs, Load Balancing & Production Infra** by Hayk Simonyan  
+   https://www.youtube.com/watch?v=C842vFY5kRo  
+   All 15 public course-contents chapters are included as lessons, grouped into modules.
+
+4. **Design Software Systems Like a Senior Engineer – Complete Course** by Hayk Simonyan  
+   https://www.youtube.com/watch?v=soTfFFIQQ8U  
+   All 28 public description timestamps are included as lessons, grouped into modules.
 
 ## How to add a course
 
@@ -52,6 +60,7 @@ Both starter courses are based on freeCodeCamp.org YouTube videos. Lesson summar
 
    - `id` — must match the filename (without `.json`)
    - `title`, `description`, `level`, `thumbnailUrl`
+   - `summarySource` — `chapters-and-description` or `transcript`
    - `source` — freeCodeCamp credit and YouTube metadata (`name`, `channelUrl`, `creator`, `videoTitle`, `videoId`, `videoUrl`, `duration`, `durationSeconds`)
    - `modules[]` — each with `id`, `title`, and `lessons[]`
    - each lesson: `id`, `title`, `startSeconds`, `endSeconds`, `chapters`, `summary`, `quiz`, and `exercise`
@@ -59,3 +68,8 @@ Both starter courses are based on freeCodeCamp.org YouTube videos. Lesson summar
 The lesson player starts at `startSeconds` and stops at `endSeconds` using the YouTube embed `start` and `end` parameters. Link the original video with `https://www.youtube.com/watch?v=VIDEO_ID&t=SECONDSs`.
 
 Do not download or check in video files. Only store metadata, text, and YouTube ids.
+
+## Security
+
+This repository has Dependabot alerts and Dependabot security updates enabled, plus GitHub secret scanning with push protection. Weekly Dependabot version updates for the npm and GitHub Actions ecosystems are configured in `.github/dependabot.yml`. Do not commit secrets, `.env` files, or private keys.
+
