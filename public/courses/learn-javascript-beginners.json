@@ -1,0 +1,1886 @@
+{
+  "id": "learn-javascript-beginners",
+  "title": "Learn JavaScript \u2014 Full Course for Beginners",
+  "description": "A structured path through freeCodeCamp\u2019s beginner JavaScript video with Beau Carnes. Watch each chapter in the original YouTube video, then use the summary, quiz, and exercise to lock in the idea. The official listing describes this as a complete 134-part tutorial; this course uses the 100 chapter timestamps published in the video\u2019s course contents.",
+  "level": "Beginner",
+  "source": {
+    "name": "freeCodeCamp.org",
+    "channelUrl": "https://www.youtube.com/@freecodecamp",
+    "creator": "Beau Carnes",
+    "videoTitle": "Learn JavaScript - Full Course for Beginners",
+    "videoId": "PkZNo7MFNFg",
+    "videoUrl": "https://www.youtube.com/watch?v=PkZNo7MFNFg",
+    "duration": "3:26:43",
+    "durationSeconds": 12403
+  },
+  "thumbnailUrl": "https://i.ytimg.com/vi/PkZNo7MFNFg/hqdefault.jpg",
+  "modules": [
+    {
+      "id": "getting-started",
+      "title": "Getting started",
+      "lessons": [
+        {
+          "id": "introduction",
+          "title": "Introduction",
+          "startSeconds": 0,
+          "endSeconds": 84,
+          "chapters": [
+            {
+              "title": "Introduction",
+              "startSeconds": 0
+            }
+          ],
+          "summary": "Beau Carnes of freeCodeCamp.org introduces this beginner JavaScript course. It is a standalone video that also follows the freeCodeCamp JavaScript curriculum, so you can optionally practice with the matching challenges after watching. The course is aimed at people who are new to JavaScript or want a syntax refresher before building their own projects.",
+          "quiz": [
+            {
+              "question": "Who created this freeCodeCamp course?",
+              "choices": [
+                "Beau Carnes",
+                "Quincy Larson",
+                "Brad Traversy",
+                "Mike Dane"
+              ],
+              "correctIndex": 0,
+              "explanation": "The video description and opening credits name Beau Carnes (@beau) as the course creator."
+            },
+            {
+              "question": "Does this video require you to use the freeCodeCamp curriculum?",
+              "choices": [
+                "Yes, the video only works with a freeCodeCamp account",
+                "No. It is a stand-alone course, and the curriculum is optional practice",
+                "Yes, you must finish HTML and CSS certifications first",
+                "No, but you must buy Scrimba to follow along"
+              ],
+              "correctIndex": 1,
+              "explanation": "The official description says the video is stand-alone and follows the freeCodeCamp curriculum as optional extra practice."
+            }
+          ],
+          "exercise": {
+            "prompt": "Write one sentence about why you want to learn JavaScript, then list one small project you would like to build after this course.",
+            "hint": "Keep it concrete, such as a tip calculator, a quiz, or a personal homepage script."
+          }
+        },
+        {
+          "id": "running-javascript",
+          "title": "Running JavaScript",
+          "startSeconds": 84,
+          "endSeconds": 263,
+          "chapters": [
+            {
+              "title": "Running JavaScript",
+              "startSeconds": 84
+            }
+          ],
+          "summary": "This chapter shows how you can run JavaScript: in a browser console, in a code editor setup, or in an in-browser playground. The goal is simply to get a first snippet of JavaScript to execute so the rest of the course can focus on language syntax rather than tooling.",
+          "quiz": [
+            {
+              "question": "Where can you run JavaScript while following a beginner course like this?",
+              "choices": [
+                "Only on a physical server you install yourself",
+                "In a browser console, a local editor, or an in-browser playground",
+                "Only after compiling it to Java",
+                "Only inside a Python interpreter"
+              ],
+              "correctIndex": 1,
+              "explanation": "JavaScript runs in browsers and in many lightweight editors and playgrounds, which is why it is approachable for beginners."
+            },
+            {
+              "question": "What is the usual first goal when setting up to learn JavaScript?",
+              "choices": [
+                "Deploying a production website",
+                "Getting a short snippet to execute so you can see results immediately",
+                "Memorizing every browser API",
+                "Installing a database"
+              ],
+              "correctIndex": 1,
+              "explanation": "The chapter is about running code so you can try each later topic as you watch."
+            }
+          ],
+          "exercise": {
+            "prompt": "Open your browser\u2019s developer console and run: console.log('Hello, JavaScript'); Confirm that the message appears.",
+            "hint": "On most desktops, F12 or right-click the page and choose Inspect, then open the Console tab."
+          }
+        },
+        {
+          "id": "comment-your-code",
+          "title": "Comment your code",
+          "startSeconds": 263,
+          "endSeconds": 356,
+          "chapters": [
+            {
+              "title": "Comment Your Code",
+              "startSeconds": 263
+            }
+          ],
+          "summary": "Comments let you leave notes in source code that JavaScript ignores when it runs. You will use single-line comments with // and multi-line comments with /* ... */ to explain intent or temporarily disable a line while you experiment.",
+          "quiz": [
+            {
+              "question": "Which of these is a valid single-line JavaScript comment?",
+              "choices": [
+                "# this is a comment",
+                "-- this is a comment",
+                "// this is a comment",
+                "<!-- this is a comment -->"
+              ],
+              "correctIndex": 2,
+              "explanation": "JavaScript uses // for single-line comments, not the # or -- styles from other languages."
+            },
+            {
+              "question": "What happens to comments when JavaScript runs your program?",
+              "choices": [
+                "They are printed to the screen",
+                "They are ignored at runtime",
+                "They become variable names",
+                "They throw a syntax error unless deleted"
+              ],
+              "correctIndex": 1,
+              "explanation": "Comments are for humans; the engine skips them when executing code."
+            }
+          ],
+          "exercise": {
+            "prompt": "Write a short script with one single-line comment and one multi-line comment, plus a console.log after them.",
+            "hint": "Use // for one line and wrap several lines in /* and */."
+          }
+        }
+      ]
+    },
+    {
+      "id": "variables",
+      "title": "Variables",
+      "lessons": [
+        {
+          "id": "declaring-variables",
+          "title": "Declaring and assigning variables",
+          "startSeconds": 356,
+          "endSeconds": 845,
+          "chapters": [
+            {
+              "title": "Declare Variables",
+              "startSeconds": 356
+            },
+            {
+              "title": "Storing Values with the Assignment Operator",
+              "startSeconds": 375
+            },
+            {
+              "title": "Initializing Variables with the Assignment Operator",
+              "startSeconds": 691
+            },
+            {
+              "title": "Uninitialized Variables",
+              "startSeconds": 718
+            },
+            {
+              "title": "Case Sensitivity in Variables",
+              "startSeconds": 760
+            }
+          ],
+          "summary": "These chapters introduce var (the keyword used in the basic part of this course), the assignment operator =, and the difference between declaring a variable, initializing it in one step, and leaving it uninitialized (which gives undefined). Variable names are case-sensitive, so myVar and myvar are different identifiers.",
+          "quiz": [
+            {
+              "question": "What value does an uninitialized variable typically hold?",
+              "choices": [
+                "0",
+                "null",
+                "undefined",
+                "false"
+              ],
+              "correctIndex": 2,
+              "explanation": "A declared but unassigned var is undefined until you store a value in it."
+            },
+            {
+              "question": "Which statement is true about JavaScript variable names?",
+              "choices": [
+                "myVar and myvar refer to the same variable",
+                "Names are case-sensitive, so myVar and myvar are different",
+                "Variable names cannot contain capital letters",
+                "You must start every name with a dollar sign"
+              ],
+              "correctIndex": 1,
+              "explanation": "JavaScript identifiers are case-sensitive."
+            },
+            {
+              "question": "What does the = operator do in this part of the course?",
+              "choices": [
+                "It compares two values for equality",
+                "It assigns a value to a variable",
+                "It creates a constant that can never change",
+                "It concatenates two numbers"
+              ],
+              "correctIndex": 1,
+              "explanation": "A single equals sign is assignment. Equality comparisons are introduced later with == and ===."
+            }
+          ],
+          "exercise": {
+            "prompt": "Declare a variable, assign it a value on a later line, then declare and initialize a second variable in one statement. Log both.",
+            "hint": "var a; a = 5; var b = 10;"
+          }
+        }
+      ]
+    },
+    {
+      "id": "numbers",
+      "title": "Numbers and math",
+      "lessons": [
+        {
+          "id": "numbers-and-math",
+          "title": "Numbers, math, and operators",
+          "startSeconds": 845,
+          "endSeconds": 1279,
+          "chapters": [
+            {
+              "title": "Basic Math",
+              "startSeconds": 845
+            },
+            {
+              "title": "Increment and Decrement",
+              "startSeconds": 930
+            },
+            {
+              "title": "Decimal Numbers",
+              "startSeconds": 982
+            },
+            {
+              "title": "Multiply Two Decimals",
+              "startSeconds": 1008
+            },
+            {
+              "title": "Divide Decimals",
+              "startSeconds": 1038
+            },
+            {
+              "title": "Finding a Remainder",
+              "startSeconds": 1053
+            },
+            {
+              "title": "Augmented Math Operations",
+              "startSeconds": 1102
+            }
+          ],
+          "summary": "JavaScript uses the familiar arithmetic operators +, -, *, and /. Increment (++) and decrement (--) add or subtract one. Decimals (floating-point numbers) use the same operators. The remainder operator % gives the leftover after division, and augmented operators such as +=, -=, *=, and /= update a variable in place.",
+          "quiz": [
+            {
+              "question": "What is 11 % 3 in JavaScript?",
+              "choices": [
+                "3.66",
+                "3",
+                "2",
+                "0"
+              ],
+              "correctIndex": 2,
+              "explanation": "3 goes into 11 three times (9), leaving a remainder of 2."
+            },
+            {
+              "question": "After let n = 4; n++; what is n?",
+              "choices": [
+                "3",
+                "4",
+                "5",
+                "undefined"
+              ],
+              "correctIndex": 2,
+              "explanation": "The increment operator adds one to the variable."
+            },
+            {
+              "question": "Which line adds 10 to a variable named score using an augmented operator?",
+              "choices": [
+                "score == 10;",
+                "score =+ 10;",
+                "score += 10;",
+                "score ++ 10;"
+              ],
+              "correctIndex": 2,
+              "explanation": "+= adds the right-hand value to the variable and stores the result."
+            }
+          ],
+          "exercise": {
+            "prompt": "Create a variable total = 10. Use augmented operators to add 5, multiply by 2, and then find total % 7. Log the final value.",
+            "hint": "The result should be 2, because (10 + 5) * 2 is 30, and 30 % 7 is 2."
+          }
+        }
+      ]
+    },
+    {
+      "id": "strings",
+      "title": "Strings",
+      "lessons": [
+        {
+          "id": "creating-strings",
+          "title": "Creating and escaping strings",
+          "startSeconds": 1279,
+          "endSeconds": 1606,
+          "chapters": [
+            {
+              "title": "Declare String Variables",
+              "startSeconds": 1279
+            },
+            {
+              "title": "Escaping Literal Quotes",
+              "startSeconds": 1321
+            },
+            {
+              "title": "Quoting Strings with Single Quotes",
+              "startSeconds": 1424
+            },
+            {
+              "title": "Escape Sequences",
+              "startSeconds": 1518
+            }
+          ],
+          "summary": "Strings hold text and can be written with double or single quotes. If the string itself contains the same quote character, you can escape it with a backslash or wrap the string in the other quote style. Escape sequences such as \\n (newline) and \\t (tab) let you include special characters in a string.",
+          "quiz": [
+            {
+              "question": "Which string correctly includes double quotes inside it?",
+              "choices": [
+                "\"He said \"hello\"\"",
+                "\"He said \\\"hello\\\"\"",
+                "\"He said /\"hello/\"\"",
+                "He said \"hello\""
+              ],
+              "correctIndex": 1,
+              "explanation": "A backslash before a quote tells JavaScript the quote is part of the string, not the end of it."
+            },
+            {
+              "question": "What does the escape sequence \\n represent?",
+              "choices": [
+                "A tab",
+                "A newline",
+                "A literal letter n",
+                "A null character"
+              ],
+              "correctIndex": 1,
+              "explanation": "\\n inserts a line break in the string."
+            }
+          ],
+          "exercise": {
+            "prompt": "Create a string that prints two lines of text, with the second line indented by a tab, using escape sequences.",
+            "hint": "Try: console.log('Line 1\\n\\tLine 2');"
+          }
+        },
+        {
+          "id": "combining-strings",
+          "title": "Combining strings",
+          "startSeconds": 1606,
+          "endSeconds": 1871,
+          "chapters": [
+            {
+              "title": "Plus Operator",
+              "startSeconds": 1606
+            },
+            {
+              "title": "Plus Equals Operator",
+              "startSeconds": 1669
+            },
+            {
+              "title": "Constructing Strings with Variables",
+              "startSeconds": 1741
+            },
+            {
+              "title": "Appending Variables to Strings",
+              "startSeconds": 1814
+            }
+          ],
+          "summary": "The + operator concatenates strings, and += appends to an existing string variable. You can build a sentence by inserting variables into a larger string, or append a variable\u2019s contents onto a string you already have.",
+          "quiz": [
+            {
+              "question": "What is the result of 'Hello, ' + 'world!'?",
+              "choices": [
+                "Hello, world!",
+                "Hello,world!",
+                "Hello + world!",
+                "TypeError"
+              ],
+              "correctIndex": 0,
+              "explanation": "The + operator joins the two strings, including the space already in the first one."
+            },
+            {
+              "question": "If word is 'code', what does message += word do when message is 'I like '?",
+              "choices": [
+                "Replaces message with 'code'",
+                "Appends 'code' so message becomes 'I like code'",
+                "Subtracts the letters in word",
+                "Creates a new variable named word"
+              ],
+              "correctIndex": 1,
+              "explanation": "+= on strings appends the right-hand value to the existing string."
+            }
+          ],
+          "exercise": {
+            "prompt": "Build a sentence from three variables (noun, verb, and adjective) using concatenation or +=, then log it.",
+            "hint": "Start with an empty string or a stub like 'The ' and append each piece plus spaces and punctuation."
+          }
+        },
+        {
+          "id": "string-characters",
+          "title": "String length and characters",
+          "startSeconds": 1871,
+          "endSeconds": 2188,
+          "chapters": [
+            {
+              "title": "Length of a String",
+              "startSeconds": 1871
+            },
+            {
+              "title": "Bracket Notation",
+              "startSeconds": 6693
+            },
+            {
+              "title": "Understand String Immutability",
+              "startSeconds": 2007
+            },
+            {
+              "title": "Find the Nth Character",
+              "startSeconds": 2063
+            }
+          ],
+          "summary": "Every string has a .length property. Bracket notation, such as word[0], reads a character by zero-based index. The last character is at index length - 1. Strings are immutable, so you cannot assign a new character into an index; you create a new string instead. The same idea lets you read the Nth character, including the last one.",
+          "quiz": [
+            {
+              "question": "What is 'JavaScript'.length?",
+              "choices": [
+                "9",
+                "10",
+                "11",
+                "undefined"
+              ],
+              "correctIndex": 1,
+              "explanation": "J-a-v-a-S-c-r-i-p-t is 10 characters."
+            },
+            {
+              "question": "If let word = 'cat'; why does word[0] = 'b' not change word to 'bat'?",
+              "choices": [
+                "Because indexes start at 1",
+                "Because strings are immutable",
+                "Because cat is a reserved word",
+                "Because you must use .charAt only"
+              ],
+              "correctIndex": 1,
+              "explanation": "You cannot mutate a character in place; you would assign a whole new string to word."
+            },
+            {
+              "question": "How do you read the last character of a string named text?",
+              "choices": [
+                "text[text.length]",
+                "text[text.length - 1]",
+                "text[-1]",
+                "text.last"
+              ],
+              "correctIndex": 1,
+              "explanation": "Indexes are zero-based, so the last character sits at length minus one."
+            }
+          ],
+          "exercise": {
+            "prompt": "Write a function firstAndLast(text) that returns the first and last characters joined together. For 'JavaScript' it should return 'Jt'.",
+            "hint": "Return text[0] + text[text.length - 1], and decide what to do with an empty string."
+          }
+        },
+        {
+          "id": "word-blanks",
+          "title": "Word blanks",
+          "startSeconds": 2188,
+          "endSeconds": 2444,
+          "chapters": [
+            {
+              "title": "Word Blanks",
+              "startSeconds": 2188
+            }
+          ],
+          "summary": "This practice challenge builds a Mad Libs-style sentence. You store words in variables and concatenate them with the rest of a sentence so the result still reads like English. It is a chance to combine the string skills from the previous lessons.",
+          "quiz": [
+            {
+              "question": "What skill is the Word Blanks exercise mainly practicing?",
+              "choices": [
+                "Writing loops",
+                "Building a sentence by concatenating variables and strings",
+                "Creating objects",
+                "Importing modules"
+              ],
+              "correctIndex": 1,
+              "explanation": "The challenge asks you to insert noun, verb, and similar variables into a template sentence."
+            },
+            {
+              "question": "Why do spaces matter when you concatenate words into a sentence?",
+              "choices": [
+                "JavaScript inserts spaces automatically",
+                "You must include spaces in your strings or words will stick together",
+                "Spaces are not allowed in strings",
+                "Spaces convert strings into numbers"
+              ],
+              "correctIndex": 1,
+              "explanation": "Concatenation does not add spaces for you."
+            }
+          ],
+          "exercise": {
+            "prompt": "Write a function wordBlanks(noun, adjective, verb, adverb) that returns a complete sentence using all four words, with correct spaces.",
+            "hint": "Something like: 'The ' + adjective + ' ' + noun + ' ' + verb + ' ' + adverb + '.'"
+          }
+        }
+      ]
+    },
+    {
+      "id": "arrays",
+      "title": "Arrays",
+      "lessons": [
+        {
+          "id": "array-basics",
+          "title": "Array basics",
+          "startSeconds": 2444,
+          "endSeconds": 2790,
+          "chapters": [
+            {
+              "title": "Arrays",
+              "startSeconds": 2444
+            },
+            {
+              "title": "Nest Arrays",
+              "startSeconds": 2503
+            },
+            {
+              "title": "Access Array Data",
+              "startSeconds": 2553
+            },
+            {
+              "title": "Modify Array Data",
+              "startSeconds": 2614
+            },
+            {
+              "title": "Access Multi-Dimensional Arrays",
+              "startSeconds": 2688
+            }
+          ],
+          "summary": "Arrays store ordered lists of values in square brackets. They can contain other arrays (nested or multi-dimensional arrays). You read and update items with bracket notation and a zero-based index, such as items[0] or matrix[1][2]. Unlike strings, array entries can be replaced in place.",
+          "quiz": [
+            {
+              "question": "How do you read the first item in an array named colors?",
+              "choices": [
+                "colors[1]",
+                "colors[0]",
+                "colors.first",
+                "colors(-1)"
+              ],
+              "correctIndex": 1,
+              "explanation": "Array indexes start at 0."
+            },
+            {
+              "question": "Can you change one item in an array after it is created?",
+              "choices": [
+                "No, arrays are immutable like strings",
+                "Yes, by assigning to an index such as items[1] = 'new'",
+                "Only if the array was declared with const",
+                "Only with the delete keyword"
+              ],
+              "correctIndex": 1,
+              "explanation": "Array contents are mutable even when the array is stored in a const variable, which is covered later."
+            },
+            {
+              "question": "How do you access the third item of the second inner array in data = [[1,2],[3,4,5]]?",
+              "choices": [
+                "data[2][3]",
+                "data[1][2]",
+                "data[2][1]",
+                "data[1][3]"
+              ],
+              "correctIndex": 1,
+              "explanation": "The second array is at index 1, and its third item is at index 2, which is 5."
+            }
+          ],
+          "exercise": {
+            "prompt": "Create a nested array that represents two days of temperatures, then log Tuesday\u2019s afternoon value (the second item of the second inner array).",
+            "hint": "const temps = [[12, 18], [14, 21]]; console.log(temps[1][1]);"
+          }
+        },
+        {
+          "id": "array-methods",
+          "title": "Array methods: push, pop, shift, unshift",
+          "startSeconds": 2790,
+          "endSeconds": 3036,
+          "chapters": [
+            {
+              "title": "push()",
+              "startSeconds": 2790
+            },
+            {
+              "title": "pop()",
+              "startSeconds": 2849
+            },
+            {
+              "title": "shift()",
+              "startSeconds": 2913
+            },
+            {
+              "title": "unshift()",
+              "startSeconds": 2963
+            }
+          ],
+          "summary": "These four methods change the ends of an array. push adds an item to the end, pop removes and returns the last item, shift removes and returns the first item, and unshift adds an item at the beginning. Together they let you treat an array like a stack or a queue.",
+          "quiz": [
+            {
+              "question": "Which method adds an item to the end of an array?",
+              "choices": [
+                "shift()",
+                "unshift()",
+                "push()",
+                "pop()"
+              ],
+              "correctIndex": 2,
+              "explanation": "push appends to the end."
+            },
+            {
+              "question": "What does shift() return?",
+              "choices": [
+                "The new length of the array",
+                "The first item, after removing it",
+                "The last item, after removing it",
+                "A copy of the array"
+              ],
+              "correctIndex": 1,
+              "explanation": "shift removes from the front and returns that item; pop does the same at the end."
+            },
+            {
+              "question": "Which method adds an item at the beginning of an array?",
+              "choices": [
+                "unshift()",
+                "push()",
+                "concat()",
+                "slice()"
+              ],
+              "correctIndex": 0,
+              "explanation": "unshift inserts at index 0 and shifts the other items to the right."
+            }
+          ],
+          "exercise": {
+            "prompt": "Start with ['b', 'c']. Use unshift and push so the array becomes ['a', 'b', 'c', 'd'], then pop one item and log the array.",
+            "hint": "After pop, the array should be ['a', 'b', 'c']."
+          }
+        },
+        {
+          "id": "shopping-list",
+          "title": "Shopping list",
+          "startSeconds": 3036,
+          "endSeconds": 3101,
+          "chapters": [
+            {
+              "title": "Shopping List",
+              "startSeconds": 3036
+            }
+          ],
+          "summary": "This practice builds a shopping list as a multi-dimensional array: each inner array holds an item name and a quantity. It ties together nested arrays and the idea of grouping related data.",
+          "quiz": [
+            {
+              "question": "How is a shopping list typically represented in this challenge?",
+              "choices": [
+                "A string of comma-separated items",
+                "An object with only prices",
+                "A multi-dimensional array of item names and quantities",
+                "A function that prints to the printer"
+              ],
+              "correctIndex": 2,
+              "explanation": "Each inner array is one row, such as ['Milk', 2]."
+            },
+            {
+              "question": "Which structure matches the pattern used here?",
+              "choices": [
+                "['Milk', 2]",
+                "{Milk: 2} only",
+                "Milk = 2",
+                "('Milk', 2) as a tuple type"
+              ],
+              "correctIndex": 0,
+              "explanation": "The exercise uses arrays, not objects or tuples, to store each item and count."
+            }
+          ],
+          "exercise": {
+            "prompt": "Create a shoppingList array with at least three items, each as [name, quantity]. Log the quantity of the second item.",
+            "hint": "shoppingList[1][1] is the quantity of the second row."
+          }
+        }
+      ]
+    },
+    {
+      "id": "functions",
+      "title": "Functions and scope",
+      "lessons": [
+        {
+          "id": "writing-functions",
+          "title": "Writing reusable functions",
+          "startSeconds": 3101,
+          "endSeconds": 3343,
+          "chapters": [
+            {
+              "title": "Write Reusable with Functions",
+              "startSeconds": 3101
+            },
+            {
+              "title": "Arguments",
+              "startSeconds": 3221
+            }
+          ],
+          "summary": "Functions let you group reusable steps under a name. You declare them with the function keyword, call them with parentheses, and pass inputs as arguments that are received as parameters. This is the foundation for the later practice problems in the course.",
+          "quiz": [
+            {
+              "question": "How do you call a function named greet?",
+              "choices": [
+                "call greet",
+                "greet;",
+                "greet()",
+                "function greet"
+              ],
+              "correctIndex": 2,
+              "explanation": "Parentheses invoke the function."
+            },
+            {
+              "question": "In function add(a, b), what are a and b?",
+              "choices": [
+                "Arguments passed at the call site only",
+                "Parameters that receive the values you pass in",
+                "Global variables created automatically",
+                "Reserved JavaScript keywords"
+              ],
+              "correctIndex": 1,
+              "explanation": "Parameters are the placeholders in the function definition; arguments are the values you pass when calling it."
+            }
+          ],
+          "exercise": {
+            "prompt": "Write a function greet(name) that logs a message including the name, then call it twice with different names.",
+            "hint": "function greet(name) { console.log('Hello, ' + name); }"
+          }
+        },
+        {
+          "id": "scope",
+          "title": "Global and local scope",
+          "startSeconds": 3343,
+          "endSeconds": 3760,
+          "chapters": [
+            {
+              "title": "Global Scope",
+              "startSeconds": 3343
+            },
+            {
+              "title": "Local Scope",
+              "startSeconds": 3571
+            },
+            {
+              "title": "Global vs Local Scope in Functions",
+              "startSeconds": 3646
+            }
+          ],
+          "summary": "A variable declared outside any function has global scope and can be seen from other functions. A variable declared inside a function is local and exists only while that function runs. If a local variable shares a name with a global one, the local binding takes precedence inside the function.",
+          "quiz": [
+            {
+              "question": "Where is a local variable visible?",
+              "choices": [
+                "Everywhere in the file",
+                "Only inside the function that declared it",
+                "Only after the program finishes",
+                "In every other function with the same name"
+              ],
+              "correctIndex": 1,
+              "explanation": "Local scope is limited to the function body."
+            },
+            {
+              "question": "If a function has a local variable with the same name as a global variable, which one is used inside the function?",
+              "choices": [
+                "The local variable",
+                "The global variable always",
+                "JavaScript throws an error",
+                "Both are added together"
+              ],
+              "correctIndex": 0,
+              "explanation": "The inner, local declaration shadows the global name for the duration of the function."
+            }
+          ],
+          "exercise": {
+            "prompt": "Create a global variable value = 'global', then a function that declares its own value = 'local' and logs it. Log the global value after the function runs.",
+            "hint": "The inner log should show 'local' and the outer log should still show 'global'."
+          }
+        },
+        {
+          "id": "return-values",
+          "title": "Returning values from functions",
+          "startSeconds": 3760,
+          "endSeconds": 3952,
+          "chapters": [
+            {
+              "title": "Return a Value from a Function",
+              "startSeconds": 3760
+            },
+            {
+              "title": "Undefined Value returned",
+              "startSeconds": 3835
+            },
+            {
+              "title": "Assignment with a Returned Value",
+              "startSeconds": 3892
+            }
+          ],
+          "summary": "return sends a value back to the caller. If a function has no return statement, or the return has no value, the result is undefined. You can store a returned value in a variable by assigning the function call, such as let result = nextInLine(arr, item).",
+          "quiz": [
+            {
+              "question": "What does a function return if it has no return statement?",
+              "choices": [
+                "0",
+                "null",
+                "undefined",
+                "false"
+              ],
+              "correctIndex": 2,
+              "explanation": "The default return value is undefined."
+            },
+            {
+              "question": "How do you store a function\u2019s output in a variable?",
+              "choices": [
+                "Assign the function name without calling it",
+                "Assign the function call, such as const result = add(2, 3)",
+                "Use print instead of return",
+                "Functions cannot produce values"
+              ],
+              "correctIndex": 1,
+              "explanation": "The call expression evaluates to the returned value."
+            }
+          ],
+          "exercise": {
+            "prompt": "Write a function timesTen(n) that returns n * 10. Assign the result of timesTen(4) to a variable and log it.",
+            "hint": "The logged value should be 40."
+          }
+        },
+        {
+          "id": "stand-in-line",
+          "title": "Stand in line",
+          "startSeconds": 3952,
+          "endSeconds": 4121,
+          "chapters": [
+            {
+              "title": "Stand in Line",
+              "startSeconds": 3952
+            }
+          ],
+          "summary": "This practice models a queue: you add an item to the end of an array and remove the item from the front, returning the removed item. It combines function arguments, return values, and the array methods push and shift.",
+          "quiz": [
+            {
+              "question": "In a queue, where does a new item usually go?",
+              "choices": [
+                "The front of the line",
+                "The end of the line",
+                "A random index",
+                "A separate object"
+              ],
+              "correctIndex": 1,
+              "explanation": "The challenge uses push to enqueue at the end."
+            },
+            {
+              "question": "Which pair of methods implements 'add to the end, remove from the front'?",
+              "choices": [
+                "push and pop",
+                "unshift and pop",
+                "push and shift",
+                "concat and slice"
+              ],
+              "correctIndex": 2,
+              "explanation": "push enqueues; shift dequeues the first item and returns it."
+            }
+          ],
+          "exercise": {
+            "prompt": "Write nextInLine(arr, item) that pushes item onto arr, then returns the result of shift(). Test it with [1, 2] and item 3.",
+            "hint": "After the call, the array should be [2, 3] and the function should return 1."
+          }
+        }
+      ]
+    },
+    {
+      "id": "conditionals",
+      "title": "Booleans, conditionals, and logic",
+      "lessons": [
+        {
+          "id": "conditionals",
+          "title": "Booleans, if statements, and comparisons",
+          "startSeconds": 4121,
+          "endSeconds": 5265,
+          "chapters": [
+            {
+              "title": "Boolean Values",
+              "startSeconds": 4121
+            },
+            {
+              "title": "If Statements",
+              "startSeconds": 4164
+            },
+            {
+              "title": "Equality Operators",
+              "startSeconds": 4311
+            },
+            {
+              "title": "And / Or Operators",
+              "startSeconds": 4757
+            },
+            {
+              "title": "Else Statements",
+              "startSeconds": 4897
+            },
+            {
+              "title": "Else If Statements",
+              "startSeconds": 4947
+            },
+            {
+              "title": "Logical Order in If Else Statements",
+              "startSeconds": 5010
+            },
+            {
+              "title": "Chaining If Else Statements",
+              "startSeconds": 5085
+            }
+          ],
+          "summary": "Booleans are true or false. if statements run a block only when a condition is true, and else / else if provide alternative paths. Equality operators include == (loose, with type conversion) and === (strict, no type conversion), plus != and !==. Logical AND (&&) and OR (||) combine conditions. The order of chained else if clauses matters because the first matching branch wins.",
+          "quiz": [
+            {
+              "question": "What is the difference between == and ===?",
+              "choices": [
+                "They are aliases of each other",
+                "== allows type conversion; === compares value and type",
+                "=== allows type conversion; == does not",
+                "== only works on numbers"
+              ],
+              "correctIndex": 1,
+              "explanation": "For example, 1 == '1' is true, but 1 === '1' is false."
+            },
+            {
+              "question": "When does conditionA && conditionB pass?",
+              "choices": [
+                "If either condition is true",
+                "Only if both conditions are true",
+                "Only if both are false",
+                "Only if they are the same type"
+              ],
+              "correctIndex": 1,
+              "explanation": "AND requires every operand to be true."
+            },
+            {
+              "question": "Why does the order of else if clauses matter?",
+              "choices": [
+                "JavaScript always runs every branch",
+                "The first matching condition wins, so a broader test can hide a later, more specific one",
+                "Later branches override earlier ones",
+                "else if can only be written in alphabetical order"
+              ],
+              "correctIndex": 1,
+              "explanation": "The course highlights logical order so a general condition does not intercept a specific case."
+            }
+          ],
+          "exercise": {
+            "prompt": "Write a function grade(score) that returns 'A', 'B', 'C', or 'F' using a chain of if / else if / else. Decide your own boundaries and test a few scores.",
+            "hint": "Check the highest band first, for example score >= 90, then 80, then 70."
+          }
+        },
+        {
+          "id": "golf-code",
+          "title": "Golf code",
+          "startSeconds": 5265,
+          "endSeconds": 5535,
+          "chapters": [
+            {
+              "title": "Golf Code",
+              "startSeconds": 5265
+            }
+          ],
+          "summary": "This practice uses chained conditionals to turn a golf score into a name, comparing strokes to par (from 'Hole-in-one!' through 'Go Home!'). It is an exercise in careful if / else if order and returning the right string for each case.",
+          "quiz": [
+            {
+              "question": "What kind of control flow does Golf Code emphasize?",
+              "choices": [
+                "A long chain of if / else if conditions that return a label",
+                "A recursive function",
+                "A switch on the player's name",
+                "A for loop over 18 holes"
+              ],
+              "correctIndex": 0,
+              "explanation": "Each range of strokes relative to par maps to a named result."
+            },
+            {
+              "question": "Why is the order of the golf conditions important?",
+              "choices": [
+                "Because the first true condition is the one that returns",
+                "Because golf scores are stored as strings",
+                "Because else cannot follow if",
+                "Because par is always 72"
+              ],
+              "correctIndex": 0,
+              "explanation": "A too-broad early condition would prevent later, more specific labels from running."
+            }
+          ],
+          "exercise": {
+            "prompt": "Write golfScore(par, strokes) that returns a named result for at least these cases: hole-in-one (1 stroke), par, and anything worse than par.",
+            "hint": "Check strokes === 1 first, then compare strokes to par."
+          }
+        },
+        {
+          "id": "switch-statements",
+          "title": "Switch statements",
+          "startSeconds": 5535,
+          "endSeconds": 6071,
+          "chapters": [
+            {
+              "title": "Switch Statements",
+              "startSeconds": 5535
+            }
+          ],
+          "summary": "A switch compares a value against a list of case clauses. When a case matches, execution runs until a break (or the end of the switch). You can group cases to share a result, and default handles values that match none of the cases.",
+          "quiz": [
+            {
+              "question": "What does break do inside a switch?",
+              "choices": [
+                "Exits the program",
+                "Stops the switch from falling through into the next case",
+                "Restarts the switch from the top",
+                "Deletes the matched case"
+              ],
+              "correctIndex": 1,
+              "explanation": "Without break, execution continues into the following cases."
+            },
+            {
+              "question": "Which clause runs when no case matches?",
+              "choices": [
+                "else",
+                "otherwise",
+                "default",
+                "fallback"
+              ],
+              "correctIndex": 2,
+              "explanation": "default is the switch equivalent of else."
+            }
+          ],
+          "exercise": {
+            "prompt": "Write a function dayType(day) that uses a switch to return 'weekend' for Saturday and Sunday and 'weekday' for the other named days.",
+            "hint": "You can stack case 'Saturday': case 'Sunday': return 'weekend'; and use default for weekdays."
+          }
+        },
+        {
+          "id": "boolean-returns",
+          "title": "Boolean returns and the early return pattern",
+          "startSeconds": 6071,
+          "endSeconds": 6218,
+          "chapters": [
+            {
+              "title": "Returning Boolean Values from Functions",
+              "startSeconds": 6071
+            },
+            {
+              "title": "Return Early Pattern for Functions",
+              "startSeconds": 6140
+            }
+          ],
+          "summary": "If a function only needs to return the result of a comparison, you can return the comparison itself instead of wrapping it in if / else. The early return pattern exits a function as soon as an answer is known, which can make guard clauses clearer than deeply nested conditionals.",
+          "quiz": [
+            {
+              "question": "Which function body is equivalent to checking if a is equal to b and returning true or false?",
+              "choices": [
+                "if (a === b) { return true; } else { return false; } and also return a === b;",
+                "return a = b;",
+                "return a + b;",
+                "Only a standalone if without a return"
+              ],
+              "correctIndex": 0,
+              "explanation": "Returning the comparison directly is the shorter form taught in this chapter."
+            },
+            {
+              "question": "What is the idea behind an early return?",
+              "choices": [
+                "Always return undefined first",
+                "Leave the function as soon as you know the result, often with a guard clause",
+                "Return only at the bottom of the file",
+                "Never use more than one return"
+              ],
+              "correctIndex": 1,
+              "explanation": "Early returns avoid extra nesting when an input is invalid or a result is already decided."
+            }
+          ],
+          "exercise": {
+            "prompt": "Rewrite a function isShort(text) so it returns the boolean expression text.length < 5 directly, without an if statement.",
+            "hint": "return text.length < 5;"
+          }
+        },
+        {
+          "id": "counting-cards",
+          "title": "Counting cards",
+          "startSeconds": 6218,
+          "endSeconds": 6551,
+          "chapters": [
+            {
+              "title": "Counting Cards",
+              "startSeconds": 6218
+            }
+          ],
+          "summary": "This longer practice keeps a running card-count and recommends 'Bet' or 'Hold'. Low cards increase the count, high cards decrease it, and face cards and aces are handled as high. It combines switch or conditionals, a global count, and a returned string.",
+          "quiz": [
+            {
+              "question": "In the classic beginner version of this challenge, what do low cards (2\u20136) usually do to the count?",
+              "choices": [
+                "Increase it",
+                "Decrease it",
+                "Reset it to zero",
+                "Convert it to a string"
+              ],
+              "correctIndex": 0,
+              "explanation": "The Hi-Lo system taught here increments on low cards and decrements on high cards."
+            },
+            {
+              "question": "What two pieces of information does the function typically return?",
+              "choices": [
+                "Only the count",
+                "Only 'Bet' or 'Hold'",
+                "The current count plus a 'Bet' or 'Hold' decision",
+                "The name of the card suit"
+              ],
+              "correctIndex": 2,
+              "explanation": "The usual format is a string such as '5 Bet' or '-1 Hold'."
+            }
+          ],
+          "exercise": {
+            "prompt": "Write a cc(card) function that updates a global count and returns count + ' Bet' if the count is positive, otherwise count + ' Hold'. Decide your own mapping for 2\u20136, 7\u20139, and 10/J/Q/K/A.",
+            "hint": "A switch with grouped cases is a clean way to classify each card."
+          }
+        }
+      ]
+    },
+    {
+      "id": "objects",
+      "title": "Objects",
+      "lessons": [
+        {
+          "id": "object-basics",
+          "title": "Building and updating objects",
+          "startSeconds": 6551,
+          "endSeconds": 6954,
+          "chapters": [
+            {
+              "title": "Build Objects",
+              "startSeconds": 6551
+            },
+            {
+              "title": "Dot Notation",
+              "startSeconds": 6646
+            },
+            {
+              "title": "Bracket Notation",
+              "startSeconds": 6693
+            },
+            {
+              "title": "Variables",
+              "startSeconds": 6767
+            },
+            {
+              "title": "Updating Object Properties",
+              "startSeconds": 6814
+            },
+            {
+              "title": "Add New Properties to Object",
+              "startSeconds": 6870
+            },
+            {
+              "title": "Delete Properties from Object",
+              "startSeconds": 6919
+            }
+          ],
+          "summary": "Objects store keyed properties in curly braces. You can read and update properties with dot notation (obj.x) or bracket notation (obj['x']). Brackets are required when the key is in a variable or is not a simple identifier. You can add new properties the same way, and delete removes a property.",
+          "quiz": [
+            {
+              "question": "When must you use bracket notation to access a property?",
+              "choices": [
+                "Whenever the value is a number",
+                "When the property name is in a variable, or is not a valid identifier",
+                "Never; dot notation always works",
+                "Only inside arrays"
+              ],
+              "correctIndex": 1,
+              "explanation": "obj[key] looks up whatever string is stored in key. Spaces or special characters also require brackets."
+            },
+            {
+              "question": "How do you remove a property named temp from an object user?",
+              "choices": [
+                "user.remove('temp')",
+                "delete user.temp",
+                "user.temp = delete",
+                "pop(user, 'temp')"
+              ],
+              "correctIndex": 1,
+              "explanation": "The delete operator removes an object property."
+            },
+            {
+              "question": "Which assignment adds a new property after the object already exists?",
+              "choices": [
+                "user.age = 30;",
+                "add property user age 30;",
+                "user + age + 30;",
+                "new user[age]"
+              ],
+              "correctIndex": 0,
+              "explanation": "Assigning to a name that does not exist yet creates the property."
+            }
+          ],
+          "exercise": {
+            "prompt": "Create an object player with name and score. Update score, add a level property, then delete level and log the object.",
+            "hint": "Use a mix of dot and bracket notation so you practice both."
+          }
+        },
+        {
+          "id": "object-lookups",
+          "title": "Lookups and testing properties",
+          "startSeconds": 6954,
+          "endSeconds": 7155,
+          "chapters": [
+            {
+              "title": "Objects for Lookups",
+              "startSeconds": 6954
+            },
+            {
+              "title": "Testing Objects for Properties",
+              "startSeconds": 7063
+            }
+          ],
+          "summary": "Objects can replace long switch statements as lookup tables: store answers under keys, then read result[key]. hasOwnProperty (or an equivalent check) tells you whether an object has a given property before you use it.",
+          "quiz": [
+            {
+              "question": "What is a lookup-table use of an object?",
+              "choices": [
+                "Storing a value under a key so you can retrieve it instead of chaining many conditionals",
+                "Sorting an array in place",
+                "Compiling JavaScript to machine code",
+                "Creating a new scope"
+              ],
+              "correctIndex": 0,
+              "explanation": "For example, a map of abbreviations to full names."
+            },
+            {
+              "question": "How can you check whether an object has a property named 'city'?",
+              "choices": [
+                "obj.hasOwnProperty('city')",
+                "obj.includes('city')",
+                "has(obj, city)",
+                "obj.city === exists"
+              ],
+              "correctIndex": 0,
+              "explanation": "This method returns true only if that property exists on the object itself."
+            }
+          ],
+          "exercise": {
+            "prompt": "Make a lookup object that maps 'MA' and 'CA' to state names. Write a function that returns the name, or 'not found' if the code is missing.",
+            "hint": "Use hasOwnProperty or check whether lookup[code] is undefined."
+          }
+        },
+        {
+          "id": "nested-objects",
+          "title": "Complex and nested structures",
+          "startSeconds": 7155,
+          "endSeconds": 7386,
+          "chapters": [
+            {
+              "title": "Manipulating Complex Objects",
+              "startSeconds": 7155
+            },
+            {
+              "title": "Nested Objects",
+              "startSeconds": 7260
+            },
+            {
+              "title": "Nested Arrays",
+              "startSeconds": 7313
+            }
+          ],
+          "summary": "Real data often mixes objects and arrays: an array of album objects, objects whose properties are other objects, or arrays nested inside objects. You chain dots and brackets to reach the inner value, such as collection.album.tracks[0].",
+          "quiz": [
+            {
+              "question": "How would you read the first track from record.tracks if tracks is an array?",
+              "choices": [
+                "record.tracks[0]",
+                "record[0].tracks",
+                "record.tracks.0",
+                "tracks.record[1]"
+              ],
+              "correctIndex": 0,
+              "explanation": "Go to the tracks property, then take index 0."
+            },
+            {
+              "question": "Which structure is 'an array of objects'?",
+              "choices": [
+                "[{id: 1}, {id: 2}]",
+                "{id: [1, 2]}",
+                "[[1], [2]]",
+                "{0: 1, 1: 2} only"
+              ],
+              "correctIndex": 0,
+              "explanation": "Each element of the array is an object."
+            }
+          ],
+          "exercise": {
+            "prompt": "Create an object library with a books array. Each book has title and year. Log the year of the second book.",
+            "hint": "library.books[1].year"
+          }
+        },
+        {
+          "id": "record-collection",
+          "title": "Record collection",
+          "startSeconds": 7386,
+          "endSeconds": 7815,
+          "chapters": [
+            {
+              "title": "Record Collection",
+              "startSeconds": 7386
+            }
+          ],
+          "summary": "This is a classic freeCodeCamp practice problem: update a collection object by id, adding or changing a property, or deleting it when the given value is empty. Tracks are stored as an array and must be created if they do not exist yet. It brings together objects, nested arrays, conditionals, and functions.",
+          "quiz": [
+            {
+              "question": "If the update value is an empty string, what should happen to that property?",
+              "choices": [
+                "It should be set to 0",
+                "It should be deleted from the record",
+                "It should become an array",
+                "The whole record should be deleted"
+              ],
+              "correctIndex": 1,
+              "explanation": "An empty value is the signal to remove the property."
+            },
+            {
+              "question": "What is special about the tracks property in this challenge?",
+              "choices": [
+                "It is a number",
+                "It is an array, and you may need to create it before pushing a new track",
+                "It cannot be updated",
+                "It must be stored as a string"
+              ],
+              "correctIndex": 1,
+              "explanation": "If tracks does not exist yet, you create an array and then add the title."
+            }
+          ],
+          "exercise": {
+            "prompt": "Write updateRecords(collection, id, prop, value) with these rules: if value is '', delete the property; if prop is 'tracks', push value onto an array (creating it if needed); otherwise set the property to value. Return the collection.",
+            "hint": "Handle the empty-value case first, then the tracks case, then the simple assignment."
+          }
+        }
+      ]
+    },
+    {
+      "id": "loops",
+      "title": "Loops",
+      "lessons": [
+        {
+          "id": "loop-types",
+          "title": "While, for, and do...while loops",
+          "startSeconds": 7815,
+          "endSeconds": 8652,
+          "chapters": [
+            {
+              "title": "While Loops",
+              "startSeconds": 7815
+            },
+            {
+              "title": "For Loops",
+              "startSeconds": 7895
+            },
+            {
+              "title": "Odd Numbers With a For Loop",
+              "startSeconds": 8036
+            },
+            {
+              "title": "Count Backwards With a For Loop",
+              "startSeconds": 8128
+            },
+            {
+              "title": "Iterate Through an Array with a For Loop",
+              "startSeconds": 8228
+            },
+            {
+              "title": "Nesting For Loops",
+              "startSeconds": 8383
+            },
+            {
+              "title": "Do...While Loops",
+              "startSeconds": 8565
+            }
+          ],
+          "summary": "Loops repeat work. A while loop continues as long as its condition is true. A for loop packs initialization, condition, and increment into one line, and you can count up, count down, skip by two (for odd numbers), or walk an array with i < array.length. Nested loops are used for multi-dimensional arrays. A do...while loop runs the body at least once, then checks the condition.",
+          "quiz": [
+            {
+              "question": "When does a do...while loop check its condition?",
+              "choices": [
+                "Before the first run of the body",
+                "After the body runs, so the body always runs at least once",
+                "Only when an error is thrown",
+                "After a break statement only"
+              ],
+              "correctIndex": 1,
+              "explanation": "That is the difference from a plain while loop."
+            },
+            {
+              "question": "Which for-loop header counts backwards from 10 to 0?",
+              "choices": [
+                "for (let i = 0; i < 10; i++)",
+                "for (let i = 10; i >= 0; i--)",
+                "for (let i = 10; i < 0; i++)",
+                "for (let i = 0; i >= 10; i--)"
+              ],
+              "correctIndex": 1,
+              "explanation": "Start high, keep going while i is at least 0, and subtract one each time."
+            },
+            {
+              "question": "How do you typically iterate every item in an array named items?",
+              "choices": [
+                "for (let i = 1; i <= items.length; i++)",
+                "for (let i = 0; i < items.length; i++)",
+                "for (let i = 0; i <= items; i++)",
+                "while (items) items++"
+              ],
+              "correctIndex": 1,
+              "explanation": "Indexes run from 0 through length - 1."
+            }
+          ],
+          "exercise": {
+            "prompt": "Write a function sumArray(nums) that uses a for loop to add every number in the array and return the total. Then write a version of a loop that pushes the odd numbers from 1 to 9 into a new array.",
+            "hint": "For odd numbers, try for (let i = 1; i <= 9; i += 2)."
+          }
+        },
+        {
+          "id": "profile-lookup",
+          "title": "Profile lookup",
+          "startSeconds": 8652,
+          "endSeconds": 8898,
+          "chapters": [
+            {
+              "title": "Profile Lookup",
+              "startSeconds": 8652
+            }
+          ],
+          "summary": "This practice loops through an array of contact objects and looks up a property on the first matching name. It returns the property value, or a message if the name or the property does not exist. It combines loops, objects, and early returns.",
+          "quiz": [
+            {
+              "question": "What should the function do after it finds the matching contact name?",
+              "choices": [
+                "Always return the whole contact",
+                "Return the requested property if it exists, otherwise a 'no such property' style message",
+                "Continue looping to find later duplicates only",
+                "Delete the contact"
+              ],
+              "correctIndex": 1,
+              "explanation": "A name match is not enough; the property still has to exist."
+            },
+            {
+              "question": "What if no contact has the given name?",
+              "choices": [
+                "Return undefined silently",
+                "Return a 'no such contact' style message",
+                "Throw a syntax error",
+                "Create a new contact"
+              ],
+              "correctIndex": 1,
+              "explanation": "The loop finishing without a match means the name was not in the list."
+            }
+          ],
+          "exercise": {
+            "prompt": "Given an array of {firstName, lastName, number} contacts, write lookUp(name, prop) that returns the property, 'No such property', or 'No such contact'.",
+            "hint": "Loop with a for loop, test firstName, then hasOwnProperty, and return after the loop if nothing matched."
+          }
+        }
+      ]
+    },
+    {
+      "id": "utilities",
+      "title": "Random numbers, parsing, and ternaries",
+      "lessons": [
+        {
+          "id": "random-and-parseint",
+          "title": "Random numbers and parseInt",
+          "startSeconds": 8898,
+          "endSeconds": 9209,
+          "chapters": [
+            {
+              "title": "Random Fractions and Whole Numbers",
+              "startSeconds": 8898
+            },
+            {
+              "title": "parseInt Function",
+              "startSeconds": 9106
+            }
+          ],
+          "summary": "Math.random() returns a fraction from 0 (inclusive) up to but not including 1. Multiplying by a range and using Math.floor gives a random whole number. parseInt converts a string to an integer, and an optional radix (such as 2) tells it which number base to use.",
+          "quiz": [
+            {
+              "question": "What range of values does Math.random() return?",
+              "choices": [
+                "1 through 10",
+                "0 inclusive up to, but not including, 1",
+                "Only integers",
+                "\u22121 to 1"
+              ],
+              "correctIndex": 1,
+              "explanation": "It never reaches 1, which is why you multiply and floor to get integers in a range."
+            },
+            {
+              "question": "What does parseInt('11', 2) return?",
+              "choices": [
+                "11",
+                "2",
+                "3",
+                "NaN"
+              ],
+              "correctIndex": 2,
+              "explanation": "The radix 2 means binary, and binary 11 is decimal 3."
+            },
+            {
+              "question": "Which expression gives a random integer from 0 to 9 inclusive?",
+              "choices": [
+                "Math.random() * 9",
+                "Math.floor(Math.random() * 10)",
+                "Math.floor(Math.random() * 9)",
+                "parseInt(Math.random())"
+              ],
+              "correctIndex": 1,
+              "explanation": "random() * 10 goes from 0 up to almost 10, and floor maps that to 0\u20139."
+            }
+          ],
+          "exercise": {
+            "prompt": "Write randomRange(min, max) that returns a random integer between min and max inclusive. Also parse the binary string '1010' with parseInt and log the result.",
+            "hint": "Math.floor(Math.random() * (max - min + 1)) + min. parseInt('1010', 2) is 10."
+          }
+        },
+        {
+          "id": "ternary-operator",
+          "title": "The ternary operator",
+          "startSeconds": 9209,
+          "endSeconds": 9417,
+          "chapters": [
+            {
+              "title": "Ternary Operator",
+              "startSeconds": 9209
+            },
+            {
+              "title": "Multiple Ternary Operators",
+              "startSeconds": 9297
+            }
+          ],
+          "summary": "The conditional (ternary) operator writes a compact if / else as condition ? ifTrue : ifFalse. You can also nest ternaries for several branches, though readability matters. This is handy for simple value choices.",
+          "quiz": [
+            {
+              "question": "What does the expression score >= 50 ? 'pass' : 'fail' return when score is 40?",
+              "choices": [
+                "pass",
+                "fail",
+                "40",
+                "undefined"
+              ],
+              "correctIndex": 1,
+              "explanation": "The condition is false, so the value after the colon is used."
+            },
+            {
+              "question": "Which structure is a valid nested ternary for a sign check?",
+              "choices": [
+                "n > 0 ? 'positive' : n < 0 ? 'negative' : 'zero'",
+                "n > 0 ? 'positive' ? 'negative' : 'zero'",
+                "n > 0 : 'positive' ? 'negative'",
+                "ternary(n, positive, negative, zero)"
+              ],
+              "correctIndex": 0,
+              "explanation": "Each : leads into the next condition or the final fallback."
+            }
+          ],
+          "exercise": {
+            "prompt": "Rewrite an if / else that returns 'adult' or 'minor' from an age as a single ternary. Then try a nested ternary that also returns 'infant' for ages under 2.",
+            "hint": "age < 2 ? 'infant' : age < 18 ? 'minor' : 'adult'"
+          }
+        }
+      ]
+    },
+    {
+      "id": "es6",
+      "title": "ES6 and modern syntax",
+      "lessons": [
+        {
+          "id": "let-and-const",
+          "title": "let, const, and immutability",
+          "startSeconds": 9417,
+          "endSeconds": 10037,
+          "chapters": [
+            {
+              "title": "var vs let",
+              "startSeconds": 9417
+            },
+            {
+              "title": "const Keyword",
+              "startSeconds": 9692
+            },
+            {
+              "title": "Mutate an Array Declared with const",
+              "startSeconds": 9820
+            },
+            {
+              "title": "Prevent Object Mutation",
+              "startSeconds": 9892
+            }
+          ],
+          "summary": "let and const are block-scoped, unlike var, which is function-scoped and can be accidentally redeclared. const prevents reassignment of the binding, but objects and arrays held in const can still be mutated unless you freeze them. Object.freeze helps prevent changes to an object\u2019s properties.",
+          "quiz": [
+            {
+              "question": "What is a key difference between var and let?",
+              "choices": [
+                "let is block-scoped; var is function-scoped and can be redeclared in the same scope",
+                "var cannot store numbers",
+                "let is only available inside classes",
+                "They behave identically in every case"
+              ],
+              "correctIndex": 0,
+              "explanation": "This is the main reason the course switches beginners toward let and const."
+            },
+            {
+              "question": "If you declare const nums = [1, 2]; can you run nums.push(3)?",
+              "choices": [
+                "No, const freezes the array contents",
+                "Yes. const prevents reassignment of nums, not mutation of the array itself",
+                "Only if you use var instead",
+                "Only in sloppy mode"
+              ],
+              "correctIndex": 1,
+              "explanation": "nums = [] would fail, but changing items or pushing is allowed unless the array is frozen."
+            },
+            {
+              "question": "What does Object.freeze(obj) help with?",
+              "choices": [
+                "It converts the object to a string",
+                "It prevents adding, removing, or changing the object\u2019s properties (in strict usage)",
+                "It deep-clones the object",
+                "It makes the object iterable"
+              ],
+              "correctIndex": 1,
+              "explanation": "The course uses freeze to prevent object mutation."
+            }
+          ],
+          "exercise": {
+            "prompt": "Declare a const array, mutate it with push, then try to reassign the variable and notice the error. After that, Object.freeze a settings object and try changing a property.",
+            "hint": "In strict mode, assignments to frozen properties fail. Reassigning a const always fails."
+          }
+        },
+        {
+          "id": "arrows-and-parameters",
+          "title": "Arrow functions, default, rest, and spread",
+          "startSeconds": 10037,
+          "endSeconds": 10638,
+          "chapters": [
+            {
+              "title": "Arrow Functions",
+              "startSeconds": 10037
+            },
+            {
+              "title": "Default Parameters",
+              "startSeconds": 10384
+            },
+            {
+              "title": "Rest Operator",
+              "startSeconds": 10440
+            },
+            {
+              "title": "Spread Operator",
+              "startSeconds": 10531
+            }
+          ],
+          "summary": "Arrow functions offer a shorter syntax, including implicit returns for single expressions. Default parameters fill in a value when an argument is missing. The rest operator gathers remaining arguments into an array, and the spread operator expands an array (or other iterable) into individual elements, which is useful for copying or combining arrays.",
+          "quiz": [
+            {
+              "question": "Which is an arrow function that doubles a number?",
+              "choices": [
+                "const double = (n) => n * 2;",
+                "const double => n * 2;",
+                "arrow function double(n) { n * 2 }",
+                "const double = function => n * 2;"
+              ],
+              "correctIndex": 0,
+              "explanation": "The parameter list comes before =>, and a single expression is returned automatically."
+            },
+            {
+              "question": "What does the rest operator do in function sum(...nums)?",
+              "choices": [
+                "It forces nums to be a number",
+                "It collects all arguments into an array named nums",
+                "It spreads nums into the caller",
+                "It makes the function async"
+              ],
+              "correctIndex": 1,
+              "explanation": "Rest is on the parameter side; spread is the similar-looking syntax used in calls or array literals."
+            },
+            {
+              "question": "What does const copy = [...original] do?",
+              "choices": [
+                "Sorts original in place",
+                "Creates a shallow copy of the original array",
+                "Turns original into a string",
+                "Deletes original"
+              ],
+              "correctIndex": 1,
+              "explanation": "Spread expands the items into a new array literal."
+            }
+          ],
+          "exercise": {
+            "prompt": "Write an arrow function sumAll(...nums) that returns the total of all arguments. Then create a new array with spread that starts with 0 and includes all of [1, 2, 3].",
+            "hint": "sumAll can use a loop or nums.reduce((total, n) => total + n, 0). The new array is [0, ...[1, 2, 3]]."
+          }
+        },
+        {
+          "id": "destructuring-and-templates",
+          "title": "Destructuring and template literals",
+          "startSeconds": 10638,
+          "endSeconds": 11443,
+          "chapters": [
+            {
+              "title": "Destructuring Assignment",
+              "startSeconds": 10638
+            },
+            {
+              "title": "Template Literals",
+              "startSeconds": 11199
+            }
+          ],
+          "summary": "Destructuring unpacks values from objects or arrays into variables, including nested values and function parameters. You can also assign remaining items with rest. Template literals use backticks and ${expression} to build strings across multiple lines without manual concatenation.",
+          "quiz": [
+            {
+              "question": "What does const {name} = user; do?",
+              "choices": [
+                "Creates a new object named name",
+                "Declares a variable name and sets it to user.name",
+                "Deletes user.name",
+                "Renames the object to name"
+              ],
+              "correctIndex": 1,
+              "explanation": "Object destructuring copies the matching property into a new variable."
+            },
+            {
+              "question": "Which string uses a template literal correctly?",
+              "choices": [
+                "'Hello, ${name}'",
+                "`Hello, ${name}`",
+                "\"Hello, ${name}\"",
+                "template('Hello', name)"
+              ],
+              "correctIndex": 1,
+              "explanation": "Backticks are required for interpolation."
+            },
+            {
+              "question": "What does const [first, ...rest] = [1, 2, 3, 4]; assign to rest?",
+              "choices": [
+                "1",
+                "[1, 2, 3, 4]",
+                "[2, 3, 4]",
+                "4"
+              ],
+              "correctIndex": 2,
+              "explanation": "first takes 1; the rest operator gathers the remaining items."
+            }
+          ],
+          "exercise": {
+            "prompt": "Given const person = {name: 'Ada', city: 'London', year: 1815}; destructure name and city, then log a template literal that uses both. Also destructure the first item of [10, 20, 30].",
+            "hint": "const {name, city} = person; console.log(`${name} lived in ${city}.`); const [first] = [10, 20, 30];"
+          }
+        },
+        {
+          "id": "classes-and-shorthand",
+          "title": "Classes, shorthand fields, and getters",
+          "startSeconds": 11443,
+          "endSeconds": 12025,
+          "chapters": [
+            {
+              "title": "Simple Fields",
+              "startSeconds": 11443
+            },
+            {
+              "title": "Declarative Functions",
+              "startSeconds": 11544
+            },
+            {
+              "title": "class Syntax",
+              "startSeconds": 11576
+            },
+            {
+              "title": "getters and setters",
+              "startSeconds": 11711
+            }
+          ],
+          "summary": "ES6 adds shorthand for object fields and concise method syntax inside object literals. class syntax is a clearer way to write constructor functions and methods. Getters and setters let you read or update a property through methods, which is useful for computed or guarded values.",
+          "quiz": [
+            {
+              "question": "What is the shorthand for { name: name } when the variable is already called name?",
+              "choices": [
+                "{ name }",
+                "{ name() }",
+                "{ name: this }",
+                "{ name = name }"
+              ],
+              "correctIndex": 0,
+              "explanation": "Simple fields copy an existing variable into a same-named property."
+            },
+            {
+              "question": "In class syntax, where do you usually initialize instance data?",
+              "choices": [
+                "In a method named init only",
+                "In the constructor method",
+                "In a global var",
+                "In an import statement"
+              ],
+              "correctIndex": 1,
+              "explanation": "constructor receives arguments and typically assigns them to this."
+            },
+            {
+              "question": "What does a getter let you do?",
+              "choices": [
+                "Call a method as if it were a property, such as obj.area",
+                "Import a module",
+                "Freeze an object",
+                "Pause a loop"
+              ],
+              "correctIndex": 0,
+              "explanation": "You define get area() { ... } and then read obj.area."
+            }
+          ],
+          "exercise": {
+            "prompt": "Write a class Rectangle with a constructor for width and height, a getter area, and a setter that updates width. Create one instance and log its area.",
+            "hint": "get area() { return this.width * this.height; }"
+          }
+        },
+        {
+          "id": "import-and-export",
+          "title": "import and export",
+          "startSeconds": 12025,
+          "endSeconds": 12403,
+          "chapters": [
+            {
+              "title": "import and export",
+              "startSeconds": 12025
+            }
+          ],
+          "summary": "Modules split code across files. export makes a function, class, or constant available to other files, either as a named export or a default export. import brings those bindings into another file. This is the closing chapter of the video and the usual way modern JavaScript projects share code.",
+          "quiz": [
+            {
+              "question": "How do you import a named export add from a file './math.js'?",
+              "choices": [
+                "include './math.js' as add",
+                "import { add } from './math.js'",
+                "import add from add",
+                "require add from math"
+              ],
+              "correctIndex": 1,
+              "explanation": "Named imports use curly braces and the exported name."
+            },
+            {
+              "question": "What is a default export?",
+              "choices": [
+                "An export that cannot be imported",
+                "The main value a module exports, imported without curly braces",
+                "A variable that is always named default",
+                "A CommonJS-only feature with no ES6 equivalent"
+              ],
+              "correctIndex": 1,
+              "explanation": "export default function() {} can be imported as import fn from './file.js'."
+            }
+          ],
+          "exercise": {
+            "prompt": "In a practice file, export a function shout(text) as a named export and imagine importing it with import { shout } from './shout.js'. If you use this app\u2019s dev server, you can try it as a small extra module later.",
+            "hint": "export function shout(text) { return text + '!'; }"
+          }
+        }
+      ]
+    }
+  ]
+}

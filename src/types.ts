@@ -1,0 +1,66 @@
+export type Chapter = {
+  title: string;
+  startSeconds: number;
+};
+
+export type QuizQuestion = {
+  question: string;
+  choices: string[];
+  correctIndex: number;
+  explanation: string;
+};
+
+export type Exercise = {
+  prompt: string;
+  hint: string;
+};
+
+export type Lesson = {
+  id: string;
+  title: string;
+  startSeconds: number;
+  endSeconds: number;
+  chapters: Chapter[];
+  summary: string;
+  quiz: QuizQuestion[];
+  exercise: Exercise;
+};
+
+export type Module = {
+  id: string;
+  title: string;
+  lessons: Lesson[];
+};
+
+export type CourseSource = {
+  name: string;
+  channelUrl: string;
+  creator: string;
+  videoTitle: string;
+  videoId: string;
+  videoUrl: string;
+  duration: string;
+  durationSeconds: number;
+};
+
+export type Course = {
+  id: string;
+  title: string;
+  description: string;
+  level: string;
+  source: CourseSource;
+  thumbnailUrl: string;
+  modules: Module[];
+};
+
+export type LessonQuizScore = {
+  correct: number;
+  total: number;
+};
+
+export type CourseProgress = {
+  completedLessons: string[];
+  quizScores: Record<string, LessonQuizScore>;
+};
+
+export type ProgressState = Record<string, CourseProgress>;
