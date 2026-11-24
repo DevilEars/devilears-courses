@@ -87,6 +87,15 @@ describe("course JSON", () => {
     }
   });
 
+  it("uses a non-empty category tag when one is set", () => {
+    for (const id of ids) {
+      const course = loadCourse(id);
+      if (course.category !== undefined) {
+        expect(course.category.trim().length, `${id} category`).toBeGreaterThan(0);
+      }
+    }
+  });
+
   it("gives every lesson written content and a content status", () => {
     for (const id of ids) {
       const course = loadCourse(id);

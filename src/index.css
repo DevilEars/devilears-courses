@@ -454,6 +454,17 @@ html[data-theme="dark"] .badge-advanced {
   color: var(--accent);
 }
 
+.badge-category {
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+
+html[data-theme="dark"] .badge-category {
+  background: var(--bg-muted);
+  color: var(--ink);
+}
+
 .course-card-body {
   display: grid;
   gap: var(--space-3);

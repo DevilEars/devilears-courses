@@ -3,6 +3,7 @@
   "title": "System Design Course — APIs, Databases, Caching, CDNs, Load Balancing & Production Infra",
   "description": "A structured path through Hayk Simonyan’s freeCodeCamp course on designing production systems: starting from a single server, then databases, scaling, load balancing, API styles, and finally authentication, authorization, and security. Watch each chapter in the original YouTube video, then use the summary, quiz, and exercise to lock in the idea.",
   "level": "Intermediate",
+  "category": "System Design",
   "summarySource": "transcript",
   "source": {
     "name": "freeCodeCamp.org",

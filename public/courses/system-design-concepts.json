@@ -3,6 +3,7 @@
   "title": "System Design Concepts Course and Interview Prep",
   "description": "A structured path through freeCodeCamp’s system design interview-prep video with Hayk Simonyan. Watch each chapter in the original YouTube video, then use the summary, quiz, and exercise to lock in the idea. The course surveys the core building blocks of scalable systems: architecture, CAP and service objectives, networking, APIs, caching, proxies, load balancing, and databases.",
   "level": "Intermediate",
+  "category": "System Design",
   "source": {
     "name": "freeCodeCamp.org",
     "channelUrl": "https://www.youtube.com/@freecodecamp",

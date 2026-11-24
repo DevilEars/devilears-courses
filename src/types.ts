@@ -60,6 +60,8 @@ export type Course = {
   title: string;
   description: string;
   level: string;
+  /** Optional topic tag shown on course cards, e.g. "Leadership". */
+  category?: string;
   summarySource: SummarySource;
   source: CourseSource;
   thumbnailUrl: string;

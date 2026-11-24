@@ -88,6 +88,9 @@ export default function CourseOverview() {
             <span className={`badge ${levelClass(course.level)}`}>
               {course.level}
             </span>
+            {course.category ? (
+              <span className="badge badge-category">{course.category}</span>
+            ) : null}
             <span className="chip">{course.modules.length} modules</span>
             <span className="chip">{total} lessons</span>
             <span className="chip">{course.source.duration}</span>
