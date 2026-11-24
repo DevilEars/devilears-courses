@@ -1,0 +1,217 @@
+{
+  "id": "become-great-engineering-manager",
+  "title": "Become a Great Engineering Manager – Course",
+  "description": "A structured path through Ankita Kulkarni’s freeCodeCamp course on becoming an engineering manager. The official announcement covers the difference between an engineering manager and a technical lead, skills for career growth, communication and feedback, and what Ankita wishes she had known before the role. Written lessons are outline-only until an official transcript is available; the original YouTube video remains an optional, credited watch.",
+  "level": "Intermediate",
+  "category": "Leadership",
+  "summarySource": "chapters-and-description",
+  "source": {
+    "name": "freeCodeCamp.org",
+    "channelUrl": "https://www.youtube.com/@freecodecamp",
+    "creator": "Ankita Kulkarni",
+    "videoTitle": "Become a Great Engineering Manager – Course",
+    "videoId": "kZdFRXeuCuY",
+    "videoUrl": "https://www.youtube.com/watch?v=kZdFRXeuCuY",
+    "duration": "1:36:49",
+    "durationSeconds": 5809
+  },
+  "thumbnailUrl": "https://i.ytimg.com/vi/kZdFRXeuCuY/hqdefault.jpg",
+  "modules": [
+    {
+      "id": "essence-of-leadership",
+      "title": "The essence of leadership",
+      "lessons": [
+        {
+          "id": "manager-and-tech-lead",
+          "title": "Engineering manager and technical lead",
+          "startSeconds": 0,
+          "endSeconds": 5809,
+          "chapters": [
+            {
+              "title": "The Essence of Leadership (chapter times pending)",
+              "startSeconds": 0
+            }
+          ],
+          "summary": "The official course announcement opens on what leadership in engineering actually is: the difference between a software engineering manager and a technical lead, a roadmap toward successful leadership, and the skills needed to guide a team. Full notes will follow once a transcript is available.",
+          "quiz": [
+            {
+              "question": "According to the official course announcement, which contrast is part of the essence of leadership in this course?",
+              "choices": [
+                "The difference between frontend and backend engineering",
+                "The difference between being a software engineering manager and a technical lead",
+                "The difference between Scrum and Kanban",
+                "The difference between junior and staff engineer titles only"
+              ],
+              "correctIndex": 1,
+              "explanation": "The freeCodeCamp announcement lists the fundamental differences between a software engineering manager and a technical lead as a core topic in this section."
+            },
+            {
+              "question": "Besides that contrast, what else does the announcement say this leadership section covers?",
+              "choices": [
+                "A roadmap to successful leadership and the skills needed to guide a team effectively",
+                "A complete Kubernetes certification syllabus",
+                "How to negotiate a vendor contract",
+                "How to write a compiler"
+              ],
+              "correctIndex": 0,
+              "explanation": "The announcement also points to a roadmap to successful leadership and the skills necessary to guide a team effectively."
+            }
+          ],
+          "exercise": {
+            "prompt": "In a short paragraph, contrast the job of a software engineering manager with the job of a technical lead as you currently understand them. Note one question you want the full lesson to answer once the transcript notes are available.",
+            "hint": "Stay with the announcement’s framing: what is different about the two roles, and what skills would you need to guide a team rather than only lead technically."
+          },
+          "content": "## Outline only — full notes pending transcript\n\nA complete written lesson will be added when the official transcript for this video is available. Until then, this page is only a short outline taken from the official freeCodeCamp course announcement. It is not a full lesson, and it is not a substitute for the segment.\n\nYouTube blocked the automated fetch of chapter timestamps and subtitles for this video (a “Sign in to confirm you’re not a bot” check). Exact start and end times for this section are therefore unknown, so the optional “Watch this part” embed covers the full Become a Great Engineering Manager video. Chapter times and full notes will be filled in when a transcript can be retrieved.\n\n## In this segment\n\n- Course: Become a Great Engineering Manager\n- Instructor: Ankita Kulkarni, on the freeCodeCamp.org YouTube channel\n- Module: The essence of leadership\n- Time range in the original video: chapter timestamps pending (full video is 1:36:49)\n\n- This section is described as “The Essence of Leadership.”\n- It covers the fundamental differences between being a software engineering manager and a technical lead.\n- It also covers what it takes to be a great leader, including a roadmap to successful leadership and the skills needed to guide a team effectively.\n\n## Key takeaways\n\n- The course treats engineering management as a leadership role that is distinct from being a technical lead, and it promises a roadmap and skills for guiding a team.\n- Full notes are pending the official transcript.\n- Use the optional “Watch this part” section if you want to study this material from the freeCodeCamp video now.\n",
+          "contentStatus": "outline-pending-transcript"
+        }
+      ]
+    },
+    {
+      "id": "skill-development",
+      "title": "Skill development for career advancement",
+      "lessons": [
+        {
+          "id": "pivotal-skills",
+          "title": "Pivotal skills for your career",
+          "startSeconds": 0,
+          "endSeconds": 5809,
+          "chapters": [
+            {
+              "title": "Skill Development for Career Advancement (chapter times pending)",
+              "startSeconds": 0
+            }
+          ],
+          "summary": "The announcement’s second area is skill development: the pivotal skills that, once mastered, can change your career trajectory and help you make a tangible impact. Detailed frameworks are pending the transcript.",
+          "quiz": [
+            {
+              "question": "What does the official announcement say the skill-development section is for?",
+              "choices": [
+                "Learning a new programming language from scratch",
+                "Uncovering pivotal skills that, once mastered, can significantly enhance your career trajectory",
+                "Passing a system design whiteboard interview",
+                "Setting up CI/CD for a monorepo"
+              ],
+              "correctIndex": 1,
+              "explanation": "The announcement describes this section as uncovering pivotal skills that can significantly enhance your career trajectory, especially if you want to make a tangible impact."
+            },
+            {
+              "question": "Who does freeCodeCamp say this course is aimed at?",
+              "choices": [
+                "Only chief technology officers",
+                "Only people who have never written code",
+                "Individual contributors curious about engineering leadership, and current managers who want to refine their skills",
+                "Only recruiters and HR business partners"
+              ],
+              "correctIndex": 2,
+              "explanation": "The announcement says the course is ideal for individual contributors curious about engineering leadership, as well as current managers seeking to refine their skills and strategies."
+            }
+          ],
+          "exercise": {
+            "prompt": "List three skills you believe would most change your career trajectory if you mastered them as a leader (or future leader). For each, write one concrete situation at work where that skill would change the outcome.",
+            "hint": "The announcement frames these as pivotal skills for impact, not as a programming syllabus. Stay practical: a meeting, a promotion conversation, a project in trouble."
+          },
+          "content": "## Outline only — full notes pending transcript\n\nA complete written lesson will be added when the official transcript for this video is available. Until then, this page is only a short outline taken from the official freeCodeCamp course announcement. It is not a full lesson, and it is not a substitute for the segment.\n\nYouTube blocked the automated fetch of chapter timestamps and subtitles for this video (a “Sign in to confirm you’re not a bot” check). Exact start and end times for this section are therefore unknown, so the optional “Watch this part” embed covers the full Become a Great Engineering Manager video. Chapter times and full notes will be filled in when a transcript can be retrieved.\n\n## In this segment\n\n- Course: Become a Great Engineering Manager\n- Instructor: Ankita Kulkarni, on the freeCodeCamp.org YouTube channel\n- Module: Skill development for career advancement\n- Time range in the original video: chapter timestamps pending (full video is 1:36:49)\n\n- This section is described as “Skill Development for Career Advancement.”\n- It focuses on pivotal skills that, once mastered, can significantly enhance your career trajectory.\n- The announcement flags this as especially useful for people who want to make a tangible impact in their professional journey.\n- The course as a whole is aimed at individual contributors curious about engineering leadership, and at current managers who want to refine their skills and strategies.\n\n## Key takeaways\n\n- Career advancement here is framed around mastering a set of pivotal leadership skills, not only technical output.\n- Full notes are pending the official transcript.\n- Use the optional “Watch this part” section if you want to study this material from the freeCodeCamp video now.\n",
+          "contentStatus": "outline-pending-transcript"
+        }
+      ]
+    },
+    {
+      "id": "communication-and-feedback",
+      "title": "Communication and feedback",
+      "lessons": [
+        {
+          "id": "communicating-with-your-team",
+          "title": "Communication and feedback in a team",
+          "startSeconds": 0,
+          "endSeconds": 5809,
+          "chapters": [
+            {
+              "title": "Communication and Feedback (chapter times pending)",
+              "startSeconds": 0
+            }
+          ],
+          "summary": "The announcement’s third area is the art of effective communication and feedback in a team. It stresses that a manager shapes team dynamics and performance, and that the course offers practical tips. The written playbook itself is pending the transcript.",
+          "quiz": [
+            {
+              "question": "What does the official announcement say you will learn in the communication and feedback section?",
+              "choices": [
+                "How to write RFC documents only",
+                "The art of effective communication and feedback within a team setting",
+                "How to configure Slack notification levels",
+                "How to automate stand-up notes with a script"
+              ],
+              "correctIndex": 1,
+              "explanation": "The announcement describes this section as learning the art of effective communication and feedback within a team setting."
+            },
+            {
+              "question": "Why does the announcement say communication and feedback matter for a manager?",
+              "choices": [
+                "Because managers are measured only on lines of code they still write",
+                "Because a manager’s role in shaping the team’s dynamics and performance is crucial",
+                "Because feedback replaces the need for a product roadmap",
+                "Because communication is only needed in incident reviews"
+              ],
+              "correctIndex": 1,
+              "explanation": "The announcement says that as a manager, your role in shaping the team’s dynamics and performance is crucial, and the course provides practical tips on how to achieve this."
+            }
+          ],
+          "exercise": {
+            "prompt": "Pick one recent moment with a teammate (praise, a missed deadline, or unclear work). Write the feedback you would give in four sentences: what you observed, why it mattered for the team, a question you would ask, and one request going forward.",
+            "hint": "The announcement emphasizes communication and feedback as tools for team dynamics and performance, not as a one-way verdict."
+          },
+          "content": "## Outline only — full notes pending transcript\n\nA complete written lesson will be added when the official transcript for this video is available. Until then, this page is only a short outline taken from the official freeCodeCamp course announcement. It is not a full lesson, and it is not a substitute for the segment.\n\nYouTube blocked the automated fetch of chapter timestamps and subtitles for this video (a “Sign in to confirm you’re not a bot” check). Exact start and end times for this section are therefore unknown, so the optional “Watch this part” embed covers the full Become a Great Engineering Manager video. Chapter times and full notes will be filled in when a transcript can be retrieved.\n\n## In this segment\n\n- Course: Become a Great Engineering Manager\n- Instructor: Ankita Kulkarni, on the freeCodeCamp.org YouTube channel\n- Module: Communication and feedback\n- Time range in the original video: chapter timestamps pending (full video is 1:36:49)\n\n- This section is described as “Communication and Feedback.”\n- It covers the art of effective communication and feedback within a team setting.\n- The announcement notes that a manager’s role in shaping the team’s dynamics and performance is crucial, and that the course offers practical tips.\n- The broader course also emphasizes empathy, communication, and team dynamics as part of the human element of a tech environment.\n\n## Key takeaways\n\n- Communication and feedback are presented as core management work because they shape how the team works and how it performs.\n- Full notes are pending the official transcript.\n- Use the optional “Watch this part” section if you want to study this material from the freeCodeCamp video now.\n",
+          "contentStatus": "outline-pending-transcript"
+        }
+      ]
+    },
+    {
+      "id": "personal-growth",
+      "title": "Personal growth and reflection",
+      "lessons": [
+        {
+          "id": "what-ankita-wishes-she-knew",
+          "title": "What Ankita wishes she knew",
+          "startSeconds": 0,
+          "endSeconds": 5809,
+          "chapters": [
+            {
+              "title": "Personal Growth and Reflection (chapter times pending)",
+              "startSeconds": 0
+            }
+          ],
+          "summary": "The announcement’s last area is personal: Ankita shares what she wishes she had known before becoming an engineering manager. It is aimed at people considering a similar transition. Her specific stories will be written up when the transcript is available.",
+          "quiz": [
+            {
+              "question": "What does the official announcement say Ankita shares in the personal-growth section?",
+              "choices": [
+                "A list of every company she has worked at, with no reflection",
+                "Her personal experiences, including what she wishes she knew before stepping into the role of an engineering manager",
+                "A salary negotiation spreadsheet",
+                "A template resignation letter"
+              ],
+              "correctIndex": 1,
+              "explanation": "The announcement says Ankita shares her personal experiences and offers a candid look at what she wishes she knew before becoming an engineering manager."
+            },
+            {
+              "question": "According to the announcement, what does this course emphasize beyond technical skills and project management?",
+              "choices": [
+                "Only how to choose a cloud vendor",
+                "The human element in a tech environment, including empathy, communication, and team dynamics",
+                "Only how to write performance-review software",
+                "Only how to pass a coding interview"
+              ],
+              "correctIndex": 1,
+              "explanation": "The announcement says what sets the course apart is a holistic approach: it is not just about technical skills or project management, but about the human element — empathy, communication, and team dynamics."
+            }
+          ],
+          "exercise": {
+            "prompt": "If you are considering (or already in) an engineering-manager role, write five things you wish you knew before the transition — or five questions you would ask someone who has made it. Keep them personal and specific to your team or company.",
+            "hint": "The announcement frames this section as candid reflection before (or early in) the move into management, not as a generic tips list."
+          },
+          "content": "## Outline only — full notes pending transcript\n\nA complete written lesson will be added when the official transcript for this video is available. Until then, this page is only a short outline taken from the official freeCodeCamp course announcement. It is not a full lesson, and it is not a substitute for the segment.\n\nYouTube blocked the automated fetch of chapter timestamps and subtitles for this video (a “Sign in to confirm you’re not a bot” check). Exact start and end times for this section are therefore unknown, so the optional “Watch this part” embed covers the full Become a Great Engineering Manager video. Chapter times and full notes will be filled in when a transcript can be retrieved.\n\n## In this segment\n\n- Course: Become a Great Engineering Manager\n- Instructor: Ankita Kulkarni, on the freeCodeCamp.org YouTube channel\n- Module: Personal growth and reflection\n- Time range in the original video: chapter timestamps pending (full video is 1:36:49)\n\n- This section is described as “Personal Growth and Reflection.”\n- Ankita shares her personal experiences and what she wishes she knew before stepping into the role of an engineering manager.\n- The announcement calls this invaluable for people contemplating a similar transition.\n- The course is described as holistic: not only technical skills or project management, but the human element in a tech environment, especially empathy, communication, and team dynamics.\n\n## Key takeaways\n\n- The close of the announced outline is personal reflection: what Ankita wishes she had known, for anyone considering the same move.\n- Full notes are pending the official transcript.\n- Use the optional “Watch this part” section if you want to study this material from the freeCodeCamp video now.\n",
+          "contentStatus": "outline-pending-transcript"
+        }
+      ]
+    }
+  ]
+}

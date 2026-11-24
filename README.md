@@ -60,6 +60,7 @@ These courses are based on freeCodeCamp.org YouTube videos. Lessons written from
 
    - `id` — must match the filename (without `.json`)
    - `title`, `description`, `level`, `thumbnailUrl`
+   - `category` — optional topic tag shown on the course card (for example `Leadership`, `JavaScript`, or `System Design`)
    - `summarySource` — `chapters-and-description` or `transcript`
    - `source` — freeCodeCamp credit and YouTube metadata (`name`, `channelUrl`, `creator`, `videoTitle`, `videoId`, `videoUrl`, `duration`, `durationSeconds`)
    - `modules[]` — each with `id`, `title`, and `lessons[]`
@@ -73,7 +74,7 @@ Do not download or check in video files. Only store metadata, text, and YouTube 
 
 The interface uses a small design system (CSS variables for color, spacing, and type) and follows your system light or dark preference. A toggle in the header can pin light or dark mode; that choice is stored in `localStorage` under `devilears-courses-theme`. Motion is reduced when `prefers-reduced-motion` is set.
 
-Course cards use the official YouTube thumbnail (`https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg`), plus level and duration badges and a progress bar from `localStorage`.
+Course cards use the official YouTube thumbnail (`https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg`), plus level, optional category, and duration badges and a progress bar from `localStorage`.
 
 ## Security
 

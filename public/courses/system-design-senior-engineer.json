@@ -3,6 +3,7 @@
   "title": "Design Software Systems Like a Senior Engineer — Complete Course",
   "description": "A structured path through Hayk Simonyan’s freeCodeCamp course on designing systems the way senior interviews expect: a five-step framework, then three worked examples in the style of Spotify, Booking.com, and WhatsApp. Watch each chapter in the original YouTube video, then use the summary, quiz, and exercise to practice the same thinking.",
   "level": "Advanced",
+  "category": "System Design",
   "summarySource": "chapters-and-description",
   "source": {
     "name": "freeCodeCamp.org",

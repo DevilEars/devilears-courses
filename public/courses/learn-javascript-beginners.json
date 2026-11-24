@@ -3,6 +3,7 @@
   "title": "Learn JavaScript — Full Course for Beginners",
   "description": "A structured path through freeCodeCamp’s beginner JavaScript video with Beau Carnes. Watch each chapter in the original YouTube video, then use the summary, quiz, and exercise to lock in the idea. The official listing describes this as a complete 134-part tutorial; this course uses the 100 chapter timestamps published in the video’s course contents.",
   "level": "Beginner",
+  "category": "JavaScript",
   "source": {
     "name": "freeCodeCamp.org",
     "channelUrl": "https://www.youtube.com/@freecodecamp",

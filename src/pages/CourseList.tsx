@@ -82,6 +82,9 @@ export default function CourseList() {
                     <span className={`badge ${levelClass(course.level)}`}>
                       {course.level}
                     </span>
+                    {course.category ? (
+                      <span className="badge badge-category">{course.category}</span>
+                    ) : null}
                     <span className="badge">
                       {formatDuration(course.source.durationSeconds)}
                     </span>
