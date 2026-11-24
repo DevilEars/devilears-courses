@@ -25,16 +25,17 @@ npm run preview
 
 Progress (completed lessons and quiz scores) is stored in your browser’s `localStorage` under the key `devilears-courses-progress`. Clearing site data will reset it.
 
-## Sample course
+## Sample courses
 
-The first course is built from:
+Both starter courses are based on freeCodeCamp.org YouTube videos. Lesson summaries are written from public chapter timestamps and the official descriptions, not from a transcript.
 
-- **Title:** Learn JavaScript - Full Course for Beginners
-- **Creator:** Beau Carnes
-- **Publisher:** [freeCodeCamp.org](https://www.youtube.com/@freecodecamp)
-- **Video:** https://www.youtube.com/watch?v=PkZNo7MFNFg
+1. **Learn JavaScript - Full Course for Beginners** by Beau Carnes  
+   https://www.youtube.com/watch?v=PkZNo7MFNFg  
+   The 100 public chapter timestamps from the video’s course contents are grouped into modules and lessons.
 
-The 100 public chapter timestamps from the video’s course contents are grouped into modules and lessons. Lesson summaries are written from those chapter titles and the official video description, not from a transcript.
+2. **System Design Concepts Course and Interview Prep** by Hayk Simonyan  
+   https://www.youtube.com/watch?v=F2FmTdLtb_4  
+   All 11 official YouTube chapters are included as lessons, grouped into modules.
 
 ## How to add a course
 

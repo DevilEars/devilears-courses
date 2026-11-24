@@ -1,0 +1,522 @@
+{
+  "id": "system-design-concepts",
+  "title": "System Design Concepts Course and Interview Prep",
+  "description": "A structured path through freeCodeCamp\u2019s system design interview-prep video with Hayk Simonyan. Watch each chapter in the original YouTube video, then use the summary, quiz, and exercise to lock in the idea. The course surveys the core building blocks of scalable systems: architecture, CAP and service objectives, networking, APIs, caching, proxies, load balancing, and databases.",
+  "level": "Intermediate",
+  "source": {
+    "name": "freeCodeCamp.org",
+    "channelUrl": "https://www.youtube.com/@freecodecamp",
+    "creator": "Hayk Simonyan",
+    "videoTitle": "System Design Concepts Course and Interview Prep",
+    "videoId": "F2FmTdLtb_4",
+    "videoUrl": "https://www.youtube.com/watch?v=F2FmTdLtb_4",
+    "duration": "53:38",
+    "durationSeconds": 3218
+  },
+  "thumbnailUrl": "https://i.ytimg.com/vi/F2FmTdLtb_4/hqdefault.jpg",
+  "modules": [
+    {
+      "id": "foundations",
+      "title": "Foundations",
+      "lessons": [
+        {
+          "id": "introduction",
+          "title": "Introduction",
+          "startSeconds": 0,
+          "endSeconds": 39,
+          "chapters": [
+            {
+              "title": "Introduction",
+              "startSeconds": 0
+            }
+          ],
+          "summary": "Hayk Simonyan introduces this freeCodeCamp.org crash course on the concepts that show up in system design interviews. The interview is less about writing code and more about how you glue a large system together: moving data, storing data, and transforming data, while aiming for scalability, maintainability, and efficiency, and planning for failure.",
+          "quiz": [
+            {
+              "question": "What is a system design interview mainly trying to assess, according to this course\u2019s framing?",
+              "choices": [
+                "How quickly you can write production-ready code on a whiteboard",
+                "How you connect the parts of a large system, not how you write the implementation code",
+                "Whether you can memorize every AWS product name",
+                "How many sorting algorithms you can implement"
+              ],
+              "correctIndex": 1,
+              "explanation": "The course describes the interview as being about gluing an entire system together rather than writing actual code."
+            },
+            {
+              "question": "Which trio does the course treat as central activities in system design?",
+              "choices": [
+                "Compiling, linking, and deploying",
+                "Moving data, storing data, and transforming data",
+                "Marketing, billing, and support",
+                "Linting, formatting, and testing"
+              ],
+              "correctIndex": 1,
+              "explanation": "Those three activities are the high-level lens used at the start of the course."
+            }
+          ],
+          "exercise": {
+            "prompt": "In two or three sentences, describe a product you know (for example a chat app or a shop) in terms of how it moves, stores, and transforms data.",
+            "hint": "Moving might be a user request or a message between services; storing might be a database or object store; transforming might be creating a feed, a receipt, or an analytics aggregate."
+          }
+        },
+        {
+          "id": "computer-architecture",
+          "title": "Computer architecture",
+          "startSeconds": 39,
+          "endSeconds": 262,
+          "chapters": [
+            {
+              "title": "Computer Architecture (Disk Storage, RAM, Cache, CPU)",
+              "startSeconds": 39
+            }
+          ],
+          "summary": "This chapter reviews the hardware layers a request travels through: disk storage, RAM, cache, and the CPU. These components differ in size, cost, and speed. Understanding that hierarchy helps you reason about why caches exist, why memory is treated as a scarce resource, and why some operations are cheap while others are slow when you design a system.",
+          "quiz": [
+            {
+              "question": "In the usual storage hierarchy, which of these is typically the fastest but smallest?",
+              "choices": [
+                "Hard disk or SSD storage",
+                "RAM",
+                "CPU cache",
+                "Magnetic tape backup"
+              ],
+              "correctIndex": 2,
+              "explanation": "Cache sits closest to the CPU: it is small and expensive, but much faster than RAM or disk."
+            },
+            {
+              "question": "Why does this hardware review matter in a system design interview?",
+              "choices": [
+                "Interviewers only hire people who can solder RAM",
+                "It explains why some operations are cheap or slow, and why we cache data closer to the processor or the user",
+                "It replaces the need to talk about databases",
+                "It proves that disk is always faster than memory"
+              ],
+              "correctIndex": 1,
+              "explanation": "The point is performance intuition, not hardware assembly."
+            }
+          ],
+          "exercise": {
+            "prompt": "Order disk, RAM, and CPU cache from fastest to slowest, and write one sentence about why an application might keep a frequently used value in memory instead of reading it from disk every time.",
+            "hint": "Fastest is cache, then RAM, then disk. Re-reading from disk on every request adds latency."
+          }
+        },
+        {
+          "id": "production-app-architecture",
+          "title": "Production app architecture",
+          "startSeconds": 262,
+          "endSeconds": 432,
+          "chapters": [
+            {
+              "title": "Production App Architecture (CI/CD, Load Balancers, Logging & Monitoring)",
+              "startSeconds": 262
+            }
+          ],
+          "summary": "A production application is more than a single process on a laptop. This chapter looks at the supporting architecture: CI/CD so changes can be tested and released safely, load balancers so traffic can be spread across instances, and logging and monitoring so you can tell what the system is doing and when it misbehaves.",
+          "quiz": [
+            {
+              "question": "What is CI/CD mainly for in a production architecture?",
+              "choices": [
+                "Storing user files in a CDN",
+                "Automatically building, testing, and deploying changes in a repeatable way",
+                "Choosing between SQL and NoSQL",
+                "Encrypting traffic between browsers"
+              ],
+              "correctIndex": 1,
+              "explanation": "Continuous integration and continuous deployment are the release pipeline, not a data store or a protocol."
+            },
+            {
+              "question": "Why do production systems need logging and monitoring, not just working code?",
+              "choices": [
+                "So you can see health, errors, and performance once the app is live",
+                "Because logs replace load balancers",
+                "Because monitoring removes the need for tests",
+                "Because CI/CD cannot run without a metrics dashboard"
+              ],
+              "correctIndex": 0,
+              "explanation": "You cannot operate or debug a distributed system if you cannot observe it."
+            }
+          ],
+          "exercise": {
+            "prompt": "Sketch a simple production path for a web app: developer commit \u2192 CI/CD \u2192 running instances behind a load balancer, plus one place logs or metrics would be sent. Label each box.",
+            "hint": "A typical path is repo \u2192 build/test pipeline \u2192 deploy to several app servers, with a load balancer in front and a log or metrics store on the side."
+          }
+        }
+      ]
+    },
+    {
+      "id": "design-requirements",
+      "title": "Design requirements",
+      "lessons": [
+        {
+          "id": "design-requirements",
+          "title": "CAP, throughput, latency, SLOs and SLAs",
+          "startSeconds": 432,
+          "endSeconds": 880,
+          "chapters": [
+            {
+              "title": "Design Requirements (CAP Theorem, Throughput, Latency, SLOs and SLAs)",
+              "startSeconds": 432
+            }
+          ],
+          "summary": "This section covers the requirements you have to name before picking an architecture. The CAP theorem says a distributed system can fully guarantee only two of consistency, availability, and partition tolerance at the same time, so you make trade-offs. Throughput is how much work you complete in a period; latency is how long one request takes. SLOs are internal reliability or performance targets; SLAs are the commitments you make, often with consequences if they are missed.",
+          "quiz": [
+            {
+              "question": "What does the CAP theorem say you can fully guarantee at once in a distributed system?",
+              "choices": [
+                "Consistency, availability, and partition tolerance, always all three",
+                "Only two of consistency, availability, and partition tolerance",
+                "Only throughput and latency",
+                "Only SLOs, never SLAs"
+              ],
+              "correctIndex": 1,
+              "explanation": "When the network partitions, you usually have to trade between consistency and availability."
+            },
+            {
+              "question": "What is the difference between latency and throughput?",
+              "choices": [
+                "They are two names for the same metric",
+                "Latency is how long one request takes; throughput is how much work the system completes in a period",
+                "Throughput is only used for disks; latency is only used for networks",
+                "Latency measures availability; throughput measures consistency"
+              ],
+              "correctIndex": 1,
+              "explanation": "A system can have high throughput and still feel slow to one user if latency is high."
+            },
+            {
+              "question": "How do SLOs and SLAs typically differ?",
+              "choices": [
+                "SLOs are internal targets; SLAs are external commitments, often with consequences if missed",
+                "SLAs are only used by front-end teams; SLOs are only used by databases",
+                "An SLO is a legal contract; an SLA is a cache setting",
+                "They are identical terms"
+              ],
+              "correctIndex": 0,
+              "explanation": "You set SLOs to run the service; an SLA is the promise you make to customers or partners."
+            }
+          ],
+          "exercise": {
+            "prompt": "Pick a system (for example a bank transfer API or a social feed). Write whether you would lean toward consistency or availability if the network partitions, and give one latency or throughput target you might set as an SLO.",
+            "hint": "A bank usually favors consistency (correct balances) over always being available. A feed might accept slightly stale data to stay up. An SLO might be \u2018p99 latency under 200 ms\u2019 or \u201899.9% of requests succeed\u2019."
+          }
+        }
+      ]
+    },
+    {
+      "id": "networking",
+      "title": "Networking and protocols",
+      "lessons": [
+        {
+          "id": "networking",
+          "title": "TCP, UDP, DNS, and IP",
+          "startSeconds": 880,
+          "endSeconds": 1143,
+          "chapters": [
+            {
+              "title": "Networking (TCP, UDP, DNS, IP Addresses & IP Headers)",
+              "startSeconds": 880
+            }
+          ],
+          "summary": "Networking is how machines find each other and exchange packets. IP addresses identify hosts, and IP headers carry the routing metadata for a packet. DNS maps human-readable names to IP addresses. TCP is a connection-oriented, reliable transport; UDP is a lighter, connectionless transport that does not guarantee delivery or order. Those trade-offs show up later in API and real-time protocol choices.",
+          "quiz": [
+            {
+              "question": "What is DNS used for?",
+              "choices": [
+                "Compressing images before they are stored",
+                "Mapping a domain name to an IP address",
+                "Guaranteeing that UDP packets arrive in order",
+                "Encrypting a database at rest"
+              ],
+              "correctIndex": 1,
+              "explanation": "DNS is the name system of the internet: example.com becomes an address a client can contact."
+            },
+            {
+              "question": "Which statement about TCP and UDP is accurate?",
+              "choices": [
+                "UDP is always slower than TCP because it retries more often",
+                "TCP is connection-oriented and aims to deliver data reliably; UDP is lighter and does not guarantee delivery or order",
+                "TCP cannot be used for HTTP",
+                "UDP assigns IP addresses to hosts"
+              ],
+              "correctIndex": 1,
+              "explanation": "TCP adds handshake, acknowledgements, and ordering. UDP skips that overhead."
+            }
+          ],
+          "exercise": {
+            "prompt": "For each of these, choose TCP or UDP and say why: a bank\u2019s payment API, a live video call, and a DNS lookup (as typically designed).",
+            "hint": "Payments usually want TCP\u2019s reliability. Real-time media often uses UDP so a late packet can be dropped instead of stalling the stream. Classic DNS queries are often UDP."
+          }
+        },
+        {
+          "id": "application-protocols",
+          "title": "Application layer protocols",
+          "startSeconds": 1143,
+          "endSeconds": 1441,
+          "chapters": [
+            {
+              "title": "Application Layer Protocols (HTTP, WebSockets, WebRTC, MQTT, etc)",
+              "startSeconds": 1143
+            }
+          ],
+          "summary": "Once packets can move, applications still need a protocol for meaning. HTTP is the common request/response model for the web and many APIs. WebSockets keep a bidirectional connection open for live updates. WebRTC is aimed at real-time, often peer-to-peer, audio, video, and data. MQTT is a lightweight publish/subscribe protocol often used for IoT and other constrained clients. You pick a protocol based on traffic pattern, not habit.",
+          "quiz": [
+            {
+              "question": "When would WebSockets usually be a better fit than plain request/response HTTP?",
+              "choices": [
+                "For a one-off download of a static image",
+                "When the client and server need an open, bidirectional channel for frequent updates",
+                "When you only need to send a single form submission",
+                "When you want to avoid all networking"
+              ],
+              "correctIndex": 1,
+              "explanation": "Chat, live feeds, and similar apps often need the server to push data without a new HTTP request each time."
+            },
+            {
+              "question": "Which protocol is commonly associated with lightweight publish/subscribe messaging, including IoT devices?",
+              "choices": [
+                "FTP",
+                "MQTT",
+                "SMTP only",
+                "CSS"
+              ],
+              "correctIndex": 1,
+              "explanation": "MQTT is designed as a compact pub/sub protocol for constrained clients and unreliable networks."
+            }
+          ],
+          "exercise": {
+            "prompt": "Choose a protocol (HTTP, WebSockets, WebRTC, or MQTT) for: (1) a product catalog API, (2) an in-browser video call, and (3) thousands of sensors reporting temperature. Write one reason for each.",
+            "hint": "Catalog: HTTP. Video call: WebRTC. Sensors: MQTT (or a similar pub/sub protocol)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "apis-and-traffic",
+      "title": "APIs, caches, proxies, and load balancers",
+      "lessons": [
+        {
+          "id": "api-design",
+          "title": "API design",
+          "startSeconds": 1441,
+          "endSeconds": 1759,
+          "chapters": [
+            {
+              "title": "API Design",
+              "startSeconds": 1441
+            }
+          ],
+          "summary": "API design is how other clients and services talk to your system. This chapter covers practical habits for APIs that stay usable as they scale: clear resource-oriented contracts, consistent naming and status codes, versioning so you can change a contract safely, and thinking about pagination, errors, and idempotency so retries do not corrupt data.",
+          "quiz": [
+            {
+              "question": "Why does API versioning matter in a production system?",
+              "choices": [
+                "It lets you change a contract without immediately breaking existing clients",
+                "It makes DNS resolve faster",
+                "It replaces the need for authentication",
+                "It automatically shards your database"
+              ],
+              "correctIndex": 0,
+              "explanation": "A versioned path or header gives old clients a stable API while new clients adopt the new one."
+            },
+            {
+              "question": "What does it mean for an API operation to be idempotent?",
+              "choices": [
+                "It can never return an error",
+                "Repeating the same request has the same effect as doing it once",
+                "It must use UDP",
+                "It always creates a new record"
+              ],
+              "correctIndex": 1,
+              "explanation": "Idempotency is important when networks retry. A well-designed PUT or a request with an idempotency key should not double-charge or double-create."
+            }
+          ],
+          "exercise": {
+            "prompt": "Design a tiny REST-style API for a library: list endpoints to list books, get one book, and borrow a book. Note one status code you would return on success and one on a client error, and say whether borrow should be idempotent if the client retries.",
+            "hint": "Example: GET /books, GET /books/{id}, POST /books/{id}/borrow. 200 or 201 on success, 400 or 404 on client errors. Retries should not borrow the same copy twice."
+          }
+        },
+        {
+          "id": "caching-and-cdns",
+          "title": "Caching and CDNs",
+          "startSeconds": 1759,
+          "endSeconds": 2193,
+          "chapters": [
+            {
+              "title": "Caching and CDNs",
+              "startSeconds": 1759
+            }
+          ],
+          "summary": "Caching stores a computed or fetched result closer to the next reader so you avoid repeating expensive work. A Content Delivery Network (CDN) is a geographically distributed cache, often for static or cacheable content, so users hit a nearby edge instead of your origin. You also have to plan cache invalidation and what happens on a cache miss, because stale or missing data is the usual trade-off.",
+          "quiz": [
+            {
+              "question": "What problem do caches and CDNs mainly try to improve?",
+              "choices": [
+                "They replace the need for a database",
+                "They reduce latency and load on the origin by serving stored copies of data or content",
+                "They guarantee strong consistency across every region",
+                "They make CAP trade-offs disappear"
+              ],
+              "correctIndex": 1,
+              "explanation": "A cache hit avoids a slower trip to the origin. A CDN does that from a location nearer the user."
+            },
+            {
+              "question": "What is a cache invalidation problem?",
+              "choices": [
+                "Deciding when a stored copy is too old or must be replaced after the source changes",
+                "Converting HTTP to WebSockets",
+                "Assigning IP addresses to cache servers",
+                "Writing the first line of a unit test"
+              ],
+              "correctIndex": 0,
+              "explanation": "If you never invalidate, users can see stale data. If you invalidate too aggressively, you lose the benefit of the cache."
+            }
+          ],
+          "exercise": {
+            "prompt": "For a news website\u2019s article pages, say what you might cache at a CDN, what should probably not be cached for long, and one way you would expire or purge a page after an editor updates it.",
+            "hint": "The rendered article and images are good CDN candidates. Personalized account widgets should stay short-lived or uncached. Use a short TTL, a cache key with a version, or a purge when the article is published."
+          }
+        },
+        {
+          "id": "proxy-servers",
+          "title": "Forward and reverse proxies",
+          "startSeconds": 2193,
+          "endSeconds": 2556,
+          "chapters": [
+            {
+              "title": "Proxy Servers (Forward/Reverse Proxies)",
+              "startSeconds": 2193
+            }
+          ],
+          "summary": "A proxy stands in the middle of a request. A forward proxy sits in front of clients and can send their requests onward (for example for egress control, filtering, or anonymity). A reverse proxy sits in front of your servers: clients talk to the proxy, and it forwards to the right origin. Reverse proxies are often used for TLS termination, caching, routing, and shielding backends \u2014 and they overlap with how many load balancers are deployed.",
+          "quiz": [
+            {
+              "question": "Where does a reverse proxy sit?",
+              "choices": [
+                "In front of your servers, so clients send requests to the proxy rather than directly to each origin",
+                "Only on the user\u2019s laptop, never in the data center",
+                "Between two database replicas only",
+                "Inside the CPU cache"
+              ],
+              "correctIndex": 0,
+              "explanation": "Clients know the proxy\u2019s address. The proxy chooses or protects the backend."
+            },
+            {
+              "question": "What is a typical job of a forward proxy?",
+              "choices": [
+                "Sharding a database by user id",
+                "Acting on behalf of clients when they make outbound requests, for example to filter or control egress",
+                "Writing CI/CD pipelines",
+                "Replacing DNS entirely"
+              ],
+              "correctIndex": 1,
+              "explanation": "Forward proxies represent the client side; reverse proxies represent the server side."
+            }
+          ],
+          "exercise": {
+            "prompt": "Draw or describe two tiny diagrams: a browser going through a forward proxy to the public internet, and many browsers going to a reverse proxy that forwards to three app servers. Label which proxy is which.",
+            "hint": "Forward: clients \u2192 forward proxy \u2192 internet. Reverse: clients \u2192 reverse proxy \u2192 your app servers."
+          }
+        },
+        {
+          "id": "load-balancers",
+          "title": "Load balancers",
+          "startSeconds": 2556,
+          "endSeconds": 2885,
+          "chapters": [
+            {
+              "title": "Load Balancers",
+              "startSeconds": 2556
+            }
+          ],
+          "summary": "Load balancers distribute incoming traffic across multiple instances so no single server is the only path, which improves availability and helps you scale horizontally. They often run health checks and stop sending traffic to sick nodes. Designs differ by layer (for example layer 4 vs layer 7) and by algorithm (round robin, least connections, and others). A load balancer can itself become a single point of failure if you only run one.",
+          "quiz": [
+            {
+              "question": "What is the main job of a load balancer?",
+              "choices": [
+                "Compile frontend assets",
+                "Distribute incoming traffic across multiple backends and usually avoid unhealthy ones",
+                "Convert SQL queries into NoSQL documents",
+                "Issue TLS certificates only"
+              ],
+              "correctIndex": 1,
+              "explanation": "It spreads load and, with health checks, can take failing instances out of rotation."
+            },
+            {
+              "question": "Why can a single load balancer still be a problem?",
+              "choices": [
+                "Because load balancers cannot use TCP",
+                "Because it can become a single point of failure if it is the only entry point and it goes down",
+                "Because it prevents you from using DNS",
+                "Because it makes caching illegal"
+              ],
+              "correctIndex": 1,
+              "explanation": "Production setups often use more than one load balancer, or a managed service with redundancy."
+            }
+          ],
+          "exercise": {
+            "prompt": "List two load-balancing algorithms and one situation where you would pick each. Then add a note about what a health check should do if an instance starts returning 500s.",
+            "hint": "Round robin is simple when instances are similar. Least connections can help if some requests are long-lived. A health check should take the failing instance out of the pool until it recovers."
+          }
+        }
+      ]
+    },
+    {
+      "id": "databases",
+      "title": "Databases",
+      "lessons": [
+        {
+          "id": "databases",
+          "title": "Sharding, replication, ACID, and scaling",
+          "startSeconds": 2885,
+          "endSeconds": 3218,
+          "chapters": [
+            {
+              "title": "Databases (Sharding, Replication, ACID, Vertical & Horizontal Scaling)",
+              "startSeconds": 2885
+            }
+          ],
+          "summary": "The final chapter covers how data stores grow and stay correct. Vertical scaling means a bigger machine; horizontal scaling means more machines. Replication copies data to other nodes for reads, backups, or failover. Sharding splits data across nodes so each holds only a part of the set. ACID (atomicity, consistency, isolation, durability) describes the guarantees people expect from a transactional database. Each choice has trade-offs in complexity, consistency, and cost.",
+          "quiz": [
+            {
+              "question": "What is the difference between vertical and horizontal scaling for a database?",
+              "choices": [
+                "Vertical means a larger machine; horizontal means adding more machines",
+                "Vertical means more regions only; horizontal means faster disks only",
+                "They are two words for sharding",
+                "Horizontal scaling never requires application changes"
+              ],
+              "correctIndex": 0,
+              "explanation": "Vertical scaling is simpler until you hit the limits of one box. Horizontal scaling adds capacity by distributing work."
+            },
+            {
+              "question": "What does sharding do?",
+              "choices": [
+                "It encrypts every query",
+                "It splits data across multiple nodes so each one stores only a subset",
+                "It always makes every replica identical and writable",
+                "It replaces the need for backups"
+              ],
+              "correctIndex": 1,
+              "explanation": "A shard key decides which node owns a row or document. That is different from replication, which copies the same data."
+            },
+            {
+              "question": "What do the letters in ACID stand for?",
+              "choices": [
+                "Availability, Caching, Indexing, Deployment",
+                "Atomicity, Consistency, Isolation, Durability",
+                "Auth, Compression, I/O, Disk",
+                "Append, Copy, Import, Delete"
+              ],
+              "correctIndex": 1,
+              "explanation": "Those four properties describe a traditional transactional store: a unit of work either completes fully, leaves valid state, does not interfere badly with others, and survives a crash once committed."
+            }
+          ],
+          "exercise": {
+            "prompt": "You have a users table that no longer fits on one machine. In a short paragraph, say whether you would first try vertical scaling, read replicas, or sharding, and what trade-off your first choice accepts.",
+            "hint": "A common path is: bigger machine first (simple, finite), then read replicas if the bottleneck is reads (writes still hit the primary), then sharding when a single primary cannot hold or write the data (more operational complexity)."
+          }
+        }
+      ]
+    }
+  ]
+}
