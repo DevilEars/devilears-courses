@@ -6,6 +6,8 @@ type Props = {
   onScored: (correct: number, total: number) => void;
 };
 
+const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
 export default function Quiz({ questions, onScored }: Props) {
   const [answers, setAnswers] = useState<Array<number | null>>(
     () => questions.map(() => null),
@@ -17,7 +19,12 @@ export default function Quiz({ questions, onScored }: Props) {
     }, 0);
   }, [answers, questions]);
 
-  const completed = answers.every((answer) => answer !== null);
+  const answeredCount = answers.filter((answer) => answer !== null).length;
+  const completed = answeredCount === questions.length && questions.length > 0;
+  const scorePercent =
+    questions.length === 0
+      ? 0
+      : Math.round((correctCount / questions.length) * 100);
 
   function select(questionIndex: number, choiceIndex: number) {
     setAnswers((prev) => {
@@ -36,26 +43,70 @@ export default function Quiz({ questions, onScored }: Props) {
   }
 
   return (
-    <section className="section-card">
-      <h2>Quiz</h2>
-      <p className="progress-label">
-        Instant feedback after each answer. Your score is saved on this device.
-      </p>
+    <section className="section-card quiz-card">
+      <div className="quiz-header">
+        <div>
+          <h2>Quiz</h2>
+          <p className="progress-label">
+            Instant feedback after each answer. Your score is saved on this
+            device.
+          </p>
+        </div>
+        <div className="quiz-score" role="status">
+          {completed ? (
+            <>
+              <strong>
+                Score {correctCount}/{questions.length}
+              </strong>
+              <span className="quiz-score-percent">{scorePercent}%</span>
+            </>
+          ) : (
+            <strong>
+              {answeredCount}/{questions.length} answered
+            </strong>
+          )}
+          <div
+            className="quiz-score-track"
+            aria-hidden="true"
+          >
+            <div
+              className={`quiz-score-fill${completed ? " is-final" : ""}`}
+              style={{
+                width: `${
+                  completed
+                    ? scorePercent
+                    : questions.length
+                      ? Math.round((answeredCount / questions.length) * 100)
+                      : 0
+                }%`,
+              }}
+            />
+          </div>
+        </div>
+      </div>
       <div className="quiz-list">
         {questions.map((question, questionIndex) => {
           const selected = answers[questionIndex];
           return (
-            <div key={question.question}>
+            <div className="quiz-item" key={question.question}>
               <h3>
-                {questionIndex + 1}. {question.question}
+                <span className="quiz-item-number">
+                  {questionIndex + 1}
+                </span>
+                {question.question}
               </h3>
-              <div className="choice-list" role="group" aria-label={question.question}>
+              <div
+                className="choice-list"
+                role="group"
+                aria-label={question.question}
+              >
                 {question.choices.map((choice, choiceIndex) => {
                   const isSelected = selected === choiceIndex;
                   const showResult = selected !== null;
                   const isCorrect = choiceIndex === question.correctIndex;
                   const className = [
                     "choice",
+                    isSelected ? "selected" : "",
                     showResult && isCorrect ? "correct" : "",
                     showResult && isSelected && !isCorrect ? "incorrect" : "",
                   ]
@@ -68,15 +119,27 @@ export default function Quiz({ questions, onScored }: Props) {
                       className={className}
                       onClick={() => select(questionIndex, choiceIndex)}
                       disabled={selected !== null}
+                      aria-pressed={isSelected}
                     >
-                      {choice}
+                      <span className="choice-letter" aria-hidden="true">
+                        {LETTERS[choiceIndex] ?? choiceIndex + 1}
+                      </span>
+                      <span className="choice-text">{choice}</span>
                     </button>
                   );
                 })}
               </div>
               {selected !== null ? (
-                <p className="feedback">
-                  {selected === question.correctIndex ? "Correct. " : "Not quite. "}
+                <p
+                  className={`feedback${
+                    selected === question.correctIndex
+                      ? " is-correct"
+                      : " is-wrong"
+                  }`}
+                >
+                  {selected === question.correctIndex
+                    ? "Correct. "
+                    : "Not quite. "}
                   {question.explanation}
                 </p>
               ) : null}
@@ -84,13 +147,6 @@ export default function Quiz({ questions, onScored }: Props) {
           );
         })}
       </div>
-      {completed ? (
-        <p className="feedback">
-          <strong>
-            Score: {correctCount} / {questions.length}
-          </strong>
-        </p>
-      ) : null}
     </section>
   );
 }

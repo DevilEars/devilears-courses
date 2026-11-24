@@ -15,6 +15,7 @@ export default function Credit({ course, startSeconds = 0 }: Props) {
 
   return (
     <aside className="credit">
+      <p className="credit-kicker">freeCodeCamp credit</p>
       <p>
         This content is based on{" "}
         <a href={href} target="_blank" rel="noreferrer">

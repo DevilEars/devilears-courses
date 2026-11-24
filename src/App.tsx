@@ -1,4 +1,5 @@
 import { Link, Navigate, Route, Routes, useLocation } from "react-router-dom";
+import ThemeToggle from "./components/ThemeToggle";
 import CourseList from "./pages/CourseList";
 import CourseOverview from "./pages/CourseOverview";
 import LessonView from "./pages/LessonView";
@@ -20,15 +21,23 @@ function Header() {
 
   return (
     <header className="site-header">
-      {backTo ? (
-        <Link to={backTo} className="header-back">
-          Back
+      <div className="site-header-inner">
+        {backTo ? (
+          <Link to={backTo} className="header-back">
+            Back
+          </Link>
+        ) : null}
+        <Link to="/" className="brand">
+          <span className="brand-mark" aria-hidden="true">
+            DE
+          </span>
+          <span className="brand-text">
+            <strong>DevilEars Courses</strong>
+            <span>Structured lessons from freeCodeCamp videos</span>
+          </span>
         </Link>
-      ) : null}
-      <Link to="/" className="brand">
-        <strong>DevilEars Courses</strong>
-        <span>Structured lessons from freeCodeCamp videos</span>
-      </Link>
+        <ThemeToggle />
+      </div>
     </header>
   );
 }
@@ -36,8 +45,11 @@ function Header() {
 export default function App() {
   return (
     <div className="app-shell">
+      <a className="skip-link" href="#main-content">
+        Skip to main content
+      </a>
       <Header />
-      <main className="site-main">
+      <main id="main-content" className="site-main" tabIndex={-1}>
         <Routes>
           <Route path="/" element={<CourseList />} />
           <Route path="/courses/:courseId" element={<CourseOverview />} />

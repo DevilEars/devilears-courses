@@ -11,6 +11,14 @@ import {
 } from "../lib/progress";
 import type { Course } from "../types";
 
+function levelClass(level: string): string {
+  const key = level.trim().toLowerCase();
+  if (key === "beginner") return "badge-beginner";
+  if (key === "intermediate") return "badge-intermediate";
+  if (key === "advanced") return "badge-advanced";
+  return "";
+}
+
 export default function CourseList() {
   const [courses, setCourses] = useState<Course[] | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -60,26 +68,31 @@ export default function CourseList() {
           const complete = getCourseProgress(state, course.id).completedLessons
             .length;
           return (
-            <article key={course.id}>
+            <article className="course-card-wrap" key={course.id}>
               <Link className="course-card" to={`/courses/${course.id}`}>
-                <img
-                  src={course.thumbnailUrl}
-                  alt=""
-                  width={480}
-                  height={360}
-                />
-                <div className="course-card-body">
-                  <div className="chip-row">
-                    <span className="chip">{course.level}</span>
-                    <span className="chip">
+                <div className="course-card-media">
+                  <img
+                    src={course.thumbnailUrl}
+                    alt=""
+                    width={480}
+                    height={360}
+                  />
+                  <div className="course-card-badges">
+                    <span className={`badge ${levelClass(course.level)}`}>
+                      {course.level}
+                    </span>
+                    <span className="badge">
                       {formatDuration(course.source.durationSeconds)}
                     </span>
-                    <span className="chip">{total} lessons</span>
                   </div>
+                </div>
+                <div className="course-card-body">
                   <h2>{course.title}</h2>
-                  <p className="lede" style={{ marginBottom: "0.85rem" }}>
-                    {course.description}
-                  </p>
+                  <p className="card-description">{course.description}</p>
+                  <div className="chip-row">
+                    <span className="chip">{total} lessons</span>
+                    <span className="chip">{course.modules.length} modules</span>
+                  </div>
                   <ProgressBar complete={complete} total={total} />
                 </div>
               </Link>

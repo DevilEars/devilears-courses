@@ -9,14 +9,16 @@ export default function Exercise({ exercise }: Props) {
   const [showHint, setShowHint] = useState(false);
 
   return (
-    <section className="section-card">
+    <section className="exercise-card">
+      <p className="page-kicker">Practice</p>
       <h2>Exercise</h2>
-      <p className="summary-text">{exercise.prompt}</p>
+      <p className="exercise-prompt">{exercise.prompt}</p>
       <div className="actions">
         <button
           type="button"
           className="btn btn-secondary"
           onClick={() => setShowHint((value) => !value)}
+          aria-expanded={showHint}
         >
           {showHint ? "Hide hint" : "Show hint"}
         </button>

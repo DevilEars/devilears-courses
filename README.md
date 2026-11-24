@@ -69,6 +69,12 @@ The lesson player starts at `startSeconds` and stops at `endSeconds` using the Y
 
 Do not download or check in video files. Only store metadata, text, and YouTube ids.
 
+## Appearance
+
+The interface uses a small design system (CSS variables for color, spacing, and type) and follows your system light or dark preference. A toggle in the header can pin light or dark mode; that choice is stored in `localStorage` under `devilears-courses-theme`. Motion is reduced when `prefers-reduced-motion` is set.
+
+Course cards use the official YouTube thumbnail (`https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg`), plus level and duration badges and a progress bar from `localStorage`.
+
 ## Security
 
 This repository has Dependabot alerts and Dependabot security updates enabled, plus GitHub secret scanning with push protection. Weekly Dependabot version updates for npm (grouped minor and patch) and GitHub Actions are configured in `.github/dependabot.yml`.
