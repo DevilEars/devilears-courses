@@ -30,7 +30,7 @@
               "startSeconds": 0
             }
           ],
-          "summary": "Beau Carnes of freeCodeCamp.org introduces this beginner JavaScript course. It is a standalone video that also follows the freeCodeCamp JavaScript curriculum, so you can optionally practice with the matching challenges after watching. The course is aimed at people who are new to JavaScript or want a syntax refresher before building their own projects.",
+          "summary": "Beau Carnes of freeCodeCamp.org introduces this beginner JavaScript course as a standalone video that also follows the freeCodeCamp JavaScript curriculum, so you can optionally use the matching live coding challenges. He recommends building your own projects after the course (and points to project tutorials in the description) and notes that the ES6 material is in the second part of the video.",
           "quiz": [
             {
               "question": "Who created this freeCodeCamp course?",
@@ -71,29 +71,29 @@
               "startSeconds": 84
             }
           ],
-          "summary": "This chapter shows how you can run JavaScript: in a browser console, in a code editor setup, or in an in-browser playground. The goal is simply to get a first snippet of JavaScript to execute so the rest of the course can focus on language syntax rather than tooling.",
+          "summary": "Beau explains that you usually do not install JavaScript: web browsers already run it, which is why JS works on so many devices. He also mentions running it outside the browser with Node.js, and this course itself was recorded in an in-browser editor (Scrimba) so you can see results immediately as you follow along.",
           "quiz": [
+            {
+              "question": "According to this lesson, do you usually have to install JavaScript to start writing it?",
+              "choices": [
+                "Yes, you must always install a special JavaScript compiler first",
+                "No. Web browsers already run JavaScript, and you can also use tools like Node.js",
+                "Yes, but only on mobile devices",
+                "No, because JavaScript only runs on servers"
+              ],
+              "correctIndex": 1,
+              "explanation": "Beau\u2019s opening point is that you usually do not install JavaScript; browsers already run it, and Node.js is an option outside the browser."
+            },
             {
               "question": "Where can you run JavaScript while following a beginner course like this?",
               "choices": [
                 "Only on a physical server you install yourself",
-                "In a browser console, a local editor, or an in-browser playground",
+                "In a browser, with Node.js, or in an in-browser playground such as the one used to record this course",
                 "Only after compiling it to Java",
                 "Only inside a Python interpreter"
               ],
               "correctIndex": 1,
-              "explanation": "JavaScript runs in browsers and in many lightweight editors and playgrounds, which is why it is approachable for beginners."
-            },
-            {
-              "question": "What is the usual first goal when setting up to learn JavaScript?",
-              "choices": [
-                "Deploying a production website",
-                "Getting a short snippet to execute so you can see results immediately",
-                "Memorizing every browser API",
-                "Installing a database"
-              ],
-              "correctIndex": 1,
-              "explanation": "The chapter is about running code so you can try each later topic as you watch."
+              "explanation": "The lesson covers browsers, Node.js, and the in-browser editor (Scrimba) used to create the course."
             }
           ],
           "exercise": {
@@ -112,7 +112,7 @@
               "startSeconds": 263
             }
           ],
-          "summary": "Comments let you leave notes in source code that JavaScript ignores when it runs. You will use single-line comments with // and multi-line comments with /* ... */ to explain intent or temporarily disable a line while you experiment.",
+          "summary": "Comments are lines JavaScript intentionally ignores, used as notes for yourself or others, or to temporarily disable code. The lesson shows single-line comments with // and multi-line comments wrapped in /* and */.",
           "quiz": [
             {
               "question": "Which of these is a valid single-line JavaScript comment?",
@@ -175,8 +175,19 @@
               "startSeconds": 760
             }
           ],
-          "summary": "These chapters introduce var (the keyword used in the basic part of this course), the assignment operator =, and the difference between declaring a variable, initializing it in one step, and leaving it uninitialized (which gives undefined). Variable names are case-sensitive, so myVar and myvar are different identifiers.",
+          "summary": "Beau introduces data types and variables. He notes that JavaScript has seven data types, with strings and numbers among the most common, and that a variable is a name you use to store data. The basic section uses var, the assignment operator =, initializing in one step, leaving a variable uninitialized (which gives undefined), and the fact that names are case-sensitive \u2014 myVar and myvar are different identifiers.",
           "quiz": [
+            {
+              "question": "How many data types does Beau say JavaScript provides in this lesson?",
+              "choices": [
+                "Two",
+                "Three",
+                "Seven",
+                "Unlimited, with no list"
+              ],
+              "correctIndex": 2,
+              "explanation": "He states that JavaScript provides seven different data types, with strings and numbers among the most common."
+            },
             {
               "question": "What value does an uninitialized variable typically hold?",
               "choices": [
@@ -198,17 +209,6 @@
               ],
               "correctIndex": 1,
               "explanation": "JavaScript identifiers are case-sensitive."
-            },
-            {
-              "question": "What does the = operator do in this part of the course?",
-              "choices": [
-                "It compares two values for equality",
-                "It assigns a value to a variable",
-                "It creates a constant that can never change",
-                "It concatenates two numbers"
-              ],
-              "correctIndex": 1,
-              "explanation": "A single equals sign is assignment. Equality comparisons are introduced later with == and ===."
             }
           ],
           "exercise": {
@@ -257,7 +257,7 @@
               "startSeconds": 1102
             }
           ],
-          "summary": "JavaScript uses the familiar arithmetic operators +, -, *, and /. Increment (++) and decrement (--) add or subtract one. Decimals (floating-point numbers) use the same operators. The remainder operator % gives the leftover after division, and augmented operators such as +=, -=, *=, and /= update a variable in place.",
+          "summary": "The lesson walks through arithmetic in JavaScript: +, -, *, and /, then increment (++) and decrement (--), decimal (floating-point) numbers, and the remainder operator %. It finishes with augmented assignment operators such as +=, -=, *=, and /=, which update a variable in place instead of writing the longer form.",
           "quiz": [
             {
               "question": "What is 11 % 3 in JavaScript?",
@@ -327,7 +327,7 @@
               "startSeconds": 1518
             }
           ],
-          "summary": "Strings hold text and can be written with double or single quotes. If the string itself contains the same quote character, you can escape it with a backslash or wrap the string in the other quote style. Escape sequences such as \\n (newline) and \\t (tab) let you include special characters in a string.",
+          "summary": "A string literal is characters inside single quotes, double quotes, or backticks. If the string itself contains the same quote character, you can escape it with a backslash or wrap the string in the other quote style. Escape sequences such as \\n (newline) and \\t (tab) let you include special characters in the string.",
           "quiz": [
             {
               "question": "Which string correctly includes double quotes inside it?",
@@ -380,7 +380,7 @@
               "startSeconds": 1814
             }
           ],
-          "summary": "The + operator concatenates strings, and += appends to an existing string variable. You can build a sentence by inserting variables into a larger string, or append a variable\u2019s contents onto a string you already have.",
+          "summary": "The + operator concatenates strings into one longer string, and += appends to an existing string variable. Beau shows building a sentence by inserting variables into a larger string, and appending a variable\u2019s contents onto a string you already have. Spaces are not added automatically, so you must include them in your literals.",
           "quiz": [
             {
               "question": "What is the result of 'Hello, ' + 'world!'?",
@@ -433,7 +433,7 @@
               "startSeconds": 2063
             }
           ],
-          "summary": "Every string has a .length property. Bracket notation, such as word[0], reads a character by zero-based index. The last character is at index length - 1. Strings are immutable, so you cannot assign a new character into an index; you create a new string instead. The same idea lets you read the Nth character, including the last one.",
+          "summary": "Every string has a .length property. Bracket notation such as word[0] reads a character by zero-based index, and the last character is at index length - 1. Strings are immutable: you cannot assign a new character into an index; you create a new string instead. The same idea is used to find the Nth character.",
           "quiz": [
             {
               "question": "What is 'JavaScript'.length?",
@@ -485,7 +485,7 @@
               "startSeconds": 2188
             }
           ],
-          "summary": "This practice challenge builds a Mad Libs-style sentence. You store words in variables and concatenate them with the rest of a sentence so the result still reads like English. It is a chance to combine the string skills from the previous lessons.",
+          "summary": "This practice builds a Mad Libs-style word game: you are given a sentence with missing nouns, verbs, adjectives, and adverbs, and you fill those gaps from variables. It is an exercise in concatenating variables with the rest of a sentence so the result still reads like English, including the spaces between words.",
           "quiz": [
             {
               "question": "What skill is the Word Blanks exercise mainly practicing?",
@@ -548,7 +548,7 @@
               "startSeconds": 2688
             }
           ],
-          "summary": "Arrays store ordered lists of values in square brackets. They can contain other arrays (nested or multi-dimensional arrays). You read and update items with bracket notation and a zero-based index, such as items[0] or matrix[1][2]. Unlike strings, array entries can be replaced in place.",
+          "summary": "Arrays store several pieces of data in one place, written with square brackets and comma-separated elements. They can contain other arrays (nested or multi-dimensional arrays). You read and update items with bracket notation and a zero-based index, such as items[0] or matrix[1][2]. Unlike strings, array entries can be replaced in place.",
           "quiz": [
             {
               "question": "How do you read the first item in an array named colors?",
@@ -664,7 +664,7 @@
               "startSeconds": 3036
             }
           ],
-          "summary": "This practice builds a shopping list as a multi-dimensional array: each inner array holds an item name and a quantity. It ties together nested arrays and the idea of grouping related data.",
+          "summary": "Beau gives a nested-array example of a shopping list: each inner array holds an item name and a quantity, such as cereal and 3 boxes, or milk and 2 cartons. It ties together nested arrays and the idea of grouping related data in one structure.",
           "quiz": [
             {
               "question": "How is a shopping list typically represented in this challenge?",
@@ -715,7 +715,7 @@
               "startSeconds": 3221
             }
           ],
-          "summary": "Functions let you group reusable steps under a name. You declare them with the function keyword, call them with parentheses, and pass inputs as arguments that are received as parameters. This is the foundation for the later practice problems in the course.",
+          "summary": "Functions let you create reusable code. You declare them with the function keyword, a name, parentheses, and a body in curly braces, then call them with parentheses. Information you pass into the parentheses is received as parameters (the lesson also calls this passing information into the function), which is the foundation for later practice problems.",
           "quiz": [
             {
               "question": "How do you call a function named greet?",
@@ -764,7 +764,7 @@
               "startSeconds": 3646
             }
           ],
-          "summary": "A variable declared outside any function has global scope and can be seen from other functions. A variable declared inside a function is local and exists only while that function runs. If a local variable shares a name with a global one, the local binding takes precedence inside the function.",
+          "summary": "Scope is the visibility of variables. A variable declared outside any function has global scope and can be seen throughout the code. A variable declared inside a function is local and exists only in that function. If a local variable shares a name with a global one, the local binding takes precedence inside the function.",
           "quiz": [
             {
               "question": "Where is a local variable visible?",
@@ -813,7 +813,7 @@
               "startSeconds": 3892
             }
           ],
-          "summary": "return sends a value back to the caller. If a function has no return statement, or the return has no value, the result is undefined. You can store a returned value in a variable by assigning the function call, such as let result = nextInLine(arr, item).",
+          "summary": "The return statement sends a value back to the caller. In the examples, a function receives a number and returns a computed result, which you can pass straight into console.log or store in a variable. If a function has no return statement, the result is undefined. You can assign a returned value with a line such as result = nextInLine(arr, item).",
           "quiz": [
             {
               "question": "What does a function return if it has no return statement?",
@@ -854,7 +854,7 @@
               "startSeconds": 3952
             }
           ],
-          "summary": "This practice models a queue: you add an item to the end of an array and remove the item from the front, returning the removed item. It combines function arguments, return values, and the array methods push and shift.",
+          "summary": "This challenge simulates a queue: in computer science a queue keeps items in order, adding new items at the back and taking old items off the front. The function should add an item to the end of an array and remove the item from the front, returning the removed item \u2014 typically with push and shift.",
           "quiz": [
             {
               "question": "In a queue, where does a new item usually go?",
@@ -929,7 +929,7 @@
               "startSeconds": 5085
             }
           ],
-          "summary": "Booleans are true or false. if statements run a block only when a condition is true, and else / else if provide alternative paths. Equality operators include == (loose, with type conversion) and === (strict, no type conversion), plus != and !==. Logical AND (&&) and OR (||) combine conditions. The order of chained else if clauses matters because the first matching branch wins.",
+          "summary": "Booleans are a data type with only two values, true and false, written without quotation marks. if statements run a block when a condition is true, and else / else if provide alternative paths. Equality operators include == (loose, with type conversion) and === (strict, no type conversion), plus != and !==. Logical AND (&&) and OR (||) combine conditions. The order of chained else if clauses matters because the first matching branch wins.",
           "quiz": [
             {
               "question": "What is the difference between == and ===?",
@@ -981,7 +981,7 @@
               "startSeconds": 5265
             }
           ],
-          "summary": "This practice uses chained conditionals to turn a golf score into a name, comparing strokes to par (from 'Hole-in-one!' through 'Go Home!'). It is an exercise in careful if / else if order and returning the right string for each case.",
+          "summary": "In golf, each hole has a par \u2014 the average strokes you are supposed to use. This practice uses chained conditionals to turn a score into a nickname, from 'Hole-in-one!' through names for under par, par, over par, and finally 'Go Home!' when the strokes are far above par. It is an exercise in careful if / else if order and returning the right string for each case.",
           "quiz": [
             {
               "question": "What kind of control flow does Golf Code emphasize?",
@@ -1022,7 +1022,7 @@
               "startSeconds": 5535
             }
           ],
-          "summary": "A switch compares a value against a list of case clauses. When a case matches, execution runs until a break (or the end of the switch). You can group cases to share a result, and default handles values that match none of the cases.",
+          "summary": "A switch tests a value against many case clauses instead of a long else if chain. When a case matches, execution runs until a break (or the end of the switch). You can group cases to share a result, and default handles values that match none of the cases. Forgetting break causes fall-through into the next case.",
           "quiz": [
             {
               "question": "What does break do inside a switch?",
@@ -1067,7 +1067,7 @@
               "startSeconds": 6140
             }
           ],
-          "summary": "If a function only needs to return the result of a comparison, you can return the comparison itself instead of wrapping it in if / else. The early return pattern exits a function as soon as an answer is known, which can make guard clauses clearer than deeply nested conditionals.",
+          "summary": "If a function only needs to return the result of a comparison, you can return the comparison itself \u2014 for example return a < b \u2014 instead of wrapping it in if / else that return true or false. The early return pattern exits a function as soon as an answer is known, which can make guard clauses clearer than deeply nested conditionals.",
           "quiz": [
             {
               "question": "Which function body is equivalent to checking if a is equal to b and returning true or false?",
@@ -1108,10 +1108,10 @@
               "startSeconds": 6218
             }
           ],
-          "summary": "This longer practice keeps a running card-count and recommends 'Bet' or 'Hold'. Low cards increase the count, high cards decrease it, and face cards and aces are handled as high. It combines switch or conditionals, a global count, and a returned string.",
+          "summary": "This challenge builds a blackjack card-counting function. When you see a low card the count goes up, a high card makes the count go down, and a middle value leaves the count unchanged. The function returns the current count plus a decision: 'Bet' if the count is positive, otherwise 'Hold'. Face cards and aces are treated as high cards.",
           "quiz": [
             {
-              "question": "In the classic beginner version of this challenge, what do low cards (2\u20136) usually do to the count?",
+              "question": "In this card-counting function, what do low cards do to the count?",
               "choices": [
                 "Increase it",
                 "Decrease it",
@@ -1119,10 +1119,10 @@
                 "Convert it to a string"
               ],
               "correctIndex": 0,
-              "explanation": "The Hi-Lo system taught here increments on low cards and decrements on high cards."
+              "explanation": "Beau says that when you see a low card the count goes up, and when you see a high card the count goes down."
             },
             {
-              "question": "What two pieces of information does the function typically return?",
+              "question": "What two pieces of information does the function return?",
               "choices": [
                 "Only the count",
                 "Only 'Bet' or 'Hold'",
@@ -1179,7 +1179,7 @@
               "startSeconds": 6919
             }
           ],
-          "summary": "Objects store keyed properties in curly braces. You can read and update properties with dot notation (obj.x) or bracket notation (obj['x']). Brackets are required when the key is in a variable or is not a simple identifier. You can add new properties the same way, and delete removes a property.",
+          "summary": "Objects are similar to arrays, except you access data with properties instead of numeric indexes. They are written with curly braces and name-value properties. You can read and update properties with dot notation (obj.x) or bracket notation (obj['x']). Brackets are required when the key is in a variable or is not a simple identifier. You can add new properties the same way, and delete removes a property.",
           "quiz": [
             {
               "question": "When must you use bracket notation to access a property?",
@@ -1235,7 +1235,7 @@
               "startSeconds": 7063
             }
           ],
-          "summary": "Objects can replace long switch statements as lookup tables: store answers under keys, then read result[key]. hasOwnProperty (or an equivalent check) tells you whether an object has a given property before you use it.",
+          "summary": "Objects can be thought of as a key-value storage, like a dictionary, and can replace a long switch statement as a lookup table: store answers under keys, then read result[key]. In the example, passing 'alpha' looks up 'Adams'. hasOwnProperty (or an equivalent check) tells you whether an object has a given property before you use it.",
           "quiz": [
             {
               "question": "What is a lookup-table use of an object?",
@@ -1284,7 +1284,7 @@
               "startSeconds": 7313
             }
           ],
-          "summary": "Real data often mixes objects and arrays: an array of album objects, objects whose properties are other objects, or arrays nested inside objects. You chain dots and brackets to reach the inner value, such as collection.album.tracks[0].",
+          "summary": "A JavaScript object can store flexible data: strings, numbers, arrays, and even other objects. The lesson uses an array of album-like objects (myMusic) and then nested objects and nested arrays, showing how you chain dots and brackets to reach an inner value, such as collection.album.tracks[0].",
           "quiz": [
             {
               "question": "How would you read the first track from record.tracks if tracks is an array?",
@@ -1325,7 +1325,7 @@
               "startSeconds": 7386
             }
           ],
-          "summary": "This is a classic freeCodeCamp practice problem: update a collection object by id, adding or changing a property, or deleting it when the given value is empty. Tracks are stored as an array and must be created if they do not exist yet. It brings together objects, nested arrays, conditionals, and functions.",
+          "summary": "This coding challenge starts with a collection object where each record has an id and fields such as album, artist, and tracks (not every record has the same fields). You write a function that updates a record by id: if the given value is empty, delete that property; if the property is tracks, push onto an array (creating it if needed); otherwise set the property. Return the collection.",
           "quiz": [
             {
               "question": "If the update value is an empty string, what should happen to that property?",
@@ -1396,7 +1396,7 @@
               "startSeconds": 8565
             }
           ],
-          "summary": "Loops repeat work. A while loop continues as long as its condition is true. A for loop packs initialization, condition, and increment into one line, and you can count up, count down, skip by two (for odd numbers), or walk an array with i < array.length. Nested loops are used for multi-dimensional arrays. A do...while loop runs the body at least once, then checks the condition.",
+          "summary": "Loops run the same code multiple times. A while loop continues as long as its condition is true. A for loop packs initialization, condition, and increment into one line, and you can count up, count down, skip by two (for odd numbers), or walk an array with i < array.length. Nested loops are used for multi-dimensional arrays. A do...while loop runs the body at least once, then checks the condition.",
           "quiz": [
             {
               "question": "When does a do...while loop check its condition?",
@@ -1448,7 +1448,7 @@
               "startSeconds": 8652
             }
           ],
-          "summary": "This practice loops through an array of contact objects and looks up a property on the first matching name. It returns the property value, or a message if the name or the property does not exist. It combines loops, objects, and early returns.",
+          "summary": "This challenge uses an array of contact objects, each with a first name, last name, number, and likes. You write a lookup function that loops through the contacts, finds a matching name, and returns the requested property if it exists, or a message if the name or the property does not exist. It combines loops, objects, and early returns.",
           "quiz": [
             {
               "question": "What should the function do after it finds the matching contact name?",
@@ -1499,7 +1499,7 @@
               "startSeconds": 9106
             }
           ],
-          "summary": "Math.random() returns a fraction from 0 (inclusive) up to but not including 1. Multiplying by a range and using Math.floor gives a random whole number. parseInt converts a string to an integer, and an optional radix (such as 2) tells it which number base to use.",
+          "summary": "Math.random() returns a decimal from 0 (inclusive) up to but not including 1. Multiplying by a range and using Math.floor gives a random whole number. parseInt converts a string to an integer, and an optional radix (such as 2) tells it which number base to use \u2014 for example parseInt('11', 2) is 3.",
           "quiz": [
             {
               "question": "What range of values does Math.random() return?",
@@ -1555,7 +1555,7 @@
               "startSeconds": 9297
             }
           ],
-          "summary": "The conditional (ternary) operator writes a compact if / else as condition ? ifTrue : ifFalse. You can also nest ternaries for several branches, though readability matters. This is handy for simple value choices.",
+          "summary": "Beau presents the ternary operator as a one-line if / else expression: condition, then a question mark, then the value if true, then a colon, then the value if false. You can also nest ternaries for several branches, though readability matters. This is handy for simple value choices.",
           "quiz": [
             {
               "question": "What does the expression score >= 50 ? 'pass' : 'fail' return when score is 40?",
@@ -1614,7 +1614,7 @@
               "startSeconds": 9892
             }
           ],
-          "summary": "let and const are block-scoped, unlike var, which is function-scoped and can be accidentally redeclared. const prevents reassignment of the binding, but objects and arrays held in const can still be mutated unless you freeze them. Object.freeze helps prevent changes to an object\u2019s properties.",
+          "summary": "For a long time JavaScript only had var, but ES6 (2015) added let and const. let and const are block-scoped, unlike var, which is function-scoped and can be accidentally redeclared. const prevents reassignment of the binding, but objects and arrays held in const can still be mutated unless you freeze them. Object.freeze helps prevent changes to an object\u2019s properties.",
           "quiz": [
             {
               "question": "What is a key difference between var and let?",
@@ -1678,7 +1678,7 @@
               "startSeconds": 10531
             }
           ],
-          "summary": "Arrow functions offer a shorter syntax, including implicit returns for single expressions. Default parameters fill in a value when an argument is missing. The rest operator gathers remaining arguments into an array, and the spread operator expands an array (or other iterable) into individual elements, which is useful for copying or combining arrays.",
+          "summary": "An anonymous function assigned to a variable can be rewritten as an arrow function, including implicit returns for a single expression. Default parameters fill in a value when an argument is missing. The rest operator gathers remaining arguments into an array, and the spread operator expands an array (or other iterable) into individual elements, which is useful for copying or combining arrays.",
           "quiz": [
             {
               "question": "Which is an arrow function that doubles a number?",
@@ -1734,7 +1734,7 @@
               "startSeconds": 11199
             }
           ],
-          "summary": "Destructuring unpacks values from objects or arrays into variables, including nested values and function parameters. You can also assign remaining items with rest. Template literals use backticks and ${expression} to build strings across multiple lines without manual concatenation.",
+          "summary": "Destructuring assignment is a syntax for neatly taking values from an object or array and assigning them to variables, including nested values and function parameters. You can also gather remaining items with rest. Template literals use backticks and ${expression} to build strings across multiple lines without manual concatenation.",
           "quiz": [
             {
               "question": "What does const {name} = user; do?",
@@ -1798,7 +1798,7 @@
               "startSeconds": 11711
             }
           ],
-          "summary": "ES6 adds shorthand for object fields and concise method syntax inside object literals. class syntax is a clearer way to write constructor functions and methods. Getters and setters let you read or update a property through methods, which is useful for computed or guarded values.",
+          "summary": "ES6 added support for easily defining object literals: simple fields copy an existing variable into a same-named property, and concise method syntax goes inside the object. class syntax is a clearer way to write constructor functions and methods. Getters and setters let you read or update a property through methods, which is useful for computed or guarded values.",
           "quiz": [
             {
               "question": "What is the shorthand for { name: name } when the variable is already called name?",
@@ -1850,8 +1850,19 @@
               "startSeconds": 12025
             }
           ],
-          "summary": "Modules split code across files. export makes a function, class, or constant available to other files, either as a named export or a default export. import brings those bindings into another file. This is the closing chapter of the video and the usual way modern JavaScript projects share code.",
+          "summary": "In the past, people used require to pull in code from other files. Now you export a function, class, or constant from one file and import it in another, either as a named export or a default export. The lesson shows named imports with curly braces and importing a default export, and it is the closing chapter of the video.",
           "quiz": [
+            {
+              "question": "What older function does this lesson contrast with import and export?",
+              "choices": [
+                "include",
+                "require",
+                "load",
+                "using"
+              ],
+              "correctIndex": 1,
+              "explanation": "Beau starts by contrasting the older require function with the newer import and export syntax."
+            },
             {
               "question": "How do you import a named export add from a file './math.js'?",
               "choices": [
@@ -1862,17 +1873,6 @@
               ],
               "correctIndex": 1,
               "explanation": "Named imports use curly braces and the exported name."
-            },
-            {
-              "question": "What is a default export?",
-              "choices": [
-                "An export that cannot be imported",
-                "The main value a module exports, imported without curly braces",
-                "A variable that is always named default",
-                "A CommonJS-only feature with no ES6 equivalent"
-              ],
-              "correctIndex": 1,
-              "explanation": "export default function() {} can be imported as import fn from './file.js'."
             }
           ],
           "exercise": {
@@ -1883,5 +1883,5 @@
       ]
     }
   ],
-  "summarySource": "chapters-and-description"
+  "summarySource": "transcript"
 }
