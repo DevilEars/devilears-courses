@@ -30,7 +30,7 @@
               "startSeconds": 0
             }
           ],
-          "summary": "Hayk Simonyan introduces this freeCodeCamp.org crash course on the concepts that show up in system design interviews. The interview is less about writing code and more about how you glue a large system together: moving data, storing data, and transforming data, while aiming for scalability, maintainability, and efficiency, and planning for failure.",
+          "summary": "Hayk Simonyan frames this as a crash course on the system design interview concepts you need, covering scalability, reliability, data handling, and high-level architecture. He stresses that the interview is not mainly about writing code; interviewers want to see how you glue an entire large-scale system together.",
           "quiz": [
             {
               "question": "What is a system design interview mainly trying to assess, according to this course\u2019s framing?",
@@ -71,7 +71,7 @@
               "startSeconds": 39
             }
           ],
-          "summary": "This chapter reviews the hardware layers a request travels through: disk storage, RAM, cache, and the CPU. These components differ in size, cost, and speed. Understanding that hierarchy helps you reason about why caches exist, why memory is treated as a scarce resource, and why some operations are cheap while others are slow when you design a system.",
+          "summary": "Before designing distributed systems, the course reviews how a single computer actually runs code. Computers work in layers and, at the core, only understand binary bits. The lesson then walks the storage and compute hierarchy \u2014 disk, RAM, cache, and the CPU \u2014 so you have intuition for why some operations are cheap, why memory is scarce, and why caches exist.",
           "quiz": [
             {
               "question": "In the usual storage hierarchy, which of these is typically the fastest but smallest?",
@@ -112,29 +112,29 @@
               "startSeconds": 262
             }
           ],
-          "summary": "A production application is more than a single process on a laptop. This chapter looks at the supporting architecture: CI/CD so changes can be tested and released safely, load balancers so traffic can be spread across instances, and logging and monitoring so you can tell what the system is doing and when it misbehaves.",
+          "summary": "A production app is more than one process on a laptop. Hayk starts with a CI/CD pipeline (continuous integration and continuous deployment) so code can go from a repository through tests and onto production without manual steps, using tools such as Jenkins or GitHub Actions. He then places load balancers in front of the app and adds logging and monitoring so you can see what the system is doing once it is live.",
           "quiz": [
             {
-              "question": "What is CI/CD mainly for in a production architecture?",
+              "question": "Which CI/CD tools does this lesson mention as examples for automating deployment?",
               "choices": [
-                "Storing user files in a CDN",
-                "Automatically building, testing, and deploying changes in a repeatable way",
-                "Choosing between SQL and NoSQL",
-                "Encrypting traffic between browsers"
-              ],
-              "correctIndex": 1,
-              "explanation": "Continuous integration and continuous deployment are the release pipeline, not a data store or a protocol."
-            },
-            {
-              "question": "Why do production systems need logging and monitoring, not just working code?",
-              "choices": [
-                "So you can see health, errors, and performance once the app is live",
-                "Because logs replace load balancers",
-                "Because monitoring removes the need for tests",
-                "Because CI/CD cannot run without a metrics dashboard"
+                "Jenkins or GitHub Actions",
+                "Only Photoshop",
+                "Only FTP clients",
+                "Excel macros"
               ],
               "correctIndex": 0,
-              "explanation": "You cannot operate or debug a distributed system if you cannot observe it."
+              "explanation": "Hayk names platforms such as Jenkins or GitHub Actions for automating the path from the repository through tests to production."
+            },
+            {
+              "question": "Besides a CI/CD pipeline, which supporting pieces appear in this high-level production architecture?",
+              "choices": [
+                "Load balancers plus logging and monitoring",
+                "Only a single laptop process with no tests",
+                "A paper filing cabinet",
+                "A CSS preprocessor only"
+              ],
+              "correctIndex": 0,
+              "explanation": "The production picture includes CI/CD, load balancing in front of the app, and logging and monitoring once it is live."
             }
           ],
           "exercise": {
@@ -159,7 +159,7 @@
               "startSeconds": 432
             }
           ],
-          "summary": "This section covers the requirements you have to name before picking an architecture. The CAP theorem says a distributed system can fully guarantee only two of consistency, availability, and partition tolerance at the same time, so you make trade-offs. Throughput is how much work you complete in a period; latency is how long one request takes. SLOs are internal reliability or performance targets; SLAs are the commitments you make, often with consequences if they are missed.",
+          "summary": "The section opens with what makes a good design: scalability as the system grows with its users, maintainability so future developers can change it, and efficiency in how resources are used, plus planning for failure. It then covers the CAP theorem (you can fully guarantee only two of consistency, availability, and partition tolerance), throughput versus latency, and the difference between SLOs (internal targets) and SLAs (external commitments).",
           "quiz": [
             {
               "question": "What does the CAP theorem say you can fully guarantee at once in a distributed system?",
@@ -217,7 +217,7 @@
               "startSeconds": 880
             }
           ],
-          "summary": "Networking is how machines find each other and exchange packets. IP addresses identify hosts, and IP headers carry the routing metadata for a packet. DNS maps human-readable names to IP addresses. TCP is a connection-oriented, reliable transport; UDP is a lighter, connectionless transport that does not guarantee delivery or order. Those trade-offs show up later in API and real-time protocol choices.",
+          "summary": "Networking basics cover how machines find each other and exchange packets. IP addresses identify hosts, and IP headers carry routing metadata. DNS maps human-readable names to addresses. TCP is a connection-oriented, reliable transport; UDP is a lighter, connectionless transport that does not guarantee delivery or order \u2014 a trade-off that shows up later in API and real-time protocol choices.",
           "quiz": [
             {
               "question": "What is DNS used for?",
@@ -258,7 +258,7 @@
               "startSeconds": 1143
             }
           ],
-          "summary": "Once packets can move, applications still need a protocol for meaning. HTTP is the common request/response model for the web and many APIs. WebSockets keep a bidirectional connection open for live updates. WebRTC is aimed at real-time, often peer-to-peer, audio, video, and data. MQTT is a lightweight publish/subscribe protocol often used for IoT and other constrained clients. You pick a protocol based on traffic pattern, not habit.",
+          "summary": "Once packets can move, applications still need a protocol for meaning. HTTP is called out as the most common application-layer protocol, the request/response model for the web and many APIs. The lesson also covers WebSockets for an open bidirectional channel, WebRTC for real-time audio and video, MQTT for lightweight publish/subscribe (often used in IoT), and mentions protocols such as SSH in the same survey.",
           "quiz": [
             {
               "question": "When would WebSockets usually be a better fit than plain request/response HTTP?",
@@ -305,7 +305,7 @@
               "startSeconds": 1441
             }
           ],
-          "summary": "API design is how other clients and services talk to your system. This chapter covers practical habits for APIs that stay usable as they scale: clear resource-oriented contracts, consistent naming and status codes, versioning so you can change a contract safely, and thinking about pagination, errors, and idempotency so retries do not corrupt data.",
+          "summary": "This section starts from API basics and works toward practical habits for interfaces that other developers can use as a system grows: clear resource-oriented contracts, consistent naming and status codes, versioning so you can change a contract safely, and thinking about pagination, errors, and idempotency so retries do not corrupt data.",
           "quiz": [
             {
               "question": "Why does API versioning matter in a production system?",
@@ -346,7 +346,7 @@
               "startSeconds": 1759
             }
           ],
-          "summary": "Caching stores a computed or fetched result closer to the next reader so you avoid repeating expensive work. A Content Delivery Network (CDN) is a geographically distributed cache, often for static or cacheable content, so users hit a nearby edge instead of your origin. You also have to plan cache invalidation and what happens on a cache miss, because stale or missing data is the usual trade-off.",
+          "summary": "Hayk motivates caching with a company hosting a website on a cloud server that is far from some users. A cache stores a computed or fetched result closer to the next reader, and a CDN is a geographically distributed cache so users hit a nearby edge instead of the origin. You also have to plan invalidation and what happens on a cache miss, because stale or missing data is the usual trade-off. Faster load times are treated as part of a better user experience.",
           "quiz": [
             {
               "question": "What problem do caches and CDNs mainly try to improve?",
@@ -387,7 +387,7 @@
               "startSeconds": 2193
             }
           ],
-          "summary": "A proxy stands in the middle of a request. A forward proxy sits in front of clients and can send their requests onward (for example for egress control, filtering, or anonymity). A reverse proxy sits in front of your servers: clients talk to the proxy, and it forwards to the right origin. Reverse proxies are often used for TLS termination, caching, routing, and shielding backends \u2014 and they overlap with how many load balancers are deployed.",
+          "summary": "Proxy servers act as an intermediary on the request path. A forward proxy sits in front of clients and can send their requests onward (for example for egress control or filtering). A reverse proxy sits in front of your servers: clients talk to the proxy, and it forwards to the right origin. Reverse proxies are often used for TLS termination, caching, routing, and shielding backends.",
           "quiz": [
             {
               "question": "Where does a reverse proxy sit?",
@@ -428,7 +428,7 @@
               "startSeconds": 2556
             }
           ],
-          "summary": "Load balancers distribute incoming traffic across multiple instances so no single server is the only path, which improves availability and helps you scale horizontally. They often run health checks and stop sending traffic to sick nodes. Designs differ by layer (for example layer 4 vs layer 7) and by algorithm (round robin, least connections, and others). A load balancer can itself become a single point of failure if you only run one.",
+          "summary": "Load balancers are described as perhaps the most popular use of proxy servers. They distribute incoming traffic across multiple instances so no single server is the only path, which improves availability and helps you scale horizontally. They often run health checks and stop sending traffic to sick nodes. A load balancer can itself become a single point of failure if you only run one.",
           "quiz": [
             {
               "question": "What is the main job of a load balancer?",
@@ -475,7 +475,7 @@
               "startSeconds": 2885
             }
           ],
-          "summary": "The final chapter covers how data stores grow and stay correct. Vertical scaling means a bigger machine; horizontal scaling means more machines. Replication copies data to other nodes for reads, backups, or failover. Sharding splits data across nodes so each holds only a part of the set. ACID (atomicity, consistency, isolation, durability) describes the guarantees people expect from a transactional database. Each choice has trade-offs in complexity, consistency, and cost.",
+          "summary": "The course treats a database deep-dive as essential for system design interviews. Vertical scaling means a bigger machine; horizontal scaling means more machines. Replication copies data to other nodes for reads, backups, or failover. Sharding splits data across nodes so each holds only a part of the set. ACID (atomicity, consistency, isolation, durability) describes the guarantees people expect from a transactional database, each with trade-offs in complexity, consistency, and cost.",
           "quiz": [
             {
               "question": "What is the difference between vertical and horizontal scaling for a database?",
@@ -519,5 +519,5 @@
       ]
     }
   ],
-  "summarySource": "chapters-and-description"
+  "summarySource": "transcript"
 }
