@@ -136,6 +136,7 @@ export default function CourseOverview() {
                   lessonNumber += 1;
                   const done = progress.completedLessons.includes(lesson.id);
                   const score = progress.quizScores[lesson.id];
+                  const outline = lesson.contentStatus === "outline-pending-transcript";
                   return (
                     <li key={lesson.id}>
                       <Link
@@ -153,7 +154,8 @@ export default function CourseOverview() {
                           <br />
                           <small>
                             {done ? "Completed · " : ""}
-                            Starts at {formatTimestamp(lesson.startSeconds)}
+                            {outline ? "Outline only — notes pending · " : "Written lesson · "}
+                            {formatTimestamp(lesson.startSeconds)}
                           </small>
                         </span>
                         {score ? (

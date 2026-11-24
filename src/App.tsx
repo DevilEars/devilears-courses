@@ -33,7 +33,7 @@ function Header() {
           </span>
           <span className="brand-text">
             <strong>DevilEars Courses</strong>
-            <span>Structured lessons from freeCodeCamp videos</span>
+            <span>Written lessons from freeCodeCamp videos</span>
           </span>
         </Link>
         <ThemeToggle />
@@ -61,7 +61,8 @@ export default function App() {
         </Routes>
       </main>
       <footer className="site-footer">
-        Videos stay on YouTube. This app does not re-host or download
+        Written lessons you can study without watching. Videos stay on YouTube
+        as an optional reference. This app does not re-host or download
         freeCodeCamp videos. All course videos are created by freeCodeCamp.org
         and their instructors.
       </footer>

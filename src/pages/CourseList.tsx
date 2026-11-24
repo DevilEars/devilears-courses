@@ -56,11 +56,12 @@ export default function CourseList() {
   return (
     <div>
       <p className="page-kicker">Course library</p>
-      <h1>Learn by watching, then practice.</h1>
+      <h1>Read the lesson. Then practice.</h1>
       <p className="lede">
-        Each course turns a freeCodeCamp YouTube video into modules, lessons,
-        short quizzes, and exercises. The original video is embedded from
-        YouTube and credited on every page.
+        Each course turns a freeCodeCamp YouTube video into standalone written
+        lessons, with quizzes and exercises. You can learn the material without
+        watching the video. The original video stays on YouTube as an optional
+        “Watch this part” link, and is credited on every course and lesson page.
       </p>
       <div className="course-grid">
         {courses.map((course) => {

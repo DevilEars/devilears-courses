@@ -1,14 +1,14 @@
 {
   "id": "system-design-senior-engineer",
-  "title": "Design Software Systems Like a Senior Engineer \u2014 Complete Course",
-  "description": "A structured path through Hayk Simonyan\u2019s freeCodeCamp course on designing systems the way senior interviews expect: a five-step framework, then three worked examples in the style of Spotify, Booking.com, and WhatsApp. Watch each chapter in the original YouTube video, then use the summary, quiz, and exercise to practice the same thinking.",
+  "title": "Design Software Systems Like a Senior Engineer — Complete Course",
+  "description": "A structured path through Hayk Simonyan’s freeCodeCamp course on designing systems the way senior interviews expect: a five-step framework, then three worked examples in the style of Spotify, Booking.com, and WhatsApp. Watch each chapter in the original YouTube video, then use the summary, quiz, and exercise to practice the same thinking.",
   "level": "Advanced",
   "summarySource": "chapters-and-description",
   "source": {
     "name": "freeCodeCamp.org",
     "channelUrl": "https://www.youtube.com/@freecodecamp",
     "creator": "Hayk Simonyan",
-    "videoTitle": "Design Software Systems Like a Senior Engineer \u2013 Complete Course",
+    "videoTitle": "Design Software Systems Like a Senior Engineer – Complete Course",
     "videoId": "soTfFFIQQ8U",
     "videoUrl": "https://www.youtube.com/watch?v=soTfFFIQQ8U",
     "duration": "3:16:48",
@@ -59,7 +59,9 @@
           "exercise": {
             "prompt": "List the five evaluation dimensions from this lesson in your own words, and circle the one you personally need to practice most.",
             "hint": "Communication, structured thinking, technical judgment, practical depth, and time management."
-          }
+          },
+          "content": "## Outline only — full notes pending transcript\n\nA complete written lesson will be added when the official transcript for this video is available. Until then, this page is only a short outline taken from the public chapter titles and the official video description. It is not a full lesson, and it is not a substitute for the segment.\n\nThe course opens by explaining why system design matters both on the job and in senior and staff interviews. Interviewers are not looking for a single correct diagram. They also score how you communicate, structure the problem, show technical judgment, go deep enough, and manage time.\n\n## In this segment\n\n- Course: Design Software Systems Like a Senior Engineer\n- Module: System design framework\n- Time range in the original video: `0:00`–`2:16`\n\n- `0:00` — Why System Design Matters\n\n## Key takeaways\n\n- Full notes are pending the official transcript.\n- Use the optional “Watch this part” section if you want to study this segment from the freeCodeCamp video now.\n",
+          "contentStatus": "outline-pending-transcript"
         },
         {
           "id": "interview-formats",
@@ -99,8 +101,10 @@
           ],
           "exercise": {
             "prompt": "For a 45-minute interview, sketch a rough time budget for: clarifying requirements, high-level design, a deep dive, and a short wrap-up.",
-            "hint": "A common split is roughly 5\u201310 minutes clarifying, 15 on the high-level design, 15 on a deep dive, and a few minutes to summarize trade-offs."
-          }
+            "hint": "A common split is roughly 5–10 minutes clarifying, 15 on the high-level design, 15 on a deep dive, and a few minutes to summarize trade-offs."
+          },
+          "content": "## Outline only — full notes pending transcript\n\nA complete written lesson will be added when the official transcript for this video is available. Until then, this page is only a short outline taken from the public chapter titles and the official video description. It is not a full lesson, and it is not a substitute for the segment.\n\nThis chapter surveys how system design interviews are typically run: a relatively short, open-ended session in which you are given a vague prompt and expected to lead the discussion. Knowing the format helps you budget time for clarifying questions, a high-level design, and a deeper dive, instead of spending the whole slot on one corner of the problem.\n\n## In this segment\n\n- Course: Design Software Systems Like a Senior Engineer\n- Module: System design framework\n- Time range in the original video: `2:16`–`9:14`\n\n- `2:16` — Interview Formats Overview\n\n## Key takeaways\n\n- Full notes are pending the official transcript.\n- Use the optional “Watch this part” section if you want to study this segment from the freeCodeCamp video now.\n",
+          "contentStatus": "outline-pending-transcript"
         },
         {
           "id": "five-step-framework",
@@ -113,7 +117,7 @@
               "startSeconds": 554
             }
           ],
-          "summary": "The course\u2019s practical framework is a repeatable sequence: clarify functional and non-functional requirements; design the data model and APIs; sketch the high-level architecture and data flows; analyze scale, bottlenecks, and reliability; then summarize trade-offs and possible extensions. Using a framework keeps the conversation organized when the prompt is broad.",
+          "summary": "The course’s practical framework is a repeatable sequence: clarify functional and non-functional requirements; design the data model and APIs; sketch the high-level architecture and data flows; analyze scale, bottlenecks, and reliability; then summarize trade-offs and possible extensions. Using a framework keeps the conversation organized when the prompt is broad.",
           "quiz": [
             {
               "question": "Which sequence matches the five-step framework taught in this course?",
@@ -124,7 +128,7 @@
                 "Draw microservices first and never discuss requirements"
               ],
               "correctIndex": 0,
-              "explanation": "That order is the backbone of the rest of the course\u2019s worked examples."
+              "explanation": "That order is the backbone of the rest of the course’s worked examples."
             },
             {
               "question": "Why start with requirements instead of components?",
@@ -141,7 +145,9 @@
           "exercise": {
             "prompt": "Write the five steps on a card. Under 'clarify requirements', add two functional and two non-functional questions you would always ask.",
             "hint": "Functional: who are the users, what are the core actions? Non-functional: scale, latency, availability, consistency."
-          }
+          },
+          "content": "## Outline only — full notes pending transcript\n\nA complete written lesson will be added when the official transcript for this video is available. Until then, this page is only a short outline taken from the public chapter titles and the official video description. It is not a full lesson, and it is not a substitute for the segment.\n\nThe course’s practical framework is a repeatable sequence: clarify functional and non-functional requirements; design the data model and APIs; sketch the high-level architecture and data flows; analyze scale, bottlenecks, and reliability; then summarize trade-offs and possible extensions. Using a framework keeps the conversation organized when the prompt is broad.\n\n## In this segment\n\n- Course: Design Software Systems Like a Senior Engineer\n- Module: System design framework\n- Time range in the original video: `9:14`–`18:24`\n\n- `9:14` — The 5 Step Framework\n\n## Key takeaways\n\n- Full notes are pending the official transcript.\n- Use the optional “Watch this part” section if you want to study this segment from the freeCodeCamp video now.\n",
+          "contentStatus": "outline-pending-transcript"
         },
         {
           "id": "tradeoffs-and-extensions",
@@ -154,7 +160,7 @@
               "startSeconds": 1104
             }
           ],
-          "summary": "The last framework step is to make trade-offs explicit and mention how the design could be extended. Interviewers want to hear alternatives you considered \u2014 for example WebSockets versus HTTP, or when you would add a load balancer or a cache \u2014 and what you would build later if traffic or features grew. This is also where you show judgment rather than a single rigid plan.",
+          "summary": "The last framework step is to make trade-offs explicit and mention how the design could be extended. Interviewers want to hear alternatives you considered — for example WebSockets versus HTTP, or when you would add a load balancer or a cache — and what you would build later if traffic or features grew. This is also where you show judgment rather than a single rigid plan.",
           "quiz": [
             {
               "question": "What should you do instead of presenting only one option as obvious?",
@@ -182,13 +188,15 @@
           "exercise": {
             "prompt": "Pick one familiar product. Write a 'v1' design choice and one extension you would add only after a named bottleneck (for example a cache after the database becomes read-heavy).",
             "hint": "Start simple. Name the signal that would justify the next component."
-          }
+          },
+          "content": "## Outline only — full notes pending transcript\n\nA complete written lesson will be added when the official transcript for this video is available. Until then, this page is only a short outline taken from the public chapter titles and the official video description. It is not a full lesson, and it is not a substitute for the segment.\n\nThe last framework step is to make trade-offs explicit and mention how the design could be extended. Interviewers want to hear alternatives you considered — for example WebSockets versus HTTP, or when you would add a load balancer or a cache — and what you would build later if traffic or features grew. This is also where you show judgment rather than a single rigid plan.\n\n## In this segment\n\n- Course: Design Software Systems Like a Senior Engineer\n- Module: System design framework\n- Time range in the original video: `18:24`–`23:55`\n\n- `18:24` — Tradeoffs and Extensions\n\n## Key takeaways\n\n- Full notes are pending the official transcript.\n- Use the optional “Watch this part” section if you want to study this segment from the freeCodeCamp video now.\n",
+          "contentStatus": "outline-pending-transcript"
         }
       ]
     },
     {
       "id": "spotify-like",
-      "title": "System 1 \u2014 music streaming (Spotify-like)",
+      "title": "System 1 — music streaming (Spotify-like)",
       "lessons": [
         {
           "id": "spotify-requirements",
@@ -209,7 +217,7 @@
                 "They tell you whether you need object storage, a CDN, or a much larger pipeline than a single disk can hold",
                 "They replace the need for an API",
                 "They are only used for typography",
-                "They decide the band\u2019s playlist order"
+                "They decide the band’s playlist order"
               ],
               "correctIndex": 0,
               "explanation": "Audio libraries and playback traffic are large enough that rough math changes the architecture."
@@ -229,7 +237,9 @@
           "exercise": {
             "prompt": "Estimate, roughly, storage for 40 million songs if each song averages 5 MB. Then write one sentence about what that number implies for local disk versus object storage.",
             "hint": "40 million times 5 MB is about 200 TB. That usually belongs in object storage, not on one app server."
-          }
+          },
+          "content": "## Outline only — full notes pending transcript\n\nA complete written lesson will be added when the official transcript for this video is available. Until then, this page is only a short outline taken from the public chapter titles and the official video description. It is not a full lesson, and it is not a substitute for the segment.\n\nThe first worked example is a music-streaming system in the style of Spotify. This chapter clarifies functional needs (play, browse, store a catalog) and then does capacity planning: estimates for storage, bandwidth, and traffic that will drive later choices about object storage, CDNs, and databases.\n\n## In this segment\n\n- Course: Design Software Systems Like a Senior Engineer\n- Module: System 1 — music streaming (Spotify-like)\n- Time range in the original video: `23:55`–`29:24`\n\n- `23:55` — Requirements and Capacity Planning\n\n## Key takeaways\n\n- Full notes are pending the official transcript.\n- Use the optional “Watch this part” section if you want to study this segment from the freeCodeCamp video now.\n",
+          "contentStatus": "outline-pending-transcript"
         },
         {
           "id": "spotify-architecture",
@@ -270,7 +280,9 @@
           "exercise": {
             "prompt": "Draw a play-request flow: app to API (auth and which file), then a signed URL or CDN, then object storage, then audio back to the app. Label where metadata is read.",
             "hint": "Metadata (title, id, path) lives in a database. The heavy bytes come from object storage or a CDN."
-          }
+          },
+          "content": "## Outline only — full notes pending transcript\n\nA complete written lesson will be added when the official transcript for this video is available. Until then, this page is only a short outline taken from the public chapter titles and the official video description. It is not a full lesson, and it is not a substitute for the segment.\n\nThis chapter sketches the high-level architecture and the data flows for playback and catalog browsing: clients talk to APIs, metadata comes from a data store, and the actual audio is typically served from object storage, often through a CDN, rather than from the API servers themselves.\n\n## In this segment\n\n- Course: Design Software Systems Like a Senior Engineer\n- Module: System 1 — music streaming (Spotify-like)\n- Time range in the original video: `29:24`–`35:23`\n\n- `29:24` — Architecture and Data Flows\n\n## Key takeaways\n\n- Full notes are pending the official transcript.\n- Use the optional “Watch this part” section if you want to study this segment from the freeCodeCamp video now.\n",
+          "contentStatus": "outline-pending-transcript"
         },
         {
           "id": "spotify-api",
@@ -311,7 +323,9 @@
           "exercise": {
             "prompt": "Write three REST-style endpoints for this system (catalog search, track metadata, request playback). Note which one would return a signed media URL.",
             "hint": "GET /tracks?q=, GET /tracks/{id}, POST /tracks/{id}/play (or GET with auth) returning a signed URL."
-          }
+          },
+          "content": "## Outline only — full notes pending transcript\n\nA complete written lesson will be added when the official transcript for this video is available. Until then, this page is only a short outline taken from the public chapter titles and the official video description. It is not a full lesson, and it is not a substitute for the segment.\n\nHere the streaming example gets an API: endpoints or operations for search or browse, fetching track metadata, and starting playback. The design has to stay simple for clients while making it possible to authorize access to the underlying audio object without putting the API server on the hot path for every byte.\n\n## In this segment\n\n- Course: Design Software Systems Like a Senior Engineer\n- Module: System 1 — music streaming (Spotify-like)\n- Time range in the original video: `35:23`–`40:04`\n\n- `35:23` — API Design\n\n## Key takeaways\n\n- Full notes are pending the official transcript.\n- Use the optional “Watch this part” section if you want to study this segment from the freeCodeCamp video now.\n",
+          "contentStatus": "outline-pending-transcript"
         },
         {
           "id": "spotify-storage",
@@ -324,14 +338,14 @@
               "startSeconds": 2404
             }
           ],
-          "summary": "Storage is split by access pattern: object storage for the audio files themselves, and a structured store (often SQL) for metadata such as tracks, artists, and albums. The schema should support the queries you actually need \u2014 listing an album, looking up a track, maybe a user\u2019s library \u2014 without pretending one store is good at everything.",
+          "summary": "Storage is split by access pattern: object storage for the audio files themselves, and a structured store (often SQL) for metadata such as tracks, artists, and albums. The schema should support the queries you actually need — listing an album, looking up a track, maybe a user’s library — without pretending one store is good at everything.",
           "quiz": [
             {
               "question": "In this Spotify-like design, where do the audio files usually live?",
               "choices": [
                 "In object storage, not as rows of raw audio in the primary metadata database",
-                "Only in each user\u2019s browser cache, never on a server",
-                "Inside the load balancer\u2019s config file",
+                "Only in each user’s browser cache, never on a server",
+                "Inside the load balancer’s config file",
                 "In DNS TXT records"
               ],
               "correctIndex": 0,
@@ -352,7 +366,9 @@
           "exercise": {
             "prompt": "Draft a minimal metadata schema: artists, albums, tracks (with a pointer to the object-storage key). Write one query you would need for an album page.",
             "hint": "tracks.album_id to albums, albums.artist_id to artists, tracks.object_key for the file. Query all tracks for an album_id, ordered by track number."
-          }
+          },
+          "content": "## Outline only — full notes pending transcript\n\nA complete written lesson will be added when the official transcript for this video is available. Until then, this page is only a short outline taken from the public chapter titles and the official video description. It is not a full lesson, and it is not a substitute for the segment.\n\nStorage is split by access pattern: object storage for the audio files themselves, and a structured store (often SQL) for metadata such as tracks, artists, and albums. The schema should support the queries you actually need — listing an album, looking up a track, maybe a user’s library — without pretending one store is good at everything.\n\n## In this segment\n\n- Course: Design Software Systems Like a Senior Engineer\n- Module: System 1 — music streaming (Spotify-like)\n- Time range in the original video: `40:04`–`44:37`\n\n- `40:04` — Storage and Schema Design\n\n## Key takeaways\n\n- Full notes are pending the official transcript.\n- Use the optional “Watch this part” section if you want to study this segment from the freeCodeCamp video now.\n",
+          "contentStatus": "outline-pending-transcript"
         },
         {
           "id": "spotify-scaling",
@@ -393,13 +409,15 @@
           "exercise": {
             "prompt": "List three scale-out steps for this design in the order you would add them, and the bottleneck that would justify each.",
             "hint": "CDN when origin bandwidth or latency hurts playback; read replicas when metadata reads spike; sharding when one primary can no longer store or write the catalog."
-          }
+          },
+          "content": "## Outline only — full notes pending transcript\n\nA complete written lesson will be added when the official transcript for this video is available. Until then, this page is only a short outline taken from the public chapter titles and the official video description. It is not a full lesson, and it is not a substitute for the segment.\n\nAs usage grows, the simple design adds the usual levers: a CDN in front of audio, read replicas for hot metadata, and eventually sharding if a single primary cannot hold or write the catalog. The course shows how to start simple and add these pieces when a bottleneck is named, rather than starting with every component.\n\n## In this segment\n\n- Course: Design Software Systems Like a Senior Engineer\n- Module: System 1 — music streaming (Spotify-like)\n- Time range in the original video: `44:37`–`50:52`\n\n- `44:37` — Scaling to Millions\n\n## Key takeaways\n\n- Full notes are pending the official transcript.\n- Use the optional “Watch this part” section if you want to study this segment from the freeCodeCamp video now.\n",
+          "contentStatus": "outline-pending-transcript"
         }
       ]
     },
     {
       "id": "booking-like",
-      "title": "System 2 \u2014 hotel booking (Booking.com-like)",
+      "title": "System 2 — hotel booking (Booking.com-like)",
       "lessons": [
         {
           "id": "booking-nfr",
@@ -440,7 +458,9 @@
           "exercise": {
             "prompt": "Write one latency target for hotel search and one consistency rule for booking a room. Say whether you would allow slightly stale search results.",
             "hint": "Search might allow p95 under a few hundred milliseconds and slightly stale availability. Booking must not confirm two guests into the last room."
-          }
+          },
+          "content": "## Outline only — full notes pending transcript\n\nA complete written lesson will be added when the official transcript for this video is available. Until then, this page is only a short outline taken from the public chapter titles and the official video description. It is not a full lesson, and it is not a substitute for the segment.\n\nThe second worked example is a hotel-booking system in the style of Booking.com. This chapter focuses on non-functional targets: search should be fast, inventory must not be double-booked, and availability, latency, and consistency needs may differ for search versus checkout. Those targets will drive later choices about search engines, transactions, and caching.\n\n## In this segment\n\n- Course: Design Software Systems Like a Senior Engineer\n- Module: System 2 — hotel booking (Booking.com-like)\n- Time range in the original video: `50:52`–`58:22`\n\n- `50:52` — Non-Functional Targets\n\n## Key takeaways\n\n- Full notes are pending the official transcript.\n- Use the optional “Watch this part” section if you want to study this segment from the freeCodeCamp video now.\n",
+          "contentStatus": "outline-pending-transcript"
         },
         {
           "id": "booking-capacity",
@@ -471,7 +491,7 @@
               "choices": [
                 "The estimates tell you which bottlenecks and stores you must plan for",
                 "The estimates replace monitoring in production",
-                "The estimates choose the hotel\u2019s star rating",
+                "The estimates choose the hotel’s star rating",
                 "The estimates are only for typography"
               ],
               "correctIndex": 0,
@@ -481,7 +501,9 @@
           "exercise": {
             "prompt": "Assume 100 million search requests a day and 1 million bookings a day. In one paragraph, say how that ratio should affect your architecture.",
             "hint": "Search is two orders of magnitude hotter and can often be cached or served from an index. Booking is rarer but must be transactional."
-          }
+          },
+          "content": "## Outline only — full notes pending transcript\n\nA complete written lesson will be added when the official transcript for this video is available. Until then, this page is only a short outline taken from the public chapter titles and the official video description. It is not a full lesson, and it is not a substitute for the segment.\n\nThis chapter does capacity math for listings, searches, and bookings, then sketches an architecture that can hold that load: clients, APIs, a store for inventory and reservations, and usually a separate path for search. The numbers justify why a single database-plus-app-server may not be enough for both exploratory search and transactional booking.\n\n## In this segment\n\n- Course: Design Software Systems Like a Senior Engineer\n- Module: System 2 — hotel booking (Booking.com-like)\n- Time range in the original video: `58:22`–`1:11:02`\n\n- `58:22` — Capacity Math and Architecture\n\n## Key takeaways\n\n- Full notes are pending the official transcript.\n- Use the optional “Watch this part” section if you want to study this segment from the freeCodeCamp video now.\n",
+          "contentStatus": "outline-pending-transcript"
         },
         {
           "id": "booking-api",
@@ -522,7 +544,9 @@
           "exercise": {
             "prompt": "Design a POST /bookings endpoint that accepts an Idempotency-Key header. Describe what the server stores and what it returns on a retry with the same key.",
             "hint": "Store the key plus the booking id and response. On a repeat key, return the original result, do not create a second booking."
-          }
+          },
+          "content": "## Outline only — full notes pending transcript\n\nA complete written lesson will be added when the official transcript for this video is available. Until then, this page is only a short outline taken from the public chapter titles and the official video description. It is not a full lesson, and it is not a substitute for the segment.\n\nThe booking API has to cover search, quoting or reserving, and confirming a payment or reservation. Idempotency is critical: if a client retries a book request after a timeout, the system must not create two reservations or two charges. Idempotency keys or safely retryable operations are the usual tools.\n\n## In this segment\n\n- Course: Design Software Systems Like a Senior Engineer\n- Module: System 2 — hotel booking (Booking.com-like)\n- Time range in the original video: `1:11:02`–`1:22:34`\n\n- `1:11:02` — API Design and Idempotency\n\n## Key takeaways\n\n- Full notes are pending the official transcript.\n- Use the optional “Watch this part” section if you want to study this segment from the freeCodeCamp video now.\n",
+          "contentStatus": "outline-pending-transcript"
         },
         {
           "id": "booking-inventory",
@@ -541,9 +565,9 @@
               "question": "What does the inventory model primarily have to represent?",
               "choices": [
                 "What can be booked, for which dates, and how much capacity is left",
-                "Only the hotel\u2019s marketing copy",
+                "Only the hotel’s marketing copy",
                 "Only CDN cache keys",
-                "Only the user\u2019s password hash"
+                "Only the user’s password hash"
               ],
               "correctIndex": 0,
               "explanation": "Without a clear inventory model, you cannot safely accept a reservation."
@@ -563,7 +587,9 @@
           "exercise": {
             "prompt": "Draft tables or documents for properties, room types, and inventory-by-date (or a calendar of availability). Write one rule you would use to check a 3-night stay.",
             "hint": "All three nights must have remaining capacity for that room type, and you will decrement (or attach a reservation) atomically later."
-          }
+          },
+          "content": "## Outline only — full notes pending transcript\n\nA complete written lesson will be added when the official transcript for this video is available. Until then, this page is only a short outline taken from the public chapter titles and the official video description. It is not a full lesson, and it is not a substitute for the segment.\n\nInventory is the heart of a booking system: rooms or rooms-of-a-type, dates, and remaining capacity. The data model has to answer 'is this stay available?' and then hold a reservation. Pricing may be dynamic, but the inventory logic still has to prevent overselling when two requests arrive at once.\n\n## In this segment\n\n- Course: Design Software Systems Like a Senior Engineer\n- Module: System 2 — hotel booking (Booking.com-like)\n- Time range in the original video: `1:22:34`–`1:33:05`\n\n- `1:22:34` — Data Modeling and Inventory Logic\n\n## Key takeaways\n\n- Full notes are pending the official transcript.\n- Use the optional “Watch this part” section if you want to study this segment from the freeCodeCamp video now.\n",
+          "contentStatus": "outline-pending-transcript"
         },
         {
           "id": "booking-concurrency",
@@ -576,7 +602,7 @@
               "startSeconds": 5585
             }
           ],
-          "summary": "When two guests try to book the last room at the same time, a race can oversell inventory. This short chapter covers transactional safeguards \u2014 such as row locking or a sufficiently strong isolation level \u2014 so only one booking wins and the other is told the room is gone.",
+          "summary": "When two guests try to book the last room at the same time, a race can oversell inventory. This short chapter covers transactional safeguards — such as row locking or a sufficiently strong isolation level — so only one booking wins and the other is told the room is gone.",
           "quiz": [
             {
               "question": "What goes wrong if two booking requests for the last room are not serialized?",
@@ -604,7 +630,9 @@
           "exercise": {
             "prompt": "Describe in a few sentences how you would implement 'book the last room' safely: begin a transaction, lock or compare the inventory row, decrement or abort, commit.",
             "hint": "If the remaining count is zero after the lock, return a conflict. Otherwise decrement and write the reservation in the same transaction."
-          }
+          },
+          "content": "## Outline only — full notes pending transcript\n\nA complete written lesson will be added when the official transcript for this video is available. Until then, this page is only a short outline taken from the public chapter titles and the official video description. It is not a full lesson, and it is not a substitute for the segment.\n\nWhen two guests try to book the last room at the same time, a race can oversell inventory. This short chapter covers transactional safeguards — such as row locking or a sufficiently strong isolation level — so only one booking wins and the other is told the room is gone.\n\n## In this segment\n\n- Course: Design Software Systems Like a Senior Engineer\n- Module: System 2 — hotel booking (Booking.com-like)\n- Time range in the original video: `1:33:05`–`1:34:44`\n\n- `1:33:05` — Concurrency and Race Conditions\n\n## Key takeaways\n\n- Full notes are pending the official transcript.\n- Use the optional “Watch this part” section if you want to study this segment from the freeCodeCamp video now.\n",
+          "contentStatus": "outline-pending-transcript"
         },
         {
           "id": "booking-sharding-cache",
@@ -635,7 +663,7 @@
               "choices": [
                 "Geography or property id, so related listings and bookings tend to live together",
                 "A random new shard for every HTTP header",
-                "Sharding only by the user\u2019s favorite color",
+                "Sharding only by the user’s favorite color",
                 "One shard per CSS file"
               ],
               "correctIndex": 0,
@@ -645,7 +673,9 @@
           "exercise": {
             "prompt": "Write a one-paragraph policy: what you cache, how long, and what the booking transaction always re-checks.",
             "hint": "Cache search hits and listing details for a short TTL. At booking time, always re-read and lock inventory in the source of truth."
-          }
+          },
+          "content": "## Outline only — full notes pending transcript\n\nA complete written lesson will be added when the official transcript for this video is available. Until then, this page is only a short outline taken from the public chapter titles and the official video description. It is not a full lesson, and it is not a substitute for the segment.\n\nAs listings and traffic grow, the booking platform may cache popular search results, shard data (for example by region or property), and scale the services independently. Caching is a good fit for search, with care about stale availability; the transactional booking path should not blindly trust a cache as the source of truth for the last room.\n\n## In this segment\n\n- Course: Design Software Systems Like a Senior Engineer\n- Module: System 2 — hotel booking (Booking.com-like)\n- Time range in the original video: `1:34:44`–`1:40:41`\n\n- `1:34:44` — Sharding, Caching and Scaling\n\n## Key takeaways\n\n- Full notes are pending the official transcript.\n- Use the optional “Watch this part” section if you want to study this segment from the freeCodeCamp video now.\n",
+          "contentStatus": "outline-pending-transcript"
         },
         {
           "id": "booking-search",
@@ -658,7 +688,7 @@
               "startSeconds": 6041
             }
           ],
-          "summary": "Hotel search \u2014 filters, geo, full text, faceted results \u2014 is a poor fit for naive queries on the system of record. This chapter looks at a search index (the chapter title uses Elasticsearch) that is built for those queries, while the transactional database remains the source of truth for inventory and bookings. The index can be slightly stale; you have to design how it is updated.",
+          "summary": "Hotel search — filters, geo, full text, faceted results — is a poor fit for naive queries on the system of record. This chapter looks at a search index (the chapter title uses Elasticsearch) that is built for those queries, while the transactional database remains the source of truth for inventory and bookings. The index can be slightly stale; you have to design how it is updated.",
           "quiz": [
             {
               "question": "Why introduce a search engine such as Elasticsearch here?",
@@ -686,7 +716,9 @@
           "exercise": {
             "prompt": "Describe how a new listing, or a change in availability, would flow from the database into the search index (for example a change event or a periodic reindex), and where you accept lag.",
             "hint": "Write to the database first, publish a change, update the index asynchronously. Search may lag by seconds; booking does not use the index as truth."
-          }
+          },
+          "content": "## Outline only — full notes pending transcript\n\nA complete written lesson will be added when the official transcript for this video is available. Until then, this page is only a short outline taken from the public chapter titles and the official video description. It is not a full lesson, and it is not a substitute for the segment.\n\nHotel search — filters, geo, full text, faceted results — is a poor fit for naive queries on the system of record. This chapter looks at a search index (the chapter title uses Elasticsearch) that is built for those queries, while the transactional database remains the source of truth for inventory and bookings. The index can be slightly stale; you have to design how it is updated.\n\n## In this segment\n\n- Course: Design Software Systems Like a Senior Engineer\n- Module: System 2 — hotel booking (Booking.com-like)\n- Time range in the original video: `1:40:41`–`1:45:19`\n\n- `1:40:41` — Search at Scale (Elasticsearch)\n\n## Key takeaways\n\n- Full notes are pending the official transcript.\n- Use the optional “Watch this part” section if you want to study this segment from the freeCodeCamp video now.\n",
+          "contentStatus": "outline-pending-transcript"
         },
         {
           "id": "booking-replication",
@@ -727,13 +759,15 @@
           "exercise": {
             "prompt": "Propose a simple global setup: where search reads go, where booking writes go, and what happens if the primary region is down.",
             "hint": "Local or regional replicas for search; booking writes to a primary (or a well-defined multi-region write protocol); failover only if you can still protect inventory."
-          }
+          },
+          "content": "## Outline only — full notes pending transcript\n\nA complete written lesson will be added when the official transcript for this video is available. Until then, this page is only a short outline taken from the public chapter titles and the official video description. It is not a full lesson, and it is not a substitute for the segment.\n\nA global booking site needs a plan for replication and for routing users to a nearby region. Replicas improve read latency and resilience; writes for bookings may still need a carefully chosen primary or a conflict strategy. Global routing (DNS or a global load balancer) should send people to a healthy, close region without breaking the consistency rules you already set.\n\n## In this segment\n\n- Course: Design Software Systems Like a Senior Engineer\n- Module: System 2 — hotel booking (Booking.com-like)\n- Time range in the original video: `1:45:19`–`1:50:45`\n\n- `1:45:19` — Replication and Global Routing\n\n## Key takeaways\n\n- Full notes are pending the official transcript.\n- Use the optional “Watch this part” section if you want to study this segment from the freeCodeCamp video now.\n",
+          "contentStatus": "outline-pending-transcript"
         }
       ]
     },
     {
       "id": "whatsapp-like",
-      "title": "System 3 \u2014 messaging (WhatsApp-like)",
+      "title": "System 3 — messaging (WhatsApp-like)",
       "lessons": [
         {
           "id": "messaging-scale",
@@ -774,7 +808,9 @@
           "exercise": {
             "prompt": "Assume 1 billion messages a day, average 200 bytes of text plus some media metadata. Roughly how much raw text storage is that per day, and what question does it raise about retention?",
             "hint": "1 billion times 200 bytes is about 200 GB/day of text, before indexes and media. You need a retention and cold-storage story."
-          }
+          },
+          "content": "## Outline only — full notes pending transcript\n\nA complete written lesson will be added when the official transcript for this video is available. Until then, this page is only a short outline taken from the public chapter titles and the official video description. It is not a full lesson, and it is not a substitute for the segment.\n\nThe third worked example is a messaging app in the style of WhatsApp. This chapter estimates scale: messages per second, online users, storage growth, and fanout to group chats or multiple devices. Those numbers explain why a naive 'write every message to one database and poll it' design will not hold.\n\n## In this segment\n\n- Course: Design Software Systems Like a Senior Engineer\n- Module: System 3 — messaging (WhatsApp-like)\n- Time range in the original video: `1:50:45`–`1:56:38`\n\n- `1:50:45` — Scale Estimation\n\n## Key takeaways\n\n- Full notes are pending the official transcript.\n- Use the optional “Watch this part” section if you want to study this segment from the freeCodeCamp video now.\n",
+          "contentStatus": "outline-pending-transcript"
         },
         {
           "id": "messaging-realtime",
@@ -787,7 +823,7 @@
               "startSeconds": 6998
             }
           ],
-          "summary": "Chat needs a real-time path, not just request/response polling. This chapter looks at an architecture that keeps connections open \u2014 commonly WebSockets \u2014 so the server can push messages as they arrive, along with the surrounding services that accept, persist, and deliver those messages.",
+          "summary": "Chat needs a real-time path, not just request/response polling. This chapter looks at an architecture that keeps connections open — commonly WebSockets — so the server can push messages as they arrive, along with the surrounding services that accept, persist, and deliver those messages.",
           "quiz": [
             {
               "question": "Why is a long-lived connection such as a WebSocket a common choice here?",
@@ -814,8 +850,10 @@
           ],
           "exercise": {
             "prompt": "Sketch components for: client connections (WebSocket gateway), a message service, and a store. Draw the path of a message from A to an online user B.",
-            "hint": "A to gateway to message service, persist, look up B\u2019s connection, then push over B\u2019s WebSocket."
-          }
+            "hint": "A to gateway to message service, persist, look up B’s connection, then push over B’s WebSocket."
+          },
+          "content": "## Outline only — full notes pending transcript\n\nA complete written lesson will be added when the official transcript for this video is available. Until then, this page is only a short outline taken from the public chapter titles and the official video description. It is not a full lesson, and it is not a substitute for the segment.\n\nChat needs a real-time path, not just request/response polling. This chapter looks at an architecture that keeps connections open — commonly WebSockets — so the server can push messages as they arrive, along with the surrounding services that accept, persist, and deliver those messages.\n\n## In this segment\n\n- Course: Design Software Systems Like a Senior Engineer\n- Module: System 3 — messaging (WhatsApp-like)\n- Time range in the original video: `1:56:38`–`2:07:04`\n\n- `1:56:38` — Architecture and Real Time Communication\n\n## Key takeaways\n\n- Full notes are pending the official transcript.\n- Use the optional “Watch this part” section if you want to study this segment from the freeCodeCamp video now.\n",
+          "contentStatus": "outline-pending-transcript"
         },
         {
           "id": "messaging-data-api",
@@ -835,7 +873,7 @@
               "choices": [
                 "A history or catch-up API so a client can load missed messages",
                 "An API to recompile the server from the phone",
-                "An API that deletes the company\u2019s backups nightly without auth",
+                "An API that deletes the company’s backups nightly without auth",
                 "An API to change DNS from the chat window"
               ],
               "correctIndex": 0,
@@ -846,7 +884,7 @@
               "choices": [
                 "A conversation or thread id, sender, timestamp, payload, and often a delivery state",
                 "Only a CSS class name",
-                "Only the recipient\u2019s favorite color",
+                "Only the recipient’s favorite color",
                 "Only a load-balancer score"
               ],
               "correctIndex": 0,
@@ -856,7 +894,9 @@
           "exercise": {
             "prompt": "Draft a messages table and two APIs: send a message, and list the latest messages in a chat (paged). Note how you would order them.",
             "hint": "Columns: id, chat_id, sender_id, body, created_at, status. GET /chats/{id}/messages?before=&limit= ordered by time descending."
-          }
+          },
+          "content": "## Outline only — full notes pending transcript\n\nA complete written lesson will be added when the official transcript for this video is available. Until then, this page is only a short outline taken from the public chapter titles and the official video description. It is not a full lesson, and it is not a substitute for the segment.\n\nThis chapter covers the data model and API flows for chats, messages, and delivery: conversation ids, senders, timestamps, and delivery or read state. The APIs need a send path, a history path (to catch up), and a way to acknowledge delivery, not only a live push.\n\n## In this segment\n\n- Course: Design Software Systems Like a Senior Engineer\n- Module: System 3 — messaging (WhatsApp-like)\n- Time range in the original video: `2:07:04`–`2:13:10`\n\n- `2:07:04` — Data Modeling and API Flows\n\n## Key takeaways\n\n- Full notes are pending the official transcript.\n- Use the optional “Watch this part” section if you want to study this segment from the freeCodeCamp video now.\n",
+          "contentStatus": "outline-pending-transcript"
         },
         {
           "id": "messaging-sync",
@@ -869,7 +909,7 @@
               "startSeconds": 7990
             }
           ],
-          "summary": "People read the same chat on a phone and a laptop, and they go offline. This chapter covers syncing message state across devices and holding messages for later delivery \u2014 an offline inbox \u2014 so a message is not lost if the recipient\u2019s socket is down. Conflicts and read-state sync across devices are part of the same problem.",
+          "summary": "People read the same chat on a phone and a laptop, and they go offline. This chapter covers syncing message state across devices and holding messages for later delivery — an offline inbox — so a message is not lost if the recipient’s socket is down. Conflicts and read-state sync across devices are part of the same problem.",
           "quiz": [
             {
               "question": "What is an offline inbox for?",
@@ -897,7 +937,9 @@
           "exercise": {
             "prompt": "Describe how you would deliver a message to a user with two devices if only one is online, and what happens when the second device opens the app.",
             "hint": "Push to the online device immediately; keep the message in a per-user inbox or log; the second device fetches catch-up (and maybe a push if it comes online later)."
-          }
+          },
+          "content": "## Outline only — full notes pending transcript\n\nA complete written lesson will be added when the official transcript for this video is available. Until then, this page is only a short outline taken from the public chapter titles and the official video description. It is not a full lesson, and it is not a substitute for the segment.\n\nPeople read the same chat on a phone and a laptop, and they go offline. This chapter covers syncing message state across devices and holding messages for later delivery — an offline inbox — so a message is not lost if the recipient’s socket is down. Conflicts and read-state sync across devices are part of the same problem.\n\n## In this segment\n\n- Course: Design Software Systems Like a Senior Engineer\n- Module: System 3 — messaging (WhatsApp-like)\n- Time range in the original video: `2:13:10`–`2:22:37`\n\n- `2:13:10` — Multi Device Sync and Offline Delivery\n\n## Key takeaways\n\n- Full notes are pending the official transcript.\n- Use the optional “Watch this part” section if you want to study this segment from the freeCodeCamp video now.\n",
+          "contentStatus": "outline-pending-transcript"
         },
         {
           "id": "messaging-media",
@@ -918,7 +960,7 @@
                 "Turning one outgoing message into deliveries for each member (or each of their devices)",
                 "Compressing JPEGs only",
                 "Deleting the group after one message",
-                "Running the API on the sender\u2019s phone only"
+                "Running the API on the sender’s phone only"
               ],
               "correctIndex": 0,
               "explanation": "A group of 100 members is 100 inboxes or sockets, not one write."
@@ -938,7 +980,9 @@
           "exercise": {
             "prompt": "Write the steps to send a photo to a group of 50: upload media, get a URL, send a message with that URL, fan out to members, members download via CDN.",
             "hint": "Upload first (maybe a pre-signed URL). Persist the message once. Fanout notifications, not 50 copies of the file, to the members."
-          }
+          },
+          "content": "## Outline only — full notes pending transcript\n\nA complete written lesson will be added when the official transcript for this video is available. Until then, this page is only a short outline taken from the public chapter titles and the official video description. It is not a full lesson, and it is not a substitute for the segment.\n\nGroup chats require fanout: one send becomes many deliveries. Media (images, audio, video) should live in object storage and usually be served via a CDN, similar to the streaming example, rather than through the chat servers. The chapter connects those two ideas: fan out a reference to the media, and let the clients fetch the heavy bytes efficiently.\n\n## In this segment\n\n- Course: Design Software Systems Like a Senior Engineer\n- Module: System 3 — messaging (WhatsApp-like)\n- Time range in the original video: `2:22:37`–`2:31:44`\n\n- `2:22:37` — Fanout, Media Storage and CDN Delivery\n\n## Key takeaways\n\n- Full notes are pending the official transcript.\n- Use the optional “Watch this part” section if you want to study this segment from the freeCodeCamp video now.\n",
+          "contentStatus": "outline-pending-transcript"
         },
         {
           "id": "messaging-events",
@@ -979,7 +1023,9 @@
           "exercise": {
             "prompt": "List three side effects of 'message sent' that you would handle with a queue rather than in the WebSocket handler, and one that must stay on the hot path.",
             "hint": "Hot path: persist the message and deliver to online sockets. Async: email/push notifications, search indexing, analytics."
-          }
+          },
+          "content": "## Outline only — full notes pending transcript\n\nA complete written lesson will be added when the official transcript for this video is available. Until then, this page is only a short outline taken from the public chapter titles and the official video description. It is not a full lesson, and it is not a substitute for the segment.\n\nOnce message traffic is large, a lot of work is better done as events and background jobs rather than in the request path: notifications, index updates, analytics, cleanup. This chapter looks at event-driven architecture and batch processing so the live send path stays thin, with queues and later consumers doing the heavy or deferrable work.\n\n## In this segment\n\n- Course: Design Software Systems Like a Senior Engineer\n- Module: System 3 — messaging (WhatsApp-like)\n- Time range in the original video: `2:31:44`–`2:39:18`\n\n- `2:31:44` — Event Driven Architecture and Batch Processing\n\n## Key takeaways\n\n- Full notes are pending the official transcript.\n- Use the optional “Watch this part” section if you want to study this segment from the freeCodeCamp video now.\n",
+          "contentStatus": "outline-pending-transcript"
         },
         {
           "id": "messaging-security",
@@ -1020,7 +1066,9 @@
           "exercise": {
             "prompt": "Propose a simple rate limit for sending messages (for example N per second per user) and say what error you would return. Also name where TLS would be used.",
             "hint": "For example 20 messages/second/user, then HTTP 429 or an equivalent chat error. TLS on client-to-gateway and between internal services."
-          }
+          },
+          "content": "## Outline only — full notes pending transcript\n\nA complete written lesson will be added when the official transcript for this video is available. Until then, this page is only a short outline taken from the public chapter titles and the official video description. It is not a full lesson, and it is not a substitute for the segment.\n\nMessaging systems handle sensitive content and are easy to abuse. This chapter covers encryption (in transit, and often at rest or end-to-end depending on the product promise) and rate limiting so a single user or bot cannot flood the system or another person. Both are part of a production-quality design, not optional decorations.\n\n## In this segment\n\n- Course: Design Software Systems Like a Senior Engineer\n- Module: System 3 — messaging (WhatsApp-like)\n- Time range in the original video: `2:39:18`–`2:49:45`\n\n- `2:39:18` — Encryption and Rate Limiting\n\n## Key takeaways\n\n- Full notes are pending the official transcript.\n- Use the optional “Watch this part” section if you want to study this segment from the freeCodeCamp video now.\n",
+          "contentStatus": "outline-pending-transcript"
         },
         {
           "id": "messaging-sharding-cleanup",
@@ -1038,7 +1086,7 @@
             {
               "question": "What is a plausible shard key for chat history?",
               "choices": [
-                "Chat or conversation id (or user id), so a conversation\u2019s messages tend to sit on one shard",
+                "Chat or conversation id (or user id), so a conversation’s messages tend to sit on one shard",
                 "A new random shard for every character in the message",
                 "The current minute of the wall clock only, with no other key",
                 "The CDN POP name"
@@ -1050,7 +1098,7 @@
               "question": "What are cleanup jobs for in this design?",
               "choices": [
                 "Expiring or archiving old messages, media, and stale inbox data so storage does not grow without bound",
-                "Restarting the user\u2019s phone",
+                "Restarting the user’s phone",
                 "Choosing a load-balancing algorithm each morning",
                 "Replacing TLS certificates with plaintext"
               ],
@@ -1061,7 +1109,9 @@
           "exercise": {
             "prompt": "Write a short retention policy (for example, media after 1 year, text after 3) and say which job would enforce it, on which shard.",
             "hint": "A per-shard scheduled job deletes or archives rows older than the policy, and also removes the object-storage media."
-          }
+          },
+          "content": "## Outline only — full notes pending transcript\n\nA complete written lesson will be added when the official transcript for this video is available. Until then, this page is only a short outline taken from the public chapter titles and the official video description. It is not a full lesson, and it is not a substitute for the segment.\n\nMessage history does not fit forever on one box. This chapter looks at sharding the data (for example by chat or by user) and at cleanup jobs that expire or archive old messages, media, and leftover inbox state. Together they keep storage growth and operational cost under control.\n\n## In this segment\n\n- Course: Design Software Systems Like a Senior Engineer\n- Module: System 3 — messaging (WhatsApp-like)\n- Time range in the original video: `2:49:45`–`2:57:53`\n\n- `2:49:45` — Sharding and Cleanup Jobs\n\n## Key takeaways\n\n- Full notes are pending the official transcript.\n- Use the optional “Watch this part” section if you want to study this segment from the freeCodeCamp video now.\n",
+          "contentStatus": "outline-pending-transcript"
         },
         {
           "id": "messaging-failure",
@@ -1074,7 +1124,7 @@
               "startSeconds": 10673
             }
           ],
-          "summary": "Things will fail: sockets drop, queues back up, a cache or a region goes down. This chapter covers failure handling \u2014 retries, dead-letter queues, fallbacks so messages are not lost \u2014 and scaling the system across regions so users worldwide still get a reliable service. The design should say what happens when a dependency is unavailable, not only when everything is healthy.",
+          "summary": "Things will fail: sockets drop, queues back up, a cache or a region goes down. This chapter covers failure handling — retries, dead-letter queues, fallbacks so messages are not lost — and scaling the system across regions so users worldwide still get a reliable service. The design should say what happens when a dependency is unavailable, not only when everything is healthy.",
           "quiz": [
             {
               "question": "What is a dead-letter queue used for?",
@@ -1102,7 +1152,9 @@
           "exercise": {
             "prompt": "Write a failure card for 'queue consumer is down': where messages sit, how they retry, when they go to a dead-letter queue, and what the user still sees.",
             "hint": "Persist first, then enqueue. If the consumer is down, messages wait in the queue. After N failures, move to a DLQ and alert. Online push may lag; history should still load from the store."
-          }
+          },
+          "content": "## Outline only — full notes pending transcript\n\nA complete written lesson will be added when the official transcript for this video is available. Until then, this page is only a short outline taken from the public chapter titles and the official video description. It is not a full lesson, and it is not a substitute for the segment.\n\nThings will fail: sockets drop, queues back up, a cache or a region goes down. This chapter covers failure handling — retries, dead-letter queues, fallbacks so messages are not lost — and scaling the system across regions so users worldwide still get a reliable service. The design should say what happens when a dependency is unavailable, not only when everything is healthy.\n\n## In this segment\n\n- Course: Design Software Systems Like a Senior Engineer\n- Module: System 3 — messaging (WhatsApp-like)\n- Time range in the original video: `2:57:53`–`3:09:08`\n\n- `2:57:53` — Failure Handling and Global Scaling\n\n## Key takeaways\n\n- Full notes are pending the official transcript.\n- Use the optional “Watch this part” section if you want to study this segment from the freeCodeCamp video now.\n",
+          "contentStatus": "outline-pending-transcript"
         },
         {
           "id": "feature-flags",
@@ -1143,7 +1195,9 @@
           "exercise": {
             "prompt": "Describe a rollout plan for a new fanout algorithm: 1% of users, then one region, then everyone, with one metric you would watch and a rollback rule.",
             "hint": "Watch send latency, error rate, and delivery lag. If they breach an SLO, flip the flag off."
-          }
+          },
+          "content": "## Outline only — full notes pending transcript\n\nA complete written lesson will be added when the official transcript for this video is available. Until then, this page is only a short outline taken from the public chapter titles and the official video description. It is not a full lesson, and it is not a substitute for the segment.\n\nThe last production topic in the messaging example is how to ship changes safely: feature flags and gradual rollouts. You can enable a new path for a small percentage of users or a single region, watch the metrics, and roll back without a full binary revert. That is how large systems change without betting the entire fleet at once.\n\n## In this segment\n\n- Course: Design Software Systems Like a Senior Engineer\n- Module: System 3 — messaging (WhatsApp-like)\n- Time range in the original video: `3:09:08`–`3:11:14`\n\n- `3:09:08` — Feature Flags and Rollouts\n\n## Key takeaways\n\n- Full notes are pending the official transcript.\n- Use the optional “Watch this part” section if you want to study this segment from the freeCodeCamp video now.\n",
+          "contentStatus": "outline-pending-transcript"
         }
       ]
     },
@@ -1162,7 +1216,7 @@
               "startSeconds": 11474
             }
           ],
-          "summary": "The closing chapter is about practice: you get better at system design by repeating the framework on real prompts, starting simple, naming bottlenecks, and talking through trade-offs out loud \u2014 not by memorizing one diagram. The three worked examples are a template you can reuse on new problems.",
+          "summary": "The closing chapter is about practice: you get better at system design by repeating the framework on real prompts, starting simple, naming bottlenecks, and talking through trade-offs out loud — not by memorizing one diagram. The three worked examples are a template you can reuse on new problems.",
           "quiz": [
             {
               "question": "According to the close of this course, how do you actually get better at system design?",
@@ -1173,7 +1227,7 @@
                 "By never drawing a diagram"
               ],
               "correctIndex": 0,
-              "explanation": "The course\u2019s own examples are meant to be a reusable method, not a script to recast on every prompt."
+              "explanation": "The course’s own examples are meant to be a reusable method, not a script to recast on every prompt."
             },
             {
               "question": "What should you do first when you practice a new prompt?",
@@ -1190,7 +1244,9 @@
           "exercise": {
             "prompt": "Pick a new prompt (for example a URL shortener or a news feed). Spend ten minutes applying the five-step framework on paper, and note one trade-off you would say out loud.",
             "hint": "Requirements, data/API, high-level design, scale and failure, then trade-offs. Keep v1 simple."
-          }
+          },
+          "content": "## Outline only — full notes pending transcript\n\nA complete written lesson will be added when the official transcript for this video is available. Until then, this page is only a short outline taken from the public chapter titles and the official video description. It is not a full lesson, and it is not a substitute for the segment.\n\nThe closing chapter is about practice: you get better at system design by repeating the framework on real prompts, starting simple, naming bottlenecks, and talking through trade-offs out loud — not by memorizing one diagram. The three worked examples are a template you can reuse on new problems.\n\n## In this segment\n\n- Course: Design Software Systems Like a Senior Engineer\n- Module: Getting better\n- Time range in the original video: `3:11:14`–`3:16:48`\n\n- `3:11:14` — How to Actually Get Better\n\n## Key takeaways\n\n- Full notes are pending the official transcript.\n- Use the optional “Watch this part” section if you want to study this segment from the freeCodeCamp video now.\n",
+          "contentStatus": "outline-pending-transcript"
         }
       ]
     }

@@ -1059,3 +1059,215 @@ html[data-theme="dark"] .feedback.is-wrong {
     transform: none;
   }
 }
+
+.lesson-page.is-reading {
+  width: min(48rem, 100%);
+  margin-inline: auto;
+}
+
+.lesson-meta {
+  margin: 0 0 var(--space-4);
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+  font-weight: 700;
+}
+
+.outline-banner {
+  margin: var(--space-4) 0 0;
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--gold-soft);
+  color: var(--gold);
+  border: 1px solid color-mix(in srgb, var(--gold) 35%, var(--line));
+}
+
+.outline-banner p {
+  margin: var(--space-2) 0 0;
+  color: var(--ink);
+}
+
+.lesson-toc {
+  margin: 0 0 var(--space-5);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 0 var(--space-4) var(--space-3);
+  box-shadow: var(--shadow);
+}
+
+.lesson-toc summary {
+  min-height: var(--tap);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 700;
+  list-style: none;
+}
+
+.lesson-toc summary::-webkit-details-marker,
+.lesson-toc summary::marker {
+  display: none;
+  content: "";
+}
+
+.lesson-toc ol {
+  margin: 0;
+  padding: 0 0 0 var(--space-4);
+  display: grid;
+  gap: 0.35rem;
+}
+
+.lesson-toc a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.lesson-toc a:hover {
+  color: var(--accent);
+}
+
+.lesson-toc .is-sub {
+  margin-left: var(--space-4);
+  font-size: var(--text-sm);
+}
+
+.lesson-article {
+  max-width: 68ch;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.lesson-article h2,
+.lesson-article h3,
+.lesson-article h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.03em;
+  line-height: var(--leading-tight);
+  margin: var(--space-8) 0 var(--space-3);
+  scroll-margin-top: calc(var(--header-h) + var(--space-3));
+}
+
+.lesson-article h2 {
+  font-size: var(--text-xl);
+}
+
+.lesson-article h3 {
+  font-size: var(--text-lg);
+}
+
+.lesson-article p,
+.lesson-article ul,
+.lesson-article ol {
+  margin: 0 0 var(--space-4);
+}
+
+.lesson-article ul,
+.lesson-article ol {
+  padding-left: 1.2rem;
+}
+
+.lesson-article li + li {
+  margin-top: 0.35rem;
+}
+
+.lesson-article pre {
+  margin: 0 0 var(--space-4);
+  padding: var(--space-4);
+  border-radius: var(--radius-sm);
+  background: var(--bg-muted);
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.lesson-article code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: var(--bg-muted);
+  border-radius: 4px;
+  padding: 0.1em 0.3em;
+}
+
+.lesson-article pre code {
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+}
+
+.lesson-article table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 var(--space-4);
+  font-size: var(--text-sm);
+  display: block;
+  overflow-x: auto;
+}
+
+.lesson-article th,
+.lesson-article td {
+  border: 1px solid var(--line);
+  padding: 0.55rem 0.7rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.lesson-article th {
+  background: var(--bg-muted);
+}
+
+.lesson-article blockquote {
+  margin: 0 0 var(--space-4);
+  padding: var(--space-1) 0 var(--space-1) var(--space-4);
+  border-left: 3px solid var(--accent);
+  color: var(--ink-soft);
+}
+
+.diagram-caption {
+  margin: 0 0 var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+}
+
+.reading-complete {
+  margin-top: var(--space-8);
+}
+
+.watch-optional {
+  margin-top: var(--space-8);
+  padding: 0 var(--space-4) var(--space-4);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.watch-optional summary {
+  min-height: var(--tap);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-weight: 650;
+  font-size: var(--text-lg);
+  list-style: none;
+}
+
+.watch-optional summary::-webkit-details-marker,
+.watch-optional summary::marker {
+  display: none;
+  content: "";
+}
+
+.watch-optional .player-wrap,
+.watch-optional .credit {
+  margin-top: var(--space-4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lesson-article h2,
+  .lesson-article h3,
+  .lesson-article h4 {
+    scroll-margin-top: calc(var(--header-h) + var(--space-3));
+  }
+}

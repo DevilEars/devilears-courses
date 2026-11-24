@@ -1,8 +1,8 @@
 # DevilEars Courses
 
-A mobile-first web app that turns freeCodeCamp YouTube videos into structured courses: modules, lessons, timestamps, summaries, quizzes, and exercises.
+A mobile-first web app that turns freeCodeCamp YouTube videos into structured courses: modules, standalone written lessons, timestamps, quizzes, and exercises.
 
-The original videos are **embedded or linked from YouTube**. This project does not re-host or download freeCodeCamp video files. Every course and lesson page credits freeCodeCamp and links back to the original video.
+You can learn each lesson from the written notes without watching the video. The original videos are an optional **Watch this part** embed or link on YouTube. This project does not re-host or download freeCodeCamp video files. Every course and lesson page credits freeCodeCamp and links back to the original video.
 
 ## How to run
 
@@ -27,7 +27,7 @@ Progress (completed lessons and quiz scores) is stored in your browser’s `loca
 
 ## Sample courses
 
-These courses are based on freeCodeCamp.org YouTube videos. Each lesson page says whether its summary was written from a transcript or from public chapter titles and the official description.
+These courses are based on freeCodeCamp.org YouTube videos. Lessons written from an official transcript are full standalone notes. The Senior Engineer course is marked “Outline only — full notes pending transcript” until a transcript is available.
 
 1. **Learn JavaScript - Full Course for Beginners** by Beau Carnes  
    https://www.youtube.com/watch?v=PkZNo7MFNFg  
@@ -63,9 +63,9 @@ These courses are based on freeCodeCamp.org YouTube videos. Each lesson page say
    - `summarySource` — `chapters-and-description` or `transcript`
    - `source` — freeCodeCamp credit and YouTube metadata (`name`, `channelUrl`, `creator`, `videoTitle`, `videoId`, `videoUrl`, `duration`, `durationSeconds`)
    - `modules[]` — each with `id`, `title`, and `lessons[]`
-   - each lesson: `id`, `title`, `startSeconds`, `endSeconds`, `chapters`, `summary`, `quiz`, and `exercise`
+   - each lesson: `id`, `title`, `startSeconds`, `endSeconds`, `chapters`, `summary`, `content` (Markdown), `contentStatus` (`full` or `outline-pending-transcript`), `quiz`, and `exercise`
 
-The lesson player starts at `startSeconds` and stops at `endSeconds` using the YouTube embed `start` and `end` parameters. Link the original video with `https://www.youtube.com/watch?v=VIDEO_ID&t=SECONDSs`.
+See [CONTENT_FORMAT.md](CONTENT_FORMAT.md) for how to write a lesson body. The optional “Watch this part” embed starts at `startSeconds` and stops at `endSeconds`. Link the original video with `https://www.youtube.com/watch?v=VIDEO_ID&t=SECONDSs`.
 
 Do not download or check in video files. Only store metadata, text, and YouTube ids.
 
