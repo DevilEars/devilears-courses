@@ -6,7 +6,7 @@ The original videos are **embedded or linked from YouTube**. This project does n
 
 ## How to run
 
-You need Node.js 20 or newer.
+You need Node.js 24 or newer.
 
 ```bash
 cd devilears-courses
@@ -71,5 +71,9 @@ Do not download or check in video files. Only store metadata, text, and YouTube 
 
 ## Security
 
-This repository has Dependabot alerts and Dependabot security updates enabled, plus GitHub secret scanning with push protection. Weekly Dependabot version updates for the npm and GitHub Actions ecosystems are configured in `.github/dependabot.yml`. Do not commit secrets, `.env` files, or private keys.
+This repository has Dependabot alerts and Dependabot security updates enabled, plus GitHub secret scanning with push protection. Weekly Dependabot version updates for npm (grouped minor and patch) and GitHub Actions are configured in `.github/dependabot.yml`.
+
+CI runs `npm audit --audit-level=high` on the lockfile, including devDependencies, and fails the build on high or critical findings. Do not use `npm audit fix --force`. Upgrade the offending package on its own branch and review breaking changes first. Gitleaks also runs on pushes and pull requests as a secret-scanning fallback.
+
+See [SECURITY.md](SECURITY.md) for how to report a vulnerability. The project is licensed under the MIT License (copyright De Villiers Neethling, 2026). Do not commit secrets, `.env` files, or private keys.
 

@@ -1,13 +1,11 @@
-# Dependencies and builds
 node_modules
 dist
 dist-ssr
 build
 coverage
-.turbo
 *.tsbuildinfo
+*.log
 
-# Secrets and local env
 .env
 .env.*
 !.env.example
@@ -15,20 +13,18 @@ coverage
 *.key
 *.p12
 *.pfx
-id_rsa
-id_rsa.pub
-id_ed25519
-id_ed25519.pub
+keystore.properties
+*.jks
+*.keystore
 
-# Editor and OS
 .DS_Store
-*.local
-.vscode
 .idea
 
-# Logs and test artifacts
-*.log
-npm-debug.log*
+# Expo / native (harmless on a web repo; do not commit generated CNG trees)
+.expo
+.expo-shared
+
+# Test artifacts
 test-results
 playwright-report
 blob-report
