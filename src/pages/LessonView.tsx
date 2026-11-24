@@ -2,10 +2,11 @@ import { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Credit from "../components/Credit";
 import Exercise from "../components/Exercise";
+import LessonBody from "../components/LessonBody";
 import Quiz from "../components/Quiz";
 import { findLesson, loadCourse } from "../lib/courses";
 import { flattenLessons, useProgress } from "../lib/progress";
-import { formatTimestamp, youtubeEmbedUrl } from "../lib/time";
+import { formatTimestamp, youtubeEmbedUrl, youtubeWatchUrl } from "../lib/time";
 import type { Course } from "../types";
 
 export default function LessonView() {
@@ -74,108 +75,108 @@ export default function LessonView() {
     lesson.startSeconds,
     lesson.endSeconds,
   );
+  const watchUrl = youtubeWatchUrl(
+    course.source.videoId,
+    lesson.startSeconds,
+  );
   const positionLabel =
     index >= 0 ? `Lesson ${index + 1} of ${sequence.length}` : "Lesson";
+  const isOutline = lesson.contentStatus === "outline-pending-transcript";
 
   return (
-    <div className="lesson-page">
+    <div className="lesson-page is-reading">
       <header className="lesson-heading">
         <p className="page-kicker">
-          {module.title} · {positionLabel} · {formatTimestamp(lesson.startSeconds)}
-          –{formatTimestamp(lesson.endSeconds)}
+          {module.title} · {positionLabel}
         </p>
         <h1>{lesson.title}</h1>
-        <p className="lede">
-          The player starts at this lesson’s timestamp in the original
-          freeCodeCamp video and stops at the next lesson.
-        </p>
-      </header>
-      <div className="lesson-layout">
-        <div className="lesson-media">
-          <div className="player-dock">
-            <div className="player-wrap">
-              <iframe
-                key={embed}
-                src={embed}
-                title={`${lesson.title} — ${course.source.videoTitle}`}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                referrerPolicy="strict-origin-when-cross-origin"
-              />
-            </div>
-          </div>
-          <Credit course={course} startSeconds={lesson.startSeconds} />
-        </div>
-        <div className="lesson-content">
-          <section className="section-card">
-            <h2>In this lesson</h2>
-            <ul className="chapter-list">
-              {lesson.chapters.map((chapter) => (
-                <li
-                  className="chip"
-                  key={`${chapter.startSeconds}-${chapter.title}`}
-                >
-                  {formatTimestamp(chapter.startSeconds)} {chapter.title}
-                </li>
-              ))}
-            </ul>
-            <p className="summary-text">{lesson.summary}</p>
-            <p className="progress-label">
-              {course.summarySource === "transcript"
-                ? "Summary written from the official video transcript."
-                : "Summary written from the public chapter titles and video description, not from a transcript."}
+        {isOutline ? (
+          <div className="outline-banner" role="status">
+            <strong>Outline only — full notes pending transcript</strong>
+            <p>
+              A complete written lesson will be added when the official
+              transcript is available. The outline below is from public chapter
+              titles and the video description, not a full lesson.
             </p>
-          </section>
-          <Quiz
-            key={lesson.id}
-            questions={lesson.quiz}
-            onScored={(correct, total) =>
-              saveQuizScore(courseId, lesson.id, correct, total)
-            }
-          />
-          <Exercise exercise={lesson.exercise} />
-          <div className="actions">
-            <button
-              type="button"
-              className="btn btn-primary"
-              disabled={completed}
-              onClick={() => markLessonComplete(courseId, lesson.id)}
-            >
-              {completed ? "Lesson marked complete" : "Mark lesson complete"}
-            </button>
           </div>
-          <nav className="lesson-nav" aria-label="Lesson">
-            {previous ? (
-              <Link
-                className="lesson-nav-link"
-                to={`/courses/${courseId}/lessons/${previous.lesson.id}`}
-              >
-                <span className="lesson-nav-dir">Previous</span>
-                <span className="lesson-nav-title">{previous.lesson.title}</span>
-              </Link>
-            ) : (
-              <span className="lesson-nav-placeholder" />
-            )}
-            {next ? (
-              <Link
-                className="lesson-nav-link is-next"
-                to={`/courses/${courseId}/lessons/${next.lesson.id}`}
-              >
-                <span className="lesson-nav-dir">Next lesson</span>
-                <span className="lesson-nav-title">{next.lesson.title}</span>
-              </Link>
-            ) : (
-              <Link
-                className="lesson-nav-link is-next"
-                to={`/courses/${courseId}`}
-              >
-                <span className="lesson-nav-dir">End of course</span>
-                <span className="lesson-nav-title">Back to course</span>
-              </Link>
-            )}
-          </nav>
-        </div>
+        ) : (
+          <p className="lede">{lesson.summary}</p>
+        )}
+      </header>
+
+      {lesson.content ? <LessonBody markdown={lesson.content} /> : null}
+
+      <div className="actions reading-complete">
+        <button
+          type="button"
+          className="btn btn-primary"
+          disabled={completed}
+          onClick={() => markLessonComplete(courseId, lesson.id)}
+        >
+          {completed ? "Lesson marked complete" : "Mark lesson complete"}
+        </button>
       </div>
+
+      <Quiz
+        key={lesson.id}
+        questions={lesson.quiz}
+        onScored={(correct, total) =>
+          saveQuizScore(courseId, lesson.id, correct, total)
+        }
+      />
+      <Exercise exercise={lesson.exercise} />
+
+      <details className="watch-optional">
+        <summary>Watch this part (optional)</summary>
+        <p className="progress-label">
+          The original freeCodeCamp video is optional. This embed starts at{" "}
+          {formatTimestamp(lesson.startSeconds)} and stops at{" "}
+          {formatTimestamp(lesson.endSeconds)}. You can also{" "}
+          <a href={watchUrl} target="_blank" rel="noreferrer">
+            open this segment on YouTube
+          </a>
+          .
+        </p>
+        <div className="player-wrap">
+          <iframe
+            key={embed}
+            src={embed}
+            title={`${lesson.title} — ${course.source.videoTitle}`}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            referrerPolicy="strict-origin-when-cross-origin"
+          />
+        </div>
+        <Credit course={course} startSeconds={lesson.startSeconds} />
+      </details>
+
+      <nav className="lesson-nav" aria-label="Lesson">
+        {previous ? (
+          <Link
+            className="lesson-nav-link"
+            to={`/courses/${courseId}/lessons/${previous.lesson.id}`}
+          >
+            <span className="lesson-nav-dir">Previous</span>
+            <span className="lesson-nav-title">{previous.lesson.title}</span>
+          </Link>
+        ) : (
+          <span className="lesson-nav-placeholder" />
+        )}
+        {next ? (
+          <Link
+            className="lesson-nav-link is-next"
+            to={`/courses/${courseId}/lessons/${next.lesson.id}`}
+          >
+            <span className="lesson-nav-dir">Next lesson</span>
+            <span className="lesson-nav-title">{next.lesson.title}</span>
+          </Link>
+        ) : (
+          <Link className="lesson-nav-link is-next" to={`/courses/${courseId}`}>
+            <span className="lesson-nav-dir">End of course</span>
+            <span className="lesson-nav-title">Back to course</span>
+          </Link>
+        )}
+      </nav>
     </div>
   );
 }

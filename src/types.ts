@@ -15,13 +15,23 @@ export type Exercise = {
   hint: string;
 };
 
+/** Whether the written lesson is complete or only a chapter outline. */
+export type LessonContentStatus = "full" | "outline-pending-transcript";
+
 export type Lesson = {
   id: string;
   title: string;
   startSeconds: number;
   endSeconds: number;
   chapters: Chapter[];
+  /** Short abstract for course cards and previews. */
   summary: string;
+  /**
+   * Standalone written lesson in Markdown.
+   * See CONTENT_FORMAT.md for the required shape and subset.
+   */
+  content: string;
+  contentStatus: LessonContentStatus;
   quiz: QuizQuestion[];
   exercise: Exercise;
 };
