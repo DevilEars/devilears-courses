@@ -1,7 +1,7 @@
 import type { Course } from "../types";
 
 export async function loadCourseIds(): Promise<string[]> {
-  const response = await fetch("/courses/index.json");
+  const response = await fetch(`${import.meta.env.BASE_URL}courses/index.json`);
   if (!response.ok) {
     throw new Error("Could not load the course list.");
   }
@@ -10,7 +10,7 @@ export async function loadCourseIds(): Promise<string[]> {
 }
 
 export async function loadCourse(id: string): Promise<Course> {
-  const response = await fetch(`/courses/${id}.json`);
+  const response = await fetch(`${import.meta.env.BASE_URL}courses/${id}.json`);
   if (!response.ok) {
     throw new Error("Course not found.");
   }
