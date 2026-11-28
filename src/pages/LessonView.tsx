@@ -4,7 +4,7 @@ import Credit from "../components/Credit";
 import Exercise from "../components/Exercise";
 import LessonBody from "../components/LessonBody";
 import Quiz from "../components/Quiz";
-import { findLesson, loadCourse } from "../lib/courses";
+import { findLesson, loadPublishedCourse } from "../lib/courses";
 import { flattenLessons, useProgress } from "../lib/progress";
 import { formatTimestamp, youtubeEmbedUrl, youtubeWatchUrl } from "../lib/time";
 import type { Course } from "../types";
@@ -18,7 +18,7 @@ export default function LessonView() {
   useEffect(() => {
     if (!courseId) return;
     let cancelled = false;
-    loadCourse(courseId)
+    loadPublishedCourse(courseId)
       .then((data) => {
         if (!cancelled) setCourse(data);
       })

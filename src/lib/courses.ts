@@ -1,4 +1,5 @@
 import type { Course } from "../types";
+import { isPublishedCourse } from "./published";
 
 export async function loadCourseIds(): Promise<string[]> {
   const response = await fetch(`${import.meta.env.BASE_URL}courses/index.json`);
@@ -17,9 +18,18 @@ export async function loadCourse(id: string): Promise<Course> {
   return (await response.json()) as Course;
 }
 
+export async function loadPublishedCourse(id: string): Promise<Course> {
+  const course = await loadCourse(id);
+  if (!isPublishedCourse(course)) {
+    throw new Error("Course not found.");
+  }
+  return course;
+}
+
 export async function loadAllCourses(): Promise<Course[]> {
   const ids = await loadCourseIds();
-  return Promise.all(ids.map((id) => loadCourse(id)));
+  const courses = await Promise.all(ids.map((id) => loadCourse(id)));
+  return courses.filter(isPublishedCourse);
 }
 
 export function findLesson(course: Course, lessonId: string) {
