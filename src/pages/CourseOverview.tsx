@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Credit from "../components/Credit";
 import ProgressBar from "../components/ProgressBar";
-import { loadCourse } from "../lib/courses";
+import { loadPublishedCourse } from "../lib/courses";
 import { formatTimestamp } from "../lib/time";
 import {
   flattenLessons,
@@ -29,7 +29,7 @@ export default function CourseOverview() {
   useEffect(() => {
     if (!courseId) return;
     let cancelled = false;
-    loadCourse(courseId)
+    loadPublishedCourse(courseId)
       .then((data) => {
         if (!cancelled) setCourse(data);
       })
